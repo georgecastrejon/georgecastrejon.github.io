@@ -1,66 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portafolio de un ingeniero de calidad de software especializado en automatización y rendimiento.">
-    <title>Portafolio - Ingeniero de QA</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="animations.js" defer></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portafolio de Software Test Engineer</title>
+
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
 </head>
+
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">QA Portfolio</div>
-            <ul class="menu">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#acerca-de-mi">Acerca de Mí</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#resumen">Mi Resumen</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#contactame">Contáctame</a></li>
-            </ul>
-        </nav>
-        <div class="banner">
-            <img src="qa-banner.jpg" alt="QA banner" class="banner-image">
-            <div class="banner-text">
-                <p class="animated-text"></p>
-            </div>
-        </div>
-    </header>
-    <main>
-        <section id="inicio">
-            <h1>Bienvenido a mi Portafolio</h1>
-            <p>Explora mi trayectoria como ingeniero de calidad de software, especializado en automatización y rendimiento.</p>
-        </section>
-        <section id="acerca-de-mi">
-            <h2>Acerca de Mí</h2>
-            <p>Soy un ingeniero con más de 20 años de experiencia en pruebas de software, liderando equipos en automatización y pruebas de performance.</p>
-        </section>
-        <section id="proyectos">
-            <h2>Proyectos</h2>
-            <p>He trabajado en diversas iniciativas de automatización y rendimiento para portales de retail y sistemas complejos.</p>
-        </section>
-        <section id="resumen">
-            <h2>Mi Resumen</h2>
-            <p>Aquí encontrarás un desglose de mi experiencia profesional, educación y certificaciones.</p>
-        </section>
-        <section id="habilidades">
-            <h2>Habilidades</h2>
-            <ul>
-                <li>Automatización de pruebas (Selenium, Appium, JMeter)</li>
-                <li>Pruebas de rendimiento</li>
-                <li>Frameworks: POM, Screenplay</li>
-                <li>Lenguajes: Java, Python</li>
-            </ul>
-        </section>
-        <section id="contactame">
-            <h2>Contáctame</h2>
-            <p>Puedes contactarme a través de mi correo: <a href="mailto:qa.engineer@example.com">qa.engineer@example.com</a></p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 QA Portfolio. Todos los derechos reservados.</p>
-    </footer>
+<!-- Cabecera -->
+<header>
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#portafolio">Portafolio</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+
+            <li class="dropdown">
+                <a href="#" class="dropbtn">
+                    <img src="assets/flags/es.svg" alt="Español" class="flag-icon">
+                    <span id="selected-language">ES</span>
+                    <img src="assets/ico/nav-icon.ico" alt="Nav" class="flag-icon-two">
+                </a>
+
+                <ul class="dropdown-content">
+                    <li>
+                        <div class="language-option" >
+                            <input type="radio" name="language" value="es" checked onclick="switchLanguage('es')"/>
+                            <span onclick="switchLanguage('es')">Español</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="language-option">
+                            <input type="radio" name="language" value="en" onclick="switchLanguage('en')"/>
+                            <span onclick="switchLanguage('en')">English</span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+
+        </ul>
+    </nav>
+</header>
+
+<!-- Secciones -->
+<section id="inicio">
+    <div class="overlay">
+        <h1>Bienvenido a mi portafolio</h1>
+        <p>Soy un ingeniero de calidad de software con más de 12 años de experiencia en automatización de pruebas y
+            rendimiento.</p>
+    </div>
+</section>
+
+<section id="sobre-mi">
+    <h2>Sobre mí</h2>
+    <p>Me especializo en pruebas automatizadas, rendimiento, y frameworks como Selenium, Appium, y JMeter.</p>
+</section>
+
+<section id="proyectos">
+    <h2>Proyectos</h2>
+    <p>He trabajado en proyectos de automatización y rendimiento para diversas industrias, incluyendo retail y servicios
+        financieros.</p>
+</section>
+
+<section id="servicios">
+    <h2>Servicios</h2>
+    <ul>
+        <li>Automatización de pruebas</li>
+        <li>Pruebas de rendimiento</li>
+        <li>Consultoría en calidad de software</li>
+    </ul>
+</section>
+
+<section id="portafolio">
+    <h2>Portafolio</h2>
+    <img src="assets/img/qa-banner.jpeg" alt="Banner de Portafolio">
+</section>
+
+<section id="contacto">
+    <h2>Contacto</h2>
+    <p>Puedes contactarme a través de <a href="mailto:miemail@dominio.com">miemail@dominio.com</a>.</p>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 Mi Portafolio. Todos los derechos reservados.</p>
+</footer>
+
+<!-- Script de animaciones -->
+<script src="scripts/animations.js"></script>
 </body>
+
 </html>

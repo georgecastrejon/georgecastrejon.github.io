@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Software Test Engineer Portfolio</title>
+
+    <link rel="stylesheet" href="styles/styles.css">
+    <!-- Favicon -->
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about me">About Me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portafolio">Portafolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+
+            <li class="dropdown">
+                <a href="#" class="dropbtn">
+                    <img src="assets/flags/en.svg" alt="English" class="flag-icon">
+                    <span id="selected-language">EN</span>
+                    <img src="assets/ico/nav-icon.ico" alt="Nav" class="flag-icon-two">
+                </a>
+
+                <ul class="dropdown-content">
+                    <li>
+                        <div class="language-option">
+                            <input type="radio" name="language" value="es" onclick="switchLanguage('es')"/>
+                            <span onclick="switchLanguage('es')">Español</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="language-option">
+                            <input type="radio" name="language" value="en" checked onclick="switchLanguage('en')"/>
+                            <span onclick="switchLanguage('en')">English</span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+
+        </ul>
+    </nav>
+</header>
+
+<section id="home">
+    <div class="overlay">
+    <h1>Welcome to my portfolio</h1>
+    <p>I am a software quality engineer with over 12 years of experience in automation testing and performance.</p>
+    </div>
+</section>
+
+<section id="about me">
+    <h2>About me</h2>
+    <p>I specialize in automated testing, performance, and frameworks such as Selenium, Appium, and JMeter.</p>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+    <p>I have worked on automation and performance projects for various industries including retail and financial services.</p>
+</section>
+
+<section id="services">
+    <h2>Services</h2>
+    <ul>
+        <li>Test Automation</li>
+        <li>Performance testing</li>
+        <li>Software quality consulting/li>
+    </ul>
+</section>
+
+<section id="portafolio">
+    <h2>Portafolio</h2>
+    <img src="assets/img/qa-banner.jpeg" alt="Banner de Portafolio">
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Puedes contactarme a través de <a href="mailto:miemail@dominio.com">miemail@dominio.com</a>.</p>
+</section>
+
+<footer>
+    <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+</footer>
+
+<!-- Script de animaciones -->
+<script src="scripts/animations.js"></script>
+
+</body>
+</html>

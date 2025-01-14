@@ -1,0 +1,116 @@
+@charset "UTF-8";
+/* Estilos para el layout general del portafolio */
+header {
+  background-color: #333;
+  padding: 15px 0px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  font-size: 18px;
+  display: inline-block;
+}
+
+/* Estilo específico para el dropdown */
+nav .dropdown .dropbtn {
+  display: flex; /* Coloca los elementos en una fila horizontal */
+  align-items: center; /* Alinea verticalmente al centro */
+  gap: 5px; /* Espaciado entre la bandera y el texto */
+  cursor: pointer; /* Cambia el cursor a puntero */
+  color: #fff; /* Color del texto */
+  text-decoration: none; /* Sin subrayado */
+  font-size: 16px; /* Tamaño del texto */
+}
+
+/* Estilo para la imagen de la bandera */
+nav .dropdown .dropbtn .flag-icon {
+  width: 20px; /* Tamaño de la bandera */
+  height: 15px;
+  object-fit: contain; /* Asegura que la imagen mantenga su proporción */
+}
+
+nav .dropdown .dropbtn .flag-icon-two {
+  width: 10px; /* Tamaño de la flecha */
+  object-fit: contain; /* Mantiene la proporción de la imagen */
+  position: absolute; /* Posiciona la flecha de manera absoluta */
+  bottom: 24px; /* Ajusta la distancia entre la letra "S" y la flecha */
+  left: 1226px; /* Ajusta la distancia entre la letra "S" y la flecha */
+}
+
+section {
+  padding: 80px 20px 20px 20px;
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+/* Contenido del menú desplegable - inicialmente oculto */
+nav .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 160px;
+  z-index: 1;
+  padding: 10px 0;
+  border-radius: 5px;
+}
+
+/* Mostrar el contenido del menú cuando el cursor esté encima */
+nav .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Estilos para los elementos del menú desplegable */
+nav .dropdown-content li {
+  padding: 10px 15px;
+  color: #fff;
+  text-align: left;
+}
+
+nav .dropdown-content .language-option {
+  display: flex;
+  align-items: center;
+  cursor: pointer; /* Hace clickeable el div cuando el cursor pasa sobre él */
+}
+
+nav .dropdown-content .language-option:hover span {
+  text-decoration: underline;
+  color: #ff7f00;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+h1, h2 {
+  font-size: 2em;
+  color: #333;
+}
+
+p {
+  font-size: 1.2em;
+  color: #666;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*# sourceMappingURL=styles.css.map */
