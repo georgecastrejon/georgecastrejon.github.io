@@ -23,22 +23,22 @@
 
             <li class="dropdown">
                 <a href="#" class="dropbtn">
-                    <img src="assets/flags/en.svg" alt="English" class="flag-icon">
+                    <img src="assets/flags/en.png" alt="English" class="flag-icon">
                     <span id="selected-language">EN</span>
                     <img src="assets/ico/nav-icon.ico" alt="Nav" class="flag-icon-two">
                 </a>
 
                 <ul class="dropdown-content">
                     <li>
-                        <div class="language-option">
-                            <input type="radio" name="language" value="es" onclick="switchLanguage('es')"/>
-                            <span onclick="switchLanguage('es')">Español</span>
+                        <div class="language-option" onclick="switchLanguage('es')">
+                            <input type="radio" name="language" value="es"/>
+                            <span>Español</span>
                         </div>
                     </li>
                     <li>
-                        <div class="language-option">
-                            <input type="radio" name="language" value="en" checked onclick="switchLanguage('en')"/>
-                            <span onclick="switchLanguage('en')">English</span>
+                        <div class="language-option" onclick="switchLanguage('en')">
+                            <input type="radio" name="language" value="en" checked/>
+                            <span>English</span>
                         </div>
                     </li>
                 </ul>
@@ -51,7 +51,7 @@
 <section id="home">
     <div class="overlay">
     <h1>Welcome to my portfolio</h1>
-    <p>I am a software quality engineer with over 12 years of experience in automation testing and performance.</p>
+    <p class="fade-in">I am a software quality engineer with over 12 years of experience in automation testing and performance.</p>
     </div>
 </section>
 

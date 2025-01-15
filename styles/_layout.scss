@@ -70,6 +70,8 @@ nav .dropdown-content {
     border-radius: 5px;
 }
 
+
+
 /* Mostrar el contenido del menú cuando el cursor esté encima */
 nav .dropdown:hover .dropdown-content {
     display: block;
@@ -90,9 +92,33 @@ nav .dropdown-content .language-option {
 }
 
 
-nav .dropdown-content .language-option:hover span {
+nav .dropdown-content .language-option:hover input[type="radio"]:not(:checked) + span {
     text-decoration: underline;
     color: #ff7f00;
+}
+
+nav .dropdown-content .language-option input[type="radio"] {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+nav .dropdown-content .language-option:hover input[type="radio"]:not(:checked)::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #ff7f00;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 

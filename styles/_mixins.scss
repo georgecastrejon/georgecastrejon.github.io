@@ -1,10 +1,2 @@
 // Mezclas y funciones SCSS reutilizables.
 
-@mixin transition($property, $duration) {
-    transition: $property $duration ease-in-out;
-}
-@mixin flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
