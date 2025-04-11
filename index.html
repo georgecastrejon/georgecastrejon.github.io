@@ -5,26 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Portafolio de Software Test Engineer</title>
+    <title>Portafolio - Software Test Engineer</title>
 
     <link rel="stylesheet" href="styles/styles.css">
-
-    <!-- Favicon -->
     <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
-<!-- Cabecera -->
-<header>
-    <nav>
+
+<header class="header">
+    <nav class="menu">
         <ul>
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#sobre-mi">Sobre mí</a></li>
-            <li><a href="#proyectos">Proyectos</a></li>
-            <li><a href="#servicios">Servicios</a></li>
             <li><a href="#portafolio">Portafolio</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
             <li><a href="#contacto">Contacto</a></li>
-
             <li class="dropdown">
                 <a href="#" class="dropbtn">
                     <img src="assets/flags/es.png" alt="Español" class="flag-icon">
@@ -35,69 +31,65 @@
                 <ul class="dropdown-content">
                     <li>
                         <div class="language-option" onclick="switchLanguage('es')">
-                            <input type="radio" name="language" value="es" checked />
-                            <span >Español</span>
+                            <label>
+                                <input type="radio" name="language" value="es" checked/>
+                            </label>
+                            <span>Español - ES</span>
                         </div>
                     </li>
                     <li>
                         <div class="language-option" onclick="switchLanguage('en')">
-                            <input type="radio" name="language" value="en"/>
-                            <span>English</span>
+                            <label>
+                                <input type="radio" name="language" value="en"/>
+                            </label>
+                            <span>English - EN</span>
                         </div>
                     </li>
                 </ul>
             </li>
-
         </ul>
     </nav>
 </header>
 
-<!-- Secciones -->
-<section id="inicio">
-    <div class="overlay">
-        <h1>Bienvenido a mi portafolio</h1>
-        <p class="fade-in">Soy un ingeniero de calidad de software con más de 12 años de experiencia en automatización de pruebas y
-            rendimiento.</p>
-    </div>
-</section>
+<main>
+    <section id="inicio" class="inicio">
+        <div class="inicio-content">
+            <button class="welcome-btn">Bienvenido</button>
+            <p class="hello-text typing-text">Hola, soy George</p>
+            <p class="role-text">Software Test Engineer</p>
+        </div>
+    </section>
+    <section id="sobre-mi" class="sobre-mi">
+        <div class="sobre-mi-content">
+            <h1>sobre mi</h1>
+        </div>
+    </section>
+    <section id="portafolio" class="portafolio">
+        <div class="portafolio-content">
+            <h1>Portafolio</h1>
+            <img src="assets/img/qa-banner.jpeg" alt="Portafolio" class="portfolio-image">
+        </div>
+    </section>
+    <section id="habilidades" class="habilidades">
+        <div class="habilidades-content">
+            <h1>habilidades</h1>
+        </div>
+    </section>
+    <section id="contacto" class="contacto">
+        <div class="contacto-content">
+            <h1>Contacto</h1>
+            <p>Contáctame en <a href="mailto:miemail@dominio.com">miemail@dominio.com</a>.</p>
+        </div>
+    </section>
 
-<section id="sobre-mi">
-    <h2>Sobre mí</h2>
-    <p>Me especializo en pruebas automatizadas, rendimiento, y frameworks como Selenium, Appium, y JMeter.</p>
-</section>
+</main>
 
-<section id="proyectos">
-    <h2>Proyectos</h2>
-    <p>He trabajado en proyectos de automatización y rendimiento para diversas industrias, incluyendo retail y servicios
-        financieros.</p>
-</section>
-
-<section id="servicios">
-    <h2>Servicios</h2>
-    <ul>
-        <li>Automatización de pruebas</li>
-        <li>Pruebas de rendimiento</li>
-        <li>Consultoría en calidad de software</li>
-    </ul>
-</section>
-
-<section id="portafolio">
-    <h2>Portafolio</h2>
-    <img src="assets/img/qa-banner.jpeg" alt="Banner de Portafolio">
-</section>
-
-<section id="contacto">
-    <h2>Contacto</h2>
-    <p>Puedes contactarme a través de <a href="mailto:miemail@dominio.com">miemail@dominio.com</a>.</p>
-</section>
-
-<!-- Footer -->
-<footer>
+<footer class="footer">
     <p>&copy; 2025 Mi Portafolio. Todos los derechos reservados.</p>
 </footer>
 
-<!-- Script de animaciones -->
 <script src="scripts/animations.js"></script>
 </body>
+
 
 </html>

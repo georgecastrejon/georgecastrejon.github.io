@@ -1,130 +1,267 @@
-/* Estilos para el layout general del portafolio */
-
-header {
-    background-color: #333;
-    padding: 15px 0px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 100;
-}
-
-nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 5px 10px;
-    font-size: 18px;
-    display: inline-block;
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
 }
 
-/* Estilo específico para el dropdown */
-nav .dropdown .dropbtn {
-    display: flex; /* Coloca los elementos en una fila horizontal */
-    align-items: center; /* Alinea verticalmente al centro */
-    gap: 5px; /* Espaciado entre la bandera y el texto */
-    cursor: pointer; /* Cambia el cursor a puntero */
-    color: #fff; /* Color del texto */
-    text-decoration: none; /* Sin subrayado */
-    font-size: 16px; /* Tamaño del texto */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.3s ease;
 }
 
-/* Estilo para la imagen de la bandera */
-nav .dropdown .dropbtn .flag-icon {
-    width: 20px; /* Tamaño de la bandera */
-    height: 15px;
-    object-fit: contain; /* Asegura que la imagen mantenga su proporción */
-}
-
-nav .dropdown .dropbtn .flag-icon-two {
-    width: 10px; /* Tamaño de la flecha */
-    object-fit: contain; /* Mantiene la proporción de la imagen */
-    position: absolute; /* Posiciona la flecha de manera absoluta */
-    bottom: 24px; /* Ajusta la distancia entre la letra "S" y la flecha */
-    left: 1226px; /* Ajusta la distancia entre la letra "S" y la flecha */
-}
-
-section {
-    padding: 80px 20px 20px 20px;
-    min-height: 100vh;
-    background-color: #fff;
-}
-
-/* Contenido del menú desplegable - inicialmente oculto */
-nav .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #333;
-    min-width: 160px;
-    z-index: 1;
-    padding: 10px 0;
-    border-radius: 5px;
-}
-
-
-
-/* Mostrar el contenido del menú cuando el cursor esté encima */
-nav .dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* Estilos para los elementos del menú desplegable */
-nav .dropdown-content li {
-    padding: 10px 15px;
-    color: #fff;
-    text-align: left;
-}
-
-
-nav .dropdown-content .language-option {
+.menu {
     display: flex;
+    justify-content: center;
+    background: transparent;
+    padding: 10px 0;
+}
+
+.menu.scrolled {
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+}
+
+.menu > ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+
+.menu > ul li a {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.menu.scrolled ul li a {
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+.menu > ul li a:hover {
+    color: #0078FF;
+}
+
+.inicio {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    cursor: pointer;/* Hace clickeable el div cuando el cursor pasa sobre él */
+    text-align: center;
+    background: url('../assets/img/Designer4.jpeg') no-repeat center center/cover;
+    color: #fff;
+    padding: 20px;
+    overflow: hidden;
 }
-
-
-nav .dropdown-content .language-option:hover input[type="radio"]:not(:checked) + span {
-    text-decoration: underline;
-    color: #ff7f00;
-}
-
-nav .dropdown-content .language-option input[type="radio"] {
-    width: 16px;
-    height: 16px;
-    border: 2px solid #fff;
-    border-radius: 50%;
-    display: inline-block;
-    position: relative;
-    background-color: transparent;
-    cursor: pointer;
-    transition: background-color 0.3s ease, border-color 0.3s ease;
-}
-
-nav .dropdown-content .language-option:hover input[type="radio"]:not(:checked)::after {
-    content: "";
-    width: 10px;
-    height: 10px;
-    background-color: #ff7f00;
-    border-radius: 50%;
+.inicio::before {
+    content: '';
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+.inicio h1, .inicio p {
+    position: relative;
+    z-index: 2;
+}
+
+.inicio h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.inicio p {
+    font-size: 1.5rem;
+}
+
+.inicio {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url('../assets/img/Designer4.jpeg') no-repeat center center/cover;
+    color: #fff;
+    padding: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.inicio {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left; /* Alineamos todo a la izquierda dentro del contenedor */
+    background: url('../assets/img/Designer4.jpeg') no-repeat center center/cover;
+    color: #fff;
+    padding: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.inicio-content {
+    text-align: left; /* Alineamos todo el contenido a la izquierda */
+    z-index: 2;
+    max-width: 1200px; /* Ancho máximo de la sección */
+    width: 100%;
+}
+
+.welcome-btn {
+    background-color: #666; /* Gris */
+    color: #fff; /* Letra blanca */
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px; /* Curvas */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 20px 0;
+}
+
+.welcome-btn:hover {
+    background-color: #444; /* Gris más oscuro al pasar el ratón */
+}
+
+.hello-text {
+    color: #fff; /* Letra blanca */
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+.role-text {
+    color: #ccc; /* Letra gris */
+    font-size: 1.2rem;
+    margin-top: 10px;
+    margin-left: 0; /* No hay margen extra, ya que todo está alineado a la izquierda */
+}
+.typing-text {
+    color: #fff; /* Letra blanca */
+    font-size: 1.5rem;
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    overflow: hidden; /* Hace que el texto que no se ha escrito aún no se muestre */
+    border-right: 3px solid #fff; /* Simula el cursor de la máquina de escribir */
+    display: inline-block;
+}
+section {
+    padding: 100px 20px;
+    text-align: center;
 }
 
 
-footer {
-    background-color: #333;
+.footer {
+    background: #333;
     color: #fff;
     text-align: center;
     padding: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .menu ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .inicio h1 {
+        font-size: 2.5rem;
+    }
+
+    .inicio p {
+        font-size: 1.2rem;
+    }
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown .dropbtn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+
+.dropdown-content li {
+    padding: 10px;
+    text-align: left;
+}
+
+.dropdown-content li:hover {
+    background-color: #444;
+    cursor: pointer;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown .dropbtn:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Mejora la experiencia al pasar el cursor */
+}
+
+.flag-icon {
+    width: 20px;
+    height: 15px;
+}
+
+.flag-icon-two {
+    width: 10px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    margin-top: 5px;
+    background-color: rgba(51, 51, 51, 0.7);
+    padding: 10px 0;
+    border-radius: 5px;
+    z-index: 1;
+    z-index: 1;
+    text-align: left; /* Opciones alineadas a la izquierda */
+    min-width: 150px; /* Ancho mínimo para opciones largas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Mejora visual */
+}
+
+.dropdown-content li {
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Suaviza el hover */
+}
+
+.dropdown-content,
+.dropdown-content ul {
+    list-style: none; /* Remueve viñetas */
+    margin: 0; /* Elimina espacio adicional */
+    padding: 0; /* Ajusta el padding */
+}
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+    display: block; /* Mantiene la lista visible al interactuar */
 }
