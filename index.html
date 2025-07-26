@@ -1,95 +1,118 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Portafolio - Software Test Engineer</title>
-
-    <link rel="stylesheet" href="styles/styles.css">
-    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <title>QA Expert | Automatización y Pruebas de Performance</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Estilo para el contenedor principal de la SPA */
+        #spa-content {
+            flex: 1; /* Para que el footer se mantenga al final */
+        }
+        /* Ocultar contenido mientras se carga */
+        .spa-loading {
+            text-align: center;
+            padding: 50px;
+        }
+    </style>
 </head>
-
-<body>
-
-<header class="header">
-    <nav class="menu">
-        <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#sobre-mi">Sobre mí</a></li>
-            <li><a href="#portafolio">Portafolio</a></li>
-            <li><a href="#habilidades">Habilidades</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-            <li class="dropdown">
-                <a href="#" class="dropbtn">
-                    <img src="assets/flags/es.png" alt="Español" class="flag-icon">
-                    <span id="selected-language">ES</span>
-                    <img src="assets/ico/nav-icon.ico" alt="Nav" class="flag-icon-two">
-                </a>
-
-                <ul class="dropdown-content">
-                    <li>
-                        <div class="language-option" onclick="switchLanguage('es')">
-                            <label>
-                                <input type="radio" name="language" value="es" checked/>
-                            </label>
-                            <span>Español - ES</span>
-                        </div>
+<body class="d-flex flex-column min-vh-100">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="/">
+                <i class="bi bi-code-slash me-2"></i>QA Expert
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-route="home">Inicio</a>
                     </li>
-                    <li>
-                        <div class="language-option" onclick="switchLanguage('en')">
-                            <label>
-                                <input type="radio" name="language" value="en"/>
-                            </label>
-                            <span>English - EN</span>
-                        </div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#servicios" data-route="servicios">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portafolio" data-route="portafolio">Portafolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto" data-route="contacto">Contacto</a>
                     </li>
                 </ul>
-            </li>
-        </ul>
+                <div class="d-flex align-items-center me-3">
+                    <select class="form-select form-select-sm" id="languageSelector" style="width: auto;">
+                        <option value="es">ES</option>
+                        <option value="en">EN</option>
+                    </select>
+                </div>
+            </div>
+        </div>
     </nav>
-</header>
 
-<main>
-    <section id="inicio" class="inicio">
-        <div class="inicio-content">
-            <button class="welcome-btn">Bienvenido</button>
-            <p class="hello-text typing-text">Hola, soy George</p>
-            <p class="role-text">Software Test Engineer</p>
+    <!-- Contenedor principal para el contenido SPA -->
+    <main id="spa-content" class="flex-shrink-0">
+        <div class="spa-loading">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
         </div>
-    </section>
-    <section id="sobre-mi" class="sobre-mi">
-        <div class="sobre-mi-content">
-            <h1>sobre mi</h1>
-        </div>
-    </section>
-    <section id="portafolio" class="portafolio">
-        <div class="portafolio-content">
-            <h1>Portafolio</h1>
-            <img src="assets/img/qa-banner.jpeg" alt="Portafolio" class="portfolio-image">
-        </div>
-    </section>
-    <section id="habilidades" class="habilidades">
-        <div class="habilidades-content">
-            <h1>habilidades</h1>
-        </div>
-    </section>
-    <section id="contacto" class="contacto">
-        <div class="contacto-content">
-            <h1>Contacto</h1>
-            <p>Contáctame en <a href="mailto:miemail@dominio.com">miemail@dominio.com</a>.</p>
-        </div>
-    </section>
+    </main>
 
-</main>
+    <!-- Footer -->
+    <footer class="mt-auto">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h4 class="fw-bold mb-4" data-lang="footer.title">QA Expert</h4>
+                    <p data-lang="footer.description">Especialista en automatización de procesos y pruebas de performance con más de 12 años de experiencia en la industria.</p>
+                    <div class="mt-4">
+                        <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-github"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <h5 class="fw-bold mb-4" data-lang="footer.links">Enlaces</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-light" data-route="home">Inicio</a></li>
+                        <li class="mb-2"><a href="#servicios" class="text-decoration-none text-light" data-route="servicios">Servicios</a></li>
+                        <li class="mb-2"><a href="#portafolio" class="text-decoration-none text-light" data-route="portafolio">Portafolio</a></li>
+                        <li class="mb-2"><a href="#contacto" class="text-decoration-none text-light" data-route="contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="fw-bold mb-4" data-lang="footer.services">Servicios</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2" data-lang="services.automation.title">Automatización de Procesos</li>
+                        <li class="mb-2" data-lang="services.performance.title">Pruebas de Performance</li>
+                        <li class="mb-2" data-lang="services.quality.title">Pruebas Funcionales</li>
+                        <li class="mb-2">Consultoría QA</li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="fw-bold mb-4" data-lang="footer.contact">Contacto</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="bi bi-envelope me-2"></i> <span data-lang="footer.email">contacto@qaexpert.com</span></li>
+                        <li class="mb-2"><i class="bi bi-telephone me-2"></i> <span data-lang="footer.phone">+57 300 123 4567</span></li>
+                        <li class="mb-2"><i class="bi bi-geo-alt me-2"></i> <span data-lang="footer.location">Bogotá, Colombia</span></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <div class="text-center">
+                <p class="mb-0" data-lang="footer.copyright">&copy; 2023 QA Expert. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
 
-<footer class="footer">
-    <p>&copy; 2025 Mi Portafolio. Todos los derechos reservados.</p>
-</footer>
-
-<script src="scripts/animations.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/language.js"></script>
 </body>
-
-
 </html>

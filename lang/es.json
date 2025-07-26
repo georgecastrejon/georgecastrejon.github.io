@@ -1,0 +1,103 @@
+{
+  "language": "es",
+  "navigation": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "portfolio": "Portafolio",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "title": "Automatización y Pruebas de Performance Profesionales",
+    "subtitle": "Especialista QA freelance con experiencia en automatización de procesos y optimización de rendimiento",
+    "cta1": "Mis Servicios",
+    "cta2": "Ver Portafolio"
+  },
+  "services": {
+    "title": "Mis Servicios",
+    "automation": {
+      "title": "Automatización de Procesos",
+      "description": "Implementación de soluciones automatizadas con herramientas como n8n, Selenium, Cypress y más para optimizar flujos de trabajo."
+    },
+    "performance": {
+      "title": "Pruebas de Performance",
+      "description": "Análisis exhaustivo del rendimiento de aplicaciones con JMeter, NeoLoad y otras herramientas para garantizar la eficiencia."
+    },
+    "quality": {
+      "title": "Pruebas de Calidad",
+      "description": "Estrategias completas de QA para garantizar la calidad del software, desde pruebas manuales hasta automatizadas."
+    }
+  },
+  "stats": {
+    "tests": "250+ Pruebas Realizadas",
+    "efficiency": "98% Eficiencia Mejorada",
+    "clients": "85+ Clientes Satisfechos",
+    "experience": "12 Años de Experiencia"
+  },
+  "tools": {
+    "title": "Herramientas que Utilizo"
+  },
+  "video": {
+    "title": "Demostración de Automatización",
+    "description": "Ejemplo de automatización de procesos con Selenium y n8n para optimización de tareas repetitivas."
+  },
+  "portfolio": {
+    "title": "Proyectos Recientes",
+    "filter": {
+      "all": "Todos",
+      "automation": "Automatización",
+      "performance": "Performance",
+      "qa": "QA"
+    },
+    "projects": {
+      "ecommerce": {
+        "title": "Automatización E-commerce",
+        "description": "Implementación de automatización de procesos para plataforma de comercio electrónico con Selenium y n8n."
+      },
+      "api": {
+        "title": "Pruebas de Rendimiento API",
+        "description": "Análisis de performance para API de servicios financieros usando JMeter y NeoLoad."
+      },
+      "qa": {
+        "title": "Sistema de QA Automatizado",
+        "description": "Desarrollo de suite de pruebas automatizadas para aplicación de gestión empresarial."
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Lo que Dicen Mis Clientes"
+  },
+  "cta": {
+    "title": "¿Listo para Optimizar tu Proceso de QA?",
+    "description": "Contáctame hoy para una consulta gratuita y descubre cómo puedo mejorar la eficiencia y calidad de tus proyectos.",
+    "button": "Solicitar Consulta"
+  },
+  "footer": {
+    "title": "QA Expert",
+    "description": "Especialista en automatización de procesos y pruebas de performance con más de 12 años de experiencia en la industria.",
+    "links": "Enlaces",
+    "services": "Servicios",
+    "contact": "Contacto",
+    "email": "contacto@qaexpert.com",
+    "phone": "+57 300 123 4567",
+    "location": "Bogotá, Colombia",
+    "copyright": "© 2023 QA Expert. Todos los derechos reservados."
+  },
+  "contact": {
+    "title": "Contáctame",
+    "description": "¿Tienes un proyecto que necesita automatización o pruebas de performance? Estoy aquí para ayudarte.",
+    "info": "Información de Contacto",
+    "email": "Correo Electrónico",
+    "phone": "Teléfono",
+    "location": "Ubicación",
+    "form": {
+      "title": "Envíame un Mensaje",
+      "name": "Nombre Completo",
+      "subject": "Asunto",
+      "service": "Servicio de Interés",
+      "message": "Mensaje",
+      "privacy": "Acepto la Política de Privacidad",
+      "button": "Enviar Mensaje",
+      "success": "Mensaje enviado exitosamente. Me pondré en contacto contigo pronto."
+    }
+  }
+}

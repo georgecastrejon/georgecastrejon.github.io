@@ -1,0 +1,103 @@
+{
+  "language": "en",
+  "navigation": {
+    "home": "Home",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Professional Automation and Performance Testing",
+    "subtitle": "Freelance QA specialist with experience in process automation and performance optimization",
+    "cta1": "My Services",
+    "cta2": "View Portfolio"
+  },
+  "services": {
+    "title": "My Services",
+    "automation": {
+      "title": "Process Automation",
+      "description": "Implementation of automated solutions with tools like n8n, Selenium, Cypress and more to optimize workflows."
+    },
+    "performance": {
+      "title": "Performance Testing",
+      "description": "Comprehensive performance analysis of applications with JMeter, NeoLoad and other tools to ensure efficiency."
+    },
+    "quality": {
+      "title": "Quality Testing",
+      "description": "Complete QA strategies to ensure software quality, from manual to automated testing."
+    }
+  },
+  "stats": {
+    "tests": "250+ Tests Performed",
+    "efficiency": "98% Efficiency Improved",
+    "clients": "85+ Satisfied Clients",
+    "experience": "12 Years of Experience"
+  },
+  "tools": {
+    "title": "Tools I Use"
+  },
+  "video": {
+    "title": "Automation Demo",
+    "description": "Example of process automation with Selenium and n8n for optimization of repetitive tasks."
+  },
+  "portfolio": {
+    "title": "Recent Projects",
+    "filter": {
+      "all": "All",
+      "automation": "Automation",
+      "performance": "Performance",
+      "qa": "QA"
+    },
+    "projects": {
+      "ecommerce": {
+        "title": "E-commerce Automation",
+        "description": "Implementation of process automation for e-commerce platform with Selenium and n8n."
+      },
+      "api": {
+        "title": "API Performance Testing",
+        "description": "Performance analysis for financial services API using JMeter and NeoLoad."
+      },
+      "qa": {
+        "title": "Automated QA System",
+        "description": "Development of automated test suite for enterprise management application."
+      }
+    }
+  },
+  "testimonials": {
+    "title": "What My Clients Say"
+  },
+  "cta": {
+    "title": "Ready to Optimize Your QA Process?",
+    "description": "Contact me today for a free consultation and discover how I can improve the efficiency and quality of your projects.",
+    "button": "Request Consultation"
+  },
+  "footer": {
+    "title": "QA Expert",
+    "description": "Specialist in process automation and performance testing with over 12 years of industry experience.",
+    "links": "Links",
+    "services": "Services",
+    "contact": "Contact",
+    "email": "contact@qaexpert.com",
+    "phone": "+57 300 123 4567",
+    "location": "Bogotá, Colombia",
+    "copyright": "© 2023 QA Expert. All rights reserved."
+  },
+  "contact": {
+    "title": "Contact Me",
+    "description": "Do you have a project that needs automation or performance testing? I'm here to help.",
+    "info": "Contact Information",
+    "email": "Email Address",
+    "phone": "Phone",
+    "location": "Location",
+    "form": {
+      "title": "Send Me a Message",
+      "name": "Full Name",
+      "subject": "Subject",
+      "service": "Service of Interest",
+      "message": "Message",
+      "privacy": "I accept the Privacy Policy",
+      "button": "Send Message",
+      "success": "Message sent successfully. I will contact you soon."
+    }
+  }
+}

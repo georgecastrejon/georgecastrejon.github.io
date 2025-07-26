@@ -1,0 +1,150 @@
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container text-center">
+        <h1 class="display-4 fw-bold mb-4" data-lang="contact.hero.title">Contáctame</h1>
+        <p class="lead mb-5" data-lang="contact.hero.subtitle">¿Tienes un proyecto que necesita automatización o pruebas de performance? Estoy aquí para ayudarte.</p>
+    </div>
+</section>
+
+<!-- Contact Info and Form Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-5">
+                <div class="contact-info bg-light p-4 rounded h-100">
+                    <h3 class="mb-4" data-lang="contact.info.title">Información de Contacto</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-4">
+                            <h5 class="mb-2"><i class="bi bi-envelope me-2"></i> <span data-lang="contact.info.email">Correo Electrónico</span></h5>
+                            <a href="mailto:contacto@qaexpert.com" class="text-decoration-none">contacto@qaexpert.com</a>
+                        </li>
+                        <li class="mb-4">
+                            <h5 class="mb-2"><i class="bi bi-telephone me-2"></i> <span data-lang="contact.info.phone">Teléfono</span></h5>
+                            <a href="tel:+573001234567" class="text-decoration-none">+57 300 123 4567</a>
+                        </li>
+                        <li class="mb-4">
+                            <h5 class="mb-2"><i class="bi bi-geo-alt me-2"></i> <span data-lang="contact.info.location">Ubicación</span></h5>
+                            <p class="mb-0">Bogotá, Colombia</p>
+                        </li>
+                    </ul>
+                    <div class="mt-4">
+                        <h5 class="mb-3" data-lang="contact.info.follow">Sígueme en Redes Sociales</h5>
+                        <div class="d-flex">
+                            <a href="#" class="social-icon me-3"><i class="bi bi-linkedin"></i></a>
+                            <a href="#" class="social-icon me-3"><i class="bi bi-github"></i></a>
+                            <a href="#" class="social-icon me-3"><i class="bi bi-twitter"></i></a>
+                            <a href="#" class="social-icon"><i class="bi bi-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="contact-form bg-white p-4 rounded">
+                    <h3 class="mb-4" data-lang="contact.form.title">Envíame un Mensaje</h3>
+                    <form id="contactForm">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="contactName" class="form-label" data-lang="contact.form.name">Nombre Completo</label>
+                                <input type="text" class="form-control" id="contactName" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="contactEmail" class="form-label" data-lang="contact.form.email">Correo Electrónico</label>
+                                <input type="email" class="form-control" id="contactEmail" required>
+                            </div>
+                            <div class="col-12">
+                                <label for="contactSubject" class="form-label" data-lang="contact.form.subject">Asunto</label>
+                                <input type="text" class="form-control" id="contactSubject" required>
+                            </div>
+                            <div class="col-12">
+                                <label for="contactService" class="form-label" data-lang="contact.form.service">Servicio de Interés</label>
+                                <select class="form-select" id="contactService">
+                                    <option value="" data-lang="contact.form.service_select">Selecciona un servicio</option>
+                                    <option value="automation" data-lang="services.automation.title">Automatización de Procesos</option>
+                                    <option value="performance" data-lang="services.performance.title">Pruebas de Performance</option>
+                                    <option value="quality" data-lang="services.quality.title">Pruebas de Calidad</option>
+                                    <option value="consulting" data-lang="contact.form.service_consulting">Consultoría QA</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label for="contactMessage" class="form-label" data-lang="contact.form.message">Mensaje</label>
+                                <textarea class="form-control" id="contactMessage" rows="5" required></textarea>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="contactPrivacy" required>
+                                    <label class="form-check-label" for="contactPrivacy" data-lang="contact.form.privacy">
+                                        Acepto la Política de Privacidad
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary w-100" data-lang="contact.form.button">Enviar Mensaje</button>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="contactSuccessMessage" class="alert alert-success mt-3 d-none" role="alert" data-lang="contact.form.success">
+                        Mensaje enviado exitosamente. Me pondré en contacto contigo pronto.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="section-title text-center mb-5" data-lang="contact.faq.title">Preguntas Frecuentes</h2>
+        <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="faqHeading1">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1" data-lang="contact.faq.q1">
+                        ¿Cuánto tiempo toma un proyecto de automatización?
+                    </button>
+                </h2>
+                <div id="faqCollapse1" class="accordion-collapse collapse show" aria-labelledby="faqHeading1" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body" data-lang="contact.faq.a1">
+                        El tiempo varía según la complejidad del proceso. Un proyecto básico puede tomar de 2 a 4 semanas, mientras que soluciones más complejas pueden requerir varios meses.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="faqHeading2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2" data-lang="contact.faq.q2">
+                        ¿Qué herramientas utilizas para las pruebas de performance?
+                    </button>
+                </h2>
+                <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faqHeading2" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body" data-lang="contact.faq.a2">
+                        Utilizo herramientas líderes en la industria como Apache JMeter, NeoLoad, LoadRunner y k6, dependiendo de las necesidades específicas del proyecto.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="faqHeading3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3" data-lang="contact.faq.q3">
+                        ¿Ofreces servicios de consultoría remota?
+                    </button>
+                </h2>
+                <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faqHeading3" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body" data-lang="contact.faq.a3">
+                        Sí, ofrezco servicios de consultoría tanto presenciales como remotos. La colaboración remota es muy efectiva gracias a las herramientas modernas de comunicación y gestión de proyectos.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h2 class="display-5 fw-bold mb-4" data-lang="cta.title">¿Listo para Optimizar tu Proceso de QA?</h2>
+                <p class="lead mb-4" data-lang="cta.description">Contáctame hoy para una consulta gratuita y descubre cómo puedo mejorar la eficiencia y calidad de tus proyectos.</p>
+                <a href="/contacto" class="btn btn-primary btn-lg px-5 py-3" data-route="contact" data-lang="cta.button">Solicitar Consulta</a>
+            </div>
+        </div>
+    </div>
+</section>
