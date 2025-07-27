@@ -1,0 +1,38 @@
+.hero-section {
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.9), rgba(14, 165, 233, 0.8)), url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 0;
+    margin-top: 70px; /* Asegúrate de que esto se adapte a tu navbar */
+}
+
+.hero-section h1 {
+    font-weight: 800;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.hero-section .lead {
+    font-size: 1.25rem;
+    opacity: 0.9;
+}
+
+/* Responsive para Hero Section */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 120px 0 60px;
+    }
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        padding: 100px 0 40px;
+    }
+    .hero-section .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

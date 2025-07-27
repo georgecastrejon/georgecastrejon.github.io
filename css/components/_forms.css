@@ -1,0 +1,36 @@
+/* Formularios */
+.form-control, .form-select {
+    border-radius: 10px;
+    padding: 12px 15px;
+    border: 2px solid #e2e8f0;
+    /* Añadir box-sizing si no está en reset/base */
+    box-sizing: border-box;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.25rem rgba(37, 99, 235, 0.25);
+    outline: none; /* Eliminar outline por defecto */
+}
+
+/* Selector de idioma */
+#languageSelector {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    border-radius: 20px;
+    padding: 5px 10px;
+    /* Añadir box-sizing si no está en reset/base */
+     box-sizing: border-box;
+}
+
+#languageSelector:focus {
+    border-color: white;
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
+    outline: none; /* Eliminar outline por defecto */
+}
+
+#languageSelector option {
+    background-color: var(--primary); /* Fondo para opciones */
+    color: white;
+}

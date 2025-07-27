@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<!-- El atributo lang se actualizará dinámicamente por LanguageManager -->
+<html lang="es"> 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- El título se actualizará dinámicamente por SPARouter -->
     <title>QA Expert | Automatización y Pruebas de Performance</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
@@ -24,7 +26,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand fw-bold" href="/">
-                <i class="bi bi-code-slash me-2"></i>QA Expert
+                <i class="bi bi-code-slash me-2"></i><span data-lang="navbar.brand"></span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -32,28 +34,28 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#" data-route="home">Inicio</a>
+                        <a class="nav-link" href="#" data-route="home" data-lang="navbar.home"></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#servicios" data-route="servicios">Servicios</a>
+                        <a class="nav-link" href="#servicios" data-route="servicios" data-lang="navbar.services"></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#portafolio" data-route="portafolio">Portafolio</a>
+                        <a class="nav-link" href="#portafolio" data-route="portafolio" data-lang="navbar.portfolio"></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contacto" data-route="contacto">Contacto</a>
+                        <a class="nav-link" href="#contacto" data-route="contacto" data-lang="navbar.contact"></a>
                     </li>
                 </ul>
                 <div class="d-flex align-items-center me-3">
+                    <!-- Textos de opciones eliminados -->
                     <select class="form-select form-select-sm" id="languageSelector" style="width: auto;">
-                        <option value="es">ES</option>
-                        <option value="en">EN</option>
+                        <option value="es" data-lang="language_selector.spanish"></option> 
+                        <option value="en" data-lang="language_selector.english"></option>
                     </select>
                 </div>
             </div>
         </div>
     </nav>
-
     <!-- Contenedor principal para el contenido SPA -->
     <main id="spa-content" class="flex-shrink-0">
         <div class="spa-loading">
@@ -62,57 +64,55 @@
             </div>
         </div>
     </main>
-
     <!-- Footer -->
     <footer class="mt-auto">
         <div class="container">
             <div class="row g-4">
                 <div class="col-md-4">
-                    <h4 class="fw-bold mb-4" data-lang="footer.title">QA Expert</h4>
-                    <p data-lang="footer.description">Especialista en automatización de procesos y pruebas de performance con más de 12 años de experiencia en la industria.</p>
+                    <h4 class="fw-bold mb-4" data-lang="footer.title"></h4> <!-- Texto eliminado -->
+                    <p data-lang="footer.description"></p> <!-- Texto eliminado -->
                     <div class="mt-4">
-                        <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
-                        <a href="#" class="social-icon"><i class="bi bi-github"></i></a>
-                        <a href="#" class="social-icon"><i class="bi bi-twitter"></i></a>
-                        <a href="#" class="social-icon"><i class="bi bi-envelope"></i></a>
+                        <!-- Tooltips en los iconos sociales -->
+                        <a href="#" class="social-icon" data-lang-title="footer.social.linkedin"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="social-icon" data-lang-title="footer.social.github"><i class="bi bi-github"></i></a>
+                        <a href="#" class="social-icon" data-lang-title="footer.social.twitter"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="social-icon" data-lang-title="footer.social.email"><i class="bi bi-envelope"></i></a>
                     </div>
                 </div>
                 <div class="col-md-2">
-                    <h5 class="fw-bold mb-4" data-lang="footer.links">Enlaces</h5>
+                    <h5 class="fw-bold mb-4" data-lang="footer.links"></h5> <!-- Texto eliminado -->
                     <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#" class="text-decoration-none text-light" data-route="home">Inicio</a></li>
-                        <li class="mb-2"><a href="#servicios" class="text-decoration-none text-light" data-route="servicios">Servicios</a></li>
-                        <li class="mb-2"><a href="#portafolio" class="text-decoration-none text-light" data-route="portafolio">Portafolio</a></li>
-                        <li class="mb-2"><a href="#contacto" class="text-decoration-none text-light" data-route="contacto">Contacto</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-light" data-route="home" data-lang="navbar.home"></a></li> <!-- Texto eliminado -->
+                        <li class="mb-2"><a href="#servicios" class="text-decoration-none text-light" data-route="servicios" data-lang="navbar.services"></a></li> <!-- Texto eliminado -->
+                        <li class="mb-2"><a href="#portafolio" class="text-decoration-none text-light" data-route="portafolio" data-lang="navbar.portfolio"></a></li> <!-- Texto eliminado -->
+                        <li class="mb-2"><a href="#contacto" class="text-decoration-none text-light" data-route="contacto" data-lang="navbar.contact"></a></li> <!-- Texto eliminado -->
                     </ul>
                 </div>
                 <div class="col-md-3">
-                    <h5 class="fw-bold mb-4" data-lang="footer.services">Servicios</h5>
+                    <h5 class="fw-bold mb-4" data-lang="footer.services"></h5> <!-- Texto eliminado -->
                     <ul class="list-unstyled">
-                        <li class="mb-2" data-lang="services.automation.title">Automatización de Procesos</li>
-                        <li class="mb-2" data-lang="services.performance.title">Pruebas de Performance</li>
-                        <li class="mb-2" data-lang="services.quality.title">Pruebas Funcionales</li>
-                        <li class="mb-2">Consultoría QA</li>
+                        <li class="mb-2" data-lang="services.automation.title"></li> <!-- Texto eliminado -->
+                        <li class="mb-2" data-lang="services.performance.title"></li> <!-- Texto eliminado -->
+                        <li class="mb-2" data-lang="services.quality.title"></li> <!-- Texto eliminado -->
+                        <li class="mb-2" data-lang="services.consulting.title"></li> <!-- Texto eliminado (si existe en JSON) -->
                     </ul>
                 </div>
                 <div class="col-md-3">
-                    <h5 class="fw-bold mb-4" data-lang="footer.contact">Contacto</h5>
+                    <h5 class="fw-bold mb-4" data-lang="footer.contact"></h5> <!-- Texto eliminado -->
                     <ul class="list-unstyled">
-                        <li class="mb-2"><i class="bi bi-envelope me-2"></i> <span data-lang="footer.email">contacto@qaexpert.com</span></li>
-                        <li class="mb-2"><i class="bi bi-telephone me-2"></i> <span data-lang="footer.phone">+57 300 123 4567</span></li>
-                        <li class="mb-2"><i class="bi bi-geo-alt me-2"></i> <span data-lang="footer.location">Bogotá, Colombia</span></li>
+                        <li class="mb-2"><i class="bi bi-envelope me-2"></i> <span data-lang="footer.email"></span></li> <!-- Texto eliminado -->
+                        <li class="mb-2"><i class="bi bi-telephone me-2"></i> <span data-lang="footer.phone"></span></li> <!-- Texto eliminado -->
+                        <li class="mb-2"><i class="bi bi-geo-alt me-2"></i> <span data-lang="footer.location"></span></li> <!-- Texto eliminado -->
                     </ul>
                 </div>
             </div>
             <hr class="my-4 bg-light">
             <div class="text-center">
-                <p class="mb-0" data-lang="footer.copyright">&copy; 2023 QA Expert. Todos los derechos reservados.</p>
+                <p class="mb-0" data-lang="footer.copyright"></p> <!-- Texto eliminado -->
             </div>
         </div>
     </footer>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/language.js"></script>
+    <script type="module" src="js/main.js"></script>
 </body>
 </html>

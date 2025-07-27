@@ -1,5 +1,33 @@
 {
   "language": "en",
+  "navbar": {
+    "brand": "QA Expert",
+    "home": "Home",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
+  },
+  "language_selector": {
+    "spanish": "ES",
+    "english": "EN"
+  },
+  "footer": {
+    "title": "QA Expert",
+    "description": "Specialist in process automation and performance testing to ensure the quality and efficiency of your software.",
+    "links": "Links",
+    "services": "Services",
+    "contact": "Contact",
+    "email": "contact@qaexpert.com",
+    "phone": "+1 555 123 4567",
+    "location": "Bogota, Colombia",
+    "copyright": "&copy; 2023 QA Expert. All rights reserved.",
+    "social": {
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "twitter": "Twitter",
+      "email": "Email"
+    }
+  },
   "navigation": {
     "home": "Home",
     "services": "Services",
@@ -8,96 +36,255 @@
   },
   "hero": {
     "title": "Professional Automation and Performance Testing",
-    "subtitle": "Freelance QA specialist with experience in process automation and performance optimization",
-    "cta1": "My Services",
-    "cta2": "View Portfolio"
+    "subtitle": "We ensure the quality and performance of your software with advanced automated solutions.",
+    "cta1": "Start Your Project",
+    "cta2": "Discover More"
+  },
+  "stats": {
+    "tests": "250",
+    "tests_label": "Tests Performed",
+    "uptime": "98",
+    "uptime_label": "Efficiency Improved",
+    "clients": "120",
+    "clients_label": "Satisfied Clients",
+    "projects": "15",
+    "projects_label": "Successful Projects"
   },
   "services": {
-    "title": "My Services",
+    "title": "Our Services",
     "automation": {
       "title": "Process Automation",
-      "description": "Implementation of automated solutions with tools like n8n, Selenium, Cypress and more to optimize workflows."
+      "description": "We implement robust solutions to automate your testing processes, saving time and resources.",
+      "benefit1": "Reduction in operational costs",
+      "benefit2": "Increased accuracy and coverage",
+      "benefit3": "Liberation of human resources"
     },
     "performance": {
       "title": "Performance Testing",
-      "description": "Comprehensive performance analysis of applications with JMeter, NeoLoad and other tools to ensure efficiency."
+      "description": "We evaluate your application's behavior under different loads to ensure its stability and speed.",
+      "benefit1": "Identification of bottlenecks",
+      "benefit2": "Optimization of server resources",
+      "benefit3": "Improved user experience"
     },
     "quality": {
       "title": "Quality Testing",
-      "description": "Complete QA strategies to ensure software quality, from manual to automated testing."
+      "description": "We design comprehensive QA strategies to ensure your software meets the highest quality standards.",
+      "benefit1": "Early detection of defects",
+      "benefit2": "Improved software reliability",
+      "benefit3": "Increased customer satisfaction"
     }
   },
-  "stats": {
-    "tests": "250+ Tests Performed",
-    "efficiency": "98% Efficiency Improved",
-    "clients": "85+ Satisfied Clients",
-    "experience": "12 Years of Experience"
-  },
-  "tools": {
-    "title": "Tools I Use"
-  },
-  "video": {
-    "title": "Automation Demo",
-    "description": "Example of process automation with Selenium and n8n for optimization of repetitive tasks."
+  "process": {
+    "title": "Our Work Process",
+    "step1": "Requirements analysis and objectives",
+    "step2": "Automated solution design",
+    "step3": "Implementation and testing",
+    "step4": "Monitoring and maintenance",
+    "video_title": "Video explaining our process"
   },
   "portfolio": {
-    "title": "Recent Projects",
+    "preview_title": "Some of Our Projects",
+    "view_details": "View Details",
+    "view_all": "View Full Portfolio",
     "filter": {
       "all": "All",
       "automation": "Automation",
       "performance": "Performance",
+      "api": "API",
       "qa": "QA"
     },
     "projects": {
       "ecommerce": {
         "title": "E-commerce Automation",
-        "description": "Implementation of process automation for e-commerce platform with Selenium and n8n."
+        "description": "Implementation of process automation for an e-commerce platform.",
+        "image_alt": "E-commerce Automation Project",
+        "modal": {
+          "image_alt": "E-commerce Automation Project Detail",
+          "description": "Complete automation of the inventory management and price update process for an e-commerce platform.",
+          "client": "RetailGlobal S.A.",
+          "duration": "3 months",
+          "result1": "80% reduction in human errors",
+          "result2": "Saving of 20 hours weekly on manual tasks",
+          "result3": "Seamless integration with existing systems"
+        }
       },
-      "api": {
+      "api_integration": {
+        "title": "API Integration with n8n",
+        "description": "Data flow automation between CRM and accounting tool using n8n.",
+        "image_alt": "API Integration Project",
+        "modal": {
+          "image_alt": "API Integration Project Detail",
+          "description": "Automation of the data flow between the company's CRM and its accounting tool using n8n to synchronize customer and invoice information.",
+          "client": "FinanzasPro Ltd.",
+          "duration": "6 weeks",
+          "result1": "Real-time automatic synchronization",
+          "result2": "Elimination of data entry errors",
+          "result3": "50% saving in processing time"
+        }
+      },
+      "web_performance": {
+        "title": "Web Performance Testing",
+        "description": "Load and stress analysis for an insurance company's web portal with JMeter.",
+        "image_alt": "Web Performance Testing Project",
+        "modal": {
+          "image_alt": "Web Performance Testing Project Detail",
+          "description": "Exhaustive load and stress evaluation for an insurer's web portal during high-traffic events like promotional campaigns.",
+          "client": "SegurosConfiable S.A.",
+          "duration": "5 weeks",
+          "result1": "Identification and resolution of critical bottlenecks",
+          "result2": "65% improvement in response times",
+          "result3": "Capacity increase from 500 to 2000 concurrent requests"
+        }
+      },
+      "api_performance": {
         "title": "API Performance Testing",
-        "description": "Performance analysis for financial services API using JMeter and NeoLoad."
+        "description": "Performance and scalability evaluation of a financial services REST API.",
+        "image_alt": "API Performance Testing Project",
+        "modal": {
+          "image_alt": "API Performance Testing Project Detail",
+          "description": "Detailed analysis of performance and scalability of a critical REST API for financial services, identifying limits and optimizing its response capability.",
+          "client": "BancoInnova",
+          "duration": "4 weeks",
+          "result1": "Identification of failure points under load",
+          "result2": "Optimization of database queries",
+          "result3": "Increase in capacity from 1000 to 5000 transactions per second"
+        }
       },
-      "qa": {
-        "title": "Automated QA System",
-        "description": "Development of automated test suite for enterprise management application."
+      "qa_automation": {
+        "title": "QA Test Automation",
+        "description": "Implementation of automated suite for functional and regression testing.",
+        "image_alt": "QA Test Automation Project",
+        "modal": {
+          "image_alt": "QA Test Automation Project Detail",
+          "description": "Development and implementation of a complete automated test suite for a complex web application, significantly reducing regression testing time.",
+          "client": "TechSolutions Global",
+          "duration": "8 weeks",
+          "result1": "90% reduction in regression testing time",
+          "result2": "Improved defect detection",
+          "result3": "Continuous integration with the development pipeline"
+        }
+      },
+      "functional_testing": {
+        "title": "Complete Functional Testing",
+        "description": "Creation of a complete functional test suite for a banking application.",
+        "image_alt": "Functional Testing Project",
+        "modal": {
+          "image_alt": "Functional Testing Project Detail",
+          "description": "Design and execution of a comprehensive functional testing plan for a new mobile banking application, ensuring requirements compliance and transaction security.",
+          "client": "United Financial Cooperative",
+          "duration": "10 weeks",
+          "result1": "Complete validation of 200+ test cases",
+          "result2": "Identification and resolution of 50+ critical defects",
+          "result3": "Security and compliance certification"
+        }
       }
+    },
+    "modal": {
+      "details": "Project Details",
+      "client": "Client:",
+      "duration": "Duration:",
+      "technologies": "Technologies:",
+      "results": "Results",
+      "close": "Close"
+    },
+    "cta": {
+      "title": "Ready to boost your project?",
+      "description": "Contact me today for a free consultation and discover how I can improve the efficiency and quality of your projects.",
+      "button": "Request Consultation"
     }
   },
-  "testimonials": {
-    "title": "What My Clients Say"
-  },
-  "cta": {
-    "title": "Ready to Optimize Your QA Process?",
-    "description": "Contact me today for a free consultation and discover how I can improve the efficiency and quality of your projects.",
-    "button": "Request Consultation"
-  },
-  "footer": {
-    "title": "QA Expert",
-    "description": "Specialist in process automation and performance testing with over 12 years of industry experience.",
-    "links": "Links",
-    "services": "Services",
-    "contact": "Contact",
-    "email": "contact@qaexpert.com",
-    "phone": "+57 300 123 4567",
-    "location": "Bogotá, Colombia",
-    "copyright": "© 2023 QA Expert. All rights reserved."
+  "services_page": {
+    "hero": {
+      "title": "Our Specialized Services",
+      "subtitle": "We offer comprehensive QA and automation solutions tailored to your business's specific needs.",
+      "cta1": "Request Quote",
+      "cta2": "View Portfolio"
+    },
+    "process": {
+      "title": "Our Delivery Process",
+      "step1": {
+        "title": "Initial Assessment",
+        "description": "We analyze your objectives, challenges, and the current state of your software."
+      },
+      "step2": {
+        "title": "Strategic Planning",
+        "description": "We create a customized plan with clear milestones and deliverables."
+      },
+      "step3": {
+        "title": "Implementation",
+        "description": "We execute the plan with cutting-edge tools and methodologies."
+      },
+      "step4": {
+        "title": "Delivery & Support",
+        "description": "We deliver the results and offer ongoing support."
+      }
+    },
+    "tech": {
+      "title": "Technologies We Use",
+      "selenium": "Selenium",
+      "cypress": "Cypress",
+      "n8n": "n8n",
+      "jmeter": "JMeter",
+      "postman": "Postman"
+    },
+    "cta": {
+      "title": "Power Your Software with Our Solutions",
+      "description": "Don't leave the quality and performance of your software to chance. Contact me to get started.",
+      "button": "Start Project"
+    }
   },
   "contact": {
-    "title": "Contact Me",
-    "description": "Do you have a project that needs automation or performance testing? I'm here to help.",
-    "info": "Contact Information",
-    "email": "Email Address",
-    "phone": "Phone",
-    "location": "Location",
+    "hero": {
+      "title": "Contact Me",
+      "subtitle": "Do you have a project that needs automation or performance testing? I'm here to help.",
+      "cta1": "Explore Services",
+      "cta2": "Send Email"
+    },
+    "info": {
+      "title": "Contact Information",
+      "description": "You can reach me through the following means:",
+      "email": "Email:",
+      "email_address": "contact@qaexpert.com",
+      "phone": "Phone:",
+      "phone_number": "+1 555 123 4567",
+      "location": "Location:",
+      "location_address": "Bogota, Colombia",
+      "follow": "Follow me on:"
+    },
     "form": {
       "title": "Send Me a Message",
-      "name": "Full Name",
+      "name": "Name",
+      "email_label": "Email",
       "subject": "Subject",
       "service": "Service of Interest",
+      "service_select": "Select a service",
+      "service_consulting": "QA Consulting",
       "message": "Message",
       "privacy": "I accept the Privacy Policy",
-      "button": "Send Message",
-      "success": "Message sent successfully. I will contact you soon."
+      "privacy_text": "I have read and accept the",
+      "privacy_link": "Privacy Policy",
+      "submit": "Send Message",
+      "success": "Message sent successfully. I will contact you soon.",
+      "error": "There was an error sending the message. Please try again."
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": "How long does an automation project take?",
+      "a1": "The time varies depending on the project's complexity. A small project can take 2 to 4 weeks, while a more complex one can extend over several months. We provide accurate estimates after an initial assessment.",
+      "q2": "What tools do you use for performance testing?",
+      "a2": "I use industry-leading tools such as Apache JMeter, NeoLoad, LoadRunner, and k6, depending on the specific needs of the project.",
+      "q3": "Do you offer maintenance for automated scripts?",
+      "a3": "Yes, we offer proactive maintenance plans to ensure your automated scripts continue to function correctly even after updates to your application."
+    },
+    "map": {
+      "title": "Our Location",
+      "description": "Find us in the heart of Bogota.",
+      "iframe_title": "QA Expert location map"
     }
+  },
+  "cta": {
+    "title": "Boost Your Business with Automation",
+    "description": "Stop wasting time on repetitive tasks. Automate your processes and focus on what really matters.",
+    "button": "Schedule a Consultation"
   }
 }

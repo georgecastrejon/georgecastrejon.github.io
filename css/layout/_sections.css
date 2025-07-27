@@ -1,0 +1,25 @@
+ /* Estilos generales para secciones */
+.section-title {
+    position: relative;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.section-title:after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    border-radius: 2px;
+}
+
+/* Responsive para Secciones */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 1.5rem;
+    }
+}

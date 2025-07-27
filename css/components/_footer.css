@@ -1,0 +1,34 @@
+/* Footer */
+footer {
+    background: linear-gradient(135deg, var(--dark), #0f172a);
+    color: white;
+    padding: 60px 0 30px;
+    margin-top: auto; /* Esto depende del flexbox en body */
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    color: white;
+    margin: 0 5px;
+    transition: all 0.3s;
+    text-decoration: none; /* Asegurar que no haya subrayado */
+}
+
+.social-icon:hover {
+    background: var(--primary);
+    transform: translateY(-3px);
+    color: white; /* Asegurar color de texto */
+}
+
+/* Responsive para Footer */
+@media (max-width: 768px) {
+    footer {
+        padding: 40px 0 20px;
+    }
+}

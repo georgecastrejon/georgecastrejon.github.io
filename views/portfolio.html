@@ -1,0 +1,346 @@
+<!-- views/portfolio.html -->
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1 class="display-4 fw-bold mb-4" data-lang="portfolio.hero.title"></h1>
+                <p class="lead mb-5" data-lang="portfolio.hero.subtitle"></p>
+                <div class="d-grid gap-3 d-sm-flex">
+                    <a href="#servicios" class="btn btn-primary btn-lg px-4 py-2" data-route="servicios" data-lang="portfolio.hero.cta1"></a>
+                    <a href="#contacto" class="btn btn-outline-light btn-lg px-4 py-2" data-route="contacto" data-lang="portfolio.hero.cta2"></a>
+                </div>
+            </div>
+            <div class="col-lg-6 d-none d-lg-block">
+                <div class="d-flex justify-content-center">
+                    <div class="tool-icon bg-white text-primary me-3">
+                        <i class="bi bi-laptop"></i>
+                    </div>
+                    <div class="tool-icon bg-white text-primary me-3">
+                        <i class="bi bi-phone"></i>
+                    </div>
+                    <div class="tool-icon bg-white text-primary">
+                        <i class="bi bi-tablet"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Portfolio Filter Section -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="section-title text-center mb-5" data-lang="portfolio.title"></h2>
+        <div class="portfolio-filter text-center mb-4">
+            <button class="filter-btn active" data-filter="all" data-lang="portfolio.filter.all"></button>
+            <button class="filter-btn" data-filter="automation" data-lang="portfolio.filter.automation"></button>
+            <button class="filter-btn" data-filter="performance" data-lang="portfolio.filter.performance"></button>
+            <button class="filter-btn" data-filter="api" data-lang="portfolio.filter.api"></button>
+            <button class="filter-btn" data-filter="qa" data-lang="portfolio.filter.qa"></button>
+        </div>
+        <div class="row g-4">
+            <!-- Proyecto 1 -->
+            <div class="col-md-6 col-lg-4 project-item" data-category="automation">
+                <div class="card portfolio-card h-100">
+                    <img src="https://placehold.co/600x400/2563eb/white?text=E-commerce+Automation" class="card-img-top" alt="E-commerce Automation" data-lang-title="portfolio.projects.ecommerce.image_alt">
+                    <div class="card-body">
+                        <span class="badge bg-primary mb-2">Automatización</span>
+                        <h5 class="card-title" data-lang="portfolio.projects.ecommerce.title"></h5>
+                        <p class="card-text" data-lang="portfolio.projects.ecommerce.description"></p>
+                        <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#projectModal1" data-lang="portfolio.view_details"></button>
+                    </div>
+                </div>
+            </div>
+            <!-- Proyecto 2 -->
+            <div class="col-md-6 col-lg-4 project-item" data-category="api">
+                <div class="card portfolio-card h-100">
+                    <img src="https://placehold.co/600x400/0ea5e9/white?text=API+Integration" class="card-img-top" alt="API Integration" data-lang-title="portfolio.projects.api_integration.image_alt">
+                    <div class="card-body">
+                        <span class="badge bg-info mb-2">API</span>
+                        <h5 class="card-title" data-lang="portfolio.projects.api_integration.title"></h5>
+                        <p class="card-text" data-lang="portfolio.projects.api_integration.description"></p>
+                        <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#projectModal2" data-lang="portfolio.view_details"></button>
+                    </div>
+                </div>
+            </div>
+            <!-- Proyecto 3 -->
+            <div class="col-md-6 col-lg-4 project-item" data-category="performance">
+                <div class="card portfolio-card h-100">
+                    <img src="https://placehold.co/600x400/8b5cf6/white?text=Web+Performance" class="card-img-top" alt="Web Performance" data-lang-title="portfolio.projects.web_performance.image_alt">
+                    <div class="card-body">
+                        <span class="badge bg-info mb-2">Performance</span>
+                        <h5 class="card-title" data-lang="portfolio.projects.web_performance.title"></h5>
+                        <p class="card-text" data-lang="portfolio.projects.web_performance.description"></p>
+                        <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#projectModal3" data-lang="portfolio.view_details"></button>
+                    </div>
+                </div>
+            </div>
+            <!-- Proyecto 4 -->
+            <div class="col-md-6 col-lg-4 project-item" data-category="api">
+                <div class="card portfolio-card h-100">
+                    <img src="https://placehold.co/600x400/f97316/white?text=API+Performance" class="card-img-top" alt="API Performance" data-lang-title="portfolio.projects.api_performance.image_alt">
+                    <div class="card-body">
+                        <span class="badge bg-warning mb-2">API</span>
+                        <h5 class="card-title" data-lang="portfolio.projects.api_performance.title"></h5>
+                        <p class="card-text" data-lang="portfolio.projects.api_performance.description"></p>
+                        <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#projectModal4" data-lang="portfolio.view_details"></button>
+                    </div>
+                </div>
+            </div>
+            <!-- Proyecto 5 -->
+            <div class="col-md-6 col-lg-4 project-item" data-category="qa">
+                <div class="card portfolio-card h-100">
+                    <img src="https://placehold.co/600x400/ef4444/white?text=QA+Automation" class="card-img-top" alt="QA Automation" data-lang-title="portfolio.projects.qa_automation.image_alt">
+                    <div class="card-body">
+                        <span class="badge bg-danger mb-2">QA</span>
+                        <h5 class="card-title" data-lang="portfolio.projects.qa_automation.title"></h5>
+                        <p class="card-text" data-lang="portfolio.projects.qa_automation.description"></p>
+                        <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#projectModal5" data-lang="portfolio.view_details"></button>
+                    </div>
+                </div>
+            </div>
+            <!-- Proyecto 6 -->
+            <div class="col-md-6 col-lg-4 project-item" data-category="qa">
+                <div class="card portfolio-card h-100">
+                    <img src="https://placehold.co/600x400/10b981/white?text=Functional+Testing" class="card-img-top" alt="Functional Testing" data-lang-title="portfolio.projects.functional_testing.image_alt">
+                    <div class="card-body">
+                        <span class="badge bg-success mb-2">QA</span>
+                        <h5 class="card-title" data-lang="portfolio.projects.functional_testing.title"></h5>
+                        <p class="card-text" data-lang="portfolio.projects.functional_testing.description"></p>
+                        <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#projectModal6" data-lang="portfolio.view_details"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Project Modals -->
+<!-- Project 1 Modal -->
+<div class="modal fade" id="projectModal1" tabindex="-1" aria-labelledby="projectModal1Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="projectModal1Label" data-lang="portfolio.projects.ecommerce.title"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <img src="https://placehold.co/800x400/2563eb/white?text=E-commerce+Automation+Detail" class="img-fluid mb-4" alt="E-commerce Automation Detail" data-lang-title="portfolio.projects.ecommerce.modal.image_alt">
+                <p data-lang="portfolio.projects.ecommerce.modal.description"></p>
+                <div class="project-detail">
+                    <h5 data-lang="portfolio.modal.details"></h5>
+                    <p><strong data-lang="portfolio.modal.client"></strong> <span data-lang="portfolio.projects.ecommerce.modal.client"></span></p>
+                    <p><strong data-lang="portfolio.modal.duration"></strong> <span data-lang="portfolio.projects.ecommerce.modal.duration"></span></p>
+                    <p><strong data-lang="portfolio.modal.technologies"></strong>
+                        <span class="tech-badge">Selenium</span>
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">MySQL</span>
+                    </p>
+                    <h5 data-lang="portfolio.modal.results"></h5>
+                    <ul>
+                        <li data-lang="portfolio.projects.ecommerce.modal.result1"></li>
+                        <li data-lang="portfolio.projects.ecommerce.modal.result2"></li>
+                        <li data-lang="portfolio.projects.ecommerce.modal.result3"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-lang="portfolio.modal.close"></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Project 2 Modal -->
+<div class="modal fade" id="projectModal2" tabindex="-1" aria-labelledby="projectModal2Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="projectModal2Label" data-lang="portfolio.projects.api_integration.title"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <img src="https://placehold.co/800x400/0ea5e9/white?text=API+Integration+Detail" class="img-fluid mb-4" alt="API Integration Detail" data-lang-title="portfolio.projects.api_integration.modal.image_alt">
+                <p data-lang="portfolio.projects.api_integration.modal.description"></p>
+                <div class="project-detail">
+                    <h5 data-lang="portfolio.modal.details"></h5>
+                    <p><strong data-lang="portfolio.modal.client"></strong> <span data-lang="portfolio.projects.api_integration.modal.client"></span></p>
+                    <p><strong data-lang="portfolio.modal.duration"></strong> <span data-lang="portfolio.projects.api_integration.modal.duration"></span></p>
+                    <p><strong data-lang="portfolio.modal.technologies"></strong>
+                        <span class="tech-badge">n8n</span>
+                        <span class="tech-badge">REST API</span>
+                        <span class="tech-badge">JSON</span>
+                        <span class="tech-badge">OAuth2</span>
+                    </p>
+                    <h5 data-lang="portfolio.modal.results"></h5>
+                    <ul>
+                        <li data-lang="portfolio.projects.api_integration.modal.result1"></li>
+                        <li data-lang="portfolio.projects.api_integration.modal.result2"></li>
+                        <li data-lang="portfolio.projects.api_integration.modal.result3"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-lang="portfolio.modal.close"></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Project 3 Modal -->
+<div class="modal fade" id="projectModal3" tabindex="-1" aria-labelledby="projectModal3Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="projectModal3Label" data-lang="portfolio.projects.web_performance.title"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <img src="https://placehold.co/800x400/8b5cf6/white?text=Web+Performance+Detail" class="img-fluid mb-4" alt="Web Performance Detail" data-lang-title="portfolio.projects.web_performance.modal.image_alt">
+                <p data-lang="portfolio.projects.web_performance.modal.description"></p>
+                <div class="project-detail">
+                    <h5 data-lang="portfolio.modal.details"></h5>
+                    <p><strong data-lang="portfolio.modal.client"></strong> <span data-lang="portfolio.projects.web_performance.modal.client"></span></p>
+                    <p><strong data-lang="portfolio.modal.duration"></strong> <span data-lang="portfolio.projects.web_performance.modal.duration"></span></p>
+                    <p><strong data-lang="portfolio.modal.technologies"></strong>
+                        <span class="tech-badge">JMeter</span>
+                        <span class="tech-badge">New Relic</span>
+                        <span class="tech-badge">AWS</span>
+                        <span class="tech-badge">Docker</span>
+                    </p>
+                    <h5 data-lang="portfolio.modal.results"></h5>
+                    <ul>
+                        <li data-lang="portfolio.projects.web_performance.modal.result1"></li>
+                        <li data-lang="portfolio.projects.web_performance.modal.result2"></li>
+                        <li data-lang="portfolio.projects.web_performance.modal.result3"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-lang="portfolio.modal.close"></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Project 4 Modal -->
+<div class="modal fade" id="projectModal4" tabindex="-1" aria-labelledby="projectModal4Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="projectModal4Label" data-lang="portfolio.projects.api_performance.title"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <img src="https://placehold.co/800x400/f97316/white?text=API+Performance+Detail" class="img-fluid mb-4" alt="API Performance Detail" data-lang-title="portfolio.projects.api_performance.modal.image_alt">
+                <p data-lang="portfolio.projects.api_performance.modal.description"></p>
+                <div class="project-detail">
+                    <h5 data-lang="portfolio.modal.details"></h5>
+                    <p><strong data-lang="portfolio.modal.client"></strong> <span data-lang="portfolio.projects.api_performance.modal.client"></span></p>
+                    <p><strong data-lang="portfolio.modal.duration"></strong> <span data-lang="portfolio.projects.api_performance.modal.duration"></span></p>
+                    <p><strong data-lang="portfolio.modal.technologies"></strong>
+                        <span class="tech-badge">JMeter</span>
+                        <span class="tech-badge">Postman</span>
+                        <span class="tech-badge">REST Assured</span>
+                        <span class="tech-badge">Grafana</span>
+                    </p>
+                    <h5 data-lang="portfolio.modal.results"></h5>
+                    <ul>
+                        <li data-lang="portfolio.projects.api_performance.modal.result1"></li>
+                        <li data-lang="portfolio.projects.api_performance.modal.result2"></li>
+                        <li data-lang="portfolio.projects.api_performance.modal.result3"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-lang="portfolio.modal.close"></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Project 5 Modal -->
+<div class="modal fade" id="projectModal5" tabindex="-1" aria-labelledby="projectModal5Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="projectModal5Label" data-lang="portfolio.projects.qa_automation.title"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <img src="https://placehold.co/800x400/ef4444/white?text=QA+Automation+Detail" class="img-fluid mb-4" alt="QA Automation Detail" data-lang-title="portfolio.projects.qa_automation.modal.image_alt">
+                <p data-lang="portfolio.projects.qa_automation.modal.description"></p>
+                <div class="project-detail">
+                    <h5 data-lang="portfolio.modal.details"></h5>
+                    <p><strong data-lang="portfolio.modal.client"></strong> <span data-lang="portfolio.projects.qa_automation.modal.client"></span></p>
+                    <p><strong data-lang="portfolio.modal.duration"></strong> <span data-lang="portfolio.projects.qa_automation.modal.duration"></span></p>
+                    <p><strong data-lang="portfolio.modal.technologies"></strong>
+                        <span class="tech-badge">Selenium</span>
+                        <span class="tech-badge">Java</span>
+                        <span class="tech-badge">TestNG</span>
+                        <span class="tech-badge">Maven</span>
+                    </p>
+                    <h5 data-lang="portfolio.modal.results"></h5>
+                    <ul>
+                        <li data-lang="portfolio.projects.qa_automation.modal.result1"></li>
+                        <li data-lang="portfolio.projects.qa_automation.modal.result2"></li>
+                        <li data-lang="portfolio.projects.qa_automation.modal.result3"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-lang="portfolio.modal.close"></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Project 6 Modal -->
+<div class="modal fade" id="projectModal6" tabindex="-1" aria-labelledby="projectModal6Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="projectModal6Label" data-lang="portfolio.projects.functional_testing.title"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <img src="https://placehold.co/800x400/10b981/white?text=Functional+Testing+Detail" class="img-fluid mb-4" alt="Functional Testing Detail" data-lang-title="portfolio.projects.functional_testing.modal.image_alt">
+                <p data-lang="portfolio.projects.functional_testing.modal.description"></p>
+                <div class="project-detail">
+                    <h5 data-lang="portfolio.modal.details"></h5>
+                    <p><strong data-lang="portfolio.modal.client"></strong> <span data-lang="portfolio.projects.functional_testing.modal.client"></span></p>
+                    <p><strong data-lang="portfolio.modal.duration"></strong> <span data-lang="portfolio.projects.functional_testing.modal.duration"></span></p>
+                    <p><strong data-lang="portfolio.modal.technologies"></strong>
+                        <span class="tech-badge">Manual Testing</span>
+                        <span class="tech-badge">TestRail</span>
+                        <span class="tech-badge">JIRA</span>
+                        <span class="tech-badge">Zephyr</span>
+                    </p>
+                    <h5 data-lang="portfolio.modal.results"></h5>
+                    <ul>
+                        <li data-lang="portfolio.projects.functional_testing.modal.result1"></li>
+                        <li data-lang="portfolio.projects.functional_testing.modal.result2"></li>
+                        <li data-lang="portfolio.projects.functional_testing.modal.result3"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-lang="portfolio.modal.close"></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CTA Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h2 class="display-5 fw-bold mb-4" data-lang="portfolio.cta.title"></h2>
+                <p class="lead mb-4" data-lang="portfolio.cta.description"></p>
+                <a href="#contacto" class="btn btn-primary btn-lg px-5 py-3" data-route="contacto" data-lang="portfolio.cta.button"></a>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,5 @@
+.navbar {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    /* Asegúrate de que el z-index sea alto si usas fixed/absolute */
+}

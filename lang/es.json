@@ -1,5 +1,33 @@
 {
   "language": "es",
+  "navbar": {
+    "brand": "QA Expert",
+    "home": "Inicio",
+    "services": "Servicios",
+    "portfolio": "Portafolio",
+    "contact": "Contacto"
+  },
+  "language_selector": {
+    "spanish": "ES",
+    "english": "EN"
+  },
+  "footer": {
+    "title": "QA Expert",
+    "description": "Especialista en automatización de procesos y pruebas de performance para garantizar la calidad y eficiencia de tu software.",
+    "links": "Enlaces",
+    "services": "Servicios",
+    "contact": "Contacto",
+    "email": "contacto@qaexpert.com",
+    "phone": "+57 300 123 4567",
+    "location": "Bogotá, Colombia",
+    "copyright": "&copy; 2023 QA Expert. Todos los derechos reservados.",
+    "social": {
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "twitter": "Twitter",
+      "email": "Email"
+    }
+  },
   "navigation": {
     "home": "Inicio",
     "services": "Servicios",
@@ -8,96 +36,255 @@
   },
   "hero": {
     "title": "Automatización y Pruebas de Performance Profesionales",
-    "subtitle": "Especialista QA freelance con experiencia en automatización de procesos y optimización de rendimiento",
-    "cta1": "Mis Servicios",
-    "cta2": "Ver Portafolio"
+    "subtitle": "Aseguramos la calidad y el rendimiento de tu software con soluciones automatizadas avanzadas.",
+    "cta1": "Comienza tu Proyecto",
+    "cta2": "Descubre Más"
+  },
+  "stats": {
+    "tests": "250",
+    "tests_label": "Pruebas Realizadas",
+    "uptime": "98",
+    "uptime_label": "Eficiencia Mejorada",
+    "clients": "120",
+    "clients_label": "Clientes Satisfechos",
+    "projects": "15",
+    "projects_label": "Proyectos Exitosos"
   },
   "services": {
-    "title": "Mis Servicios",
+    "title": "Nuestros Servicios",
     "automation": {
       "title": "Automatización de Procesos",
-      "description": "Implementación de soluciones automatizadas con herramientas como n8n, Selenium, Cypress y más para optimizar flujos de trabajo."
+      "description": "Implementamos soluciones robustas para automatizar tus procesos de testing, ahorrando tiempo y recursos.",
+      "benefit1": "Reducción de costos operativos",
+      "benefit2": "Aumento de la precisión y cobertura",
+      "benefit3": "Liberación de recursos humanos"
     },
     "performance": {
-      "title": "Pruebas de Performance",
-      "description": "Análisis exhaustivo del rendimiento de aplicaciones con JMeter, NeoLoad y otras herramientas para garantizar la eficiencia."
+      "title": "Pruebas de Rendimiento",
+      "description": "Evaluamos el comportamiento de tu aplicación bajo diferentes cargas para garantizar su estabilidad y velocidad.",
+      "benefit1": "Identificación de cuellos de botella",
+      "benefit2": "Optimización de recursos del servidor",
+      "benefit3": "Mejora de la experiencia del usuario"
     },
     "quality": {
       "title": "Pruebas de Calidad",
-      "description": "Estrategias completas de QA para garantizar la calidad del software, desde pruebas manuales hasta automatizadas."
+      "description": "Diseñamos estrategias integrales de QA para asegurar que tu software cumpla con los más altos estándares de calidad.",
+      "benefit1": "Detección temprana de defectos",
+      "benefit2": "Mejora de la confiabilidad del software",
+      "benefit3": "Aumento de la satisfacción del cliente"
     }
   },
-  "stats": {
-    "tests": "250+ Pruebas Realizadas",
-    "efficiency": "98% Eficiencia Mejorada",
-    "clients": "85+ Clientes Satisfechos",
-    "experience": "12 Años de Experiencia"
-  },
-  "tools": {
-    "title": "Herramientas que Utilizo"
-  },
-  "video": {
-    "title": "Demostración de Automatización",
-    "description": "Ejemplo de automatización de procesos con Selenium y n8n para optimización de tareas repetitivas."
+  "process": {
+    "title": "Nuestro Proceso de Trabajo",
+    "step1": "Análisis de requisitos y objetivos",
+    "step2": "Diseño de solución automatizada",
+    "step3": "Implementación y pruebas",
+    "step4": "Monitoreo y mantenimiento",
+    "video_title": "Video explicativo de nuestro proceso"
   },
   "portfolio": {
-    "title": "Proyectos Recientes",
+    "preview_title": "Algunos de Nuestros Proyectos",
+    "view_details": "Ver Detalles",
+    "view_all": "Ver Todo el Portafolio",
     "filter": {
       "all": "Todos",
       "automation": "Automatización",
       "performance": "Performance",
+      "api": "API",
       "qa": "QA"
     },
     "projects": {
       "ecommerce": {
         "title": "Automatización E-commerce",
-        "description": "Implementación de automatización de procesos para plataforma de comercio electrónico con Selenium y n8n."
+        "description": "Implementación de automatización de procesos para plataforma de comercio electrónico.",
+        "image_alt": "Proyecto de Automatización E-commerce",
+        "modal": {
+          "image_alt": "Detalle del proyecto de Automatización E-commerce",
+          "description": "Automatización completa del proceso de gestión de inventario y actualización de precios para una plataforma de comercio electrónico.",
+          "client": "RetailGlobal S.A.",
+          "duration": "3 meses",
+          "result1": "Reducción del 80% en errores humanos",
+          "result2": "Ahorro de 20 horas semanales en tareas manuales",
+          "result3": "Integración perfecta con sistemas existentes"
+        }
       },
-      "api": {
+      "api_integration": {
+        "title": "Integración API con n8n",
+        "description": "Automatización de flujo de datos entre CRM y herramienta de contabilidad usando n8n.",
+        "image_alt": "Proyecto de Integración API",
+        "modal": {
+          "image_alt": "Detalle del proyecto de Integración API",
+          "description": "Automatización del flujo de datos entre el CRM de la empresa y su herramienta de contabilidad utilizando n8n para sincronizar información de clientes y facturas.",
+          "client": "FinanzasPro Ltda.",
+          "duration": "6 semanas",
+          "result1": "Sincronización automática en tiempo real",
+          "result2": "Eliminación de errores de entrada de datos",
+          "result3": "Ahorro del 50% en tiempo de procesamiento"
+        }
+      },
+      "web_performance": {
+        "title": "Pruebas de Rendimiento Web",
+        "description": "Análisis de carga y estrés para portal web de empresa de seguros con JMeter.",
+        "image_alt": "Proyecto de Pruebas de Rendimiento Web",
+        "modal": {
+          "image_alt": "Detalle del proyecto de Pruebas de Rendimiento Web",
+          "description": "Evaluación exhaustiva de carga y estrés para el portal web de una aseguradora durante eventos de alto tráfico como campañas promocionales.",
+          "client": "SegurosConfiable S.A.",
+          "duration": "5 semanas",
+          "result1": "Identificación y resolución de cuellos de botella críticos",
+          "result2": "Mejora del 65% en tiempos de respuesta",
+          "result3": "Aumento de capacidad de 500 a 2000 solicitudes concurrentes"
+        }
+      },
+      "api_performance": {
         "title": "Pruebas de Rendimiento API",
-        "description": "Análisis de performance para API de servicios financieros usando JMeter y NeoLoad."
+        "description": "Evaluación de rendimiento y escalabilidad de API REST de servicios financieros.",
+        "image_alt": "Proyecto de Pruebas de Rendimiento API",
+        "modal": {
+          "image_alt": "Detalle del proyecto de Pruebas de Rendimiento API",
+          "description": "Análisis detallado de rendimiento y escalabilidad de una API REST crítica para servicios financieros, identificando límites y optimizando su capacidad de respuesta.",
+          "client": "BancoInnova",
+          "duration": "4 semanas",
+          "result1": "Identificación de puntos de fallo bajo carga",
+          "result2": "Optimización de consultas de base de datos",
+          "result3": "Aumento de capacidad de 1000 a 5000 transacciones por segundo"
+        }
       },
-      "qa": {
-        "title": "Sistema de QA Automatizado",
-        "description": "Desarrollo de suite de pruebas automatizadas para aplicación de gestión empresarial."
+      "qa_automation": {
+        "title": "Automatización de Pruebas QA",
+        "description": "Implementación de suite automatizada para pruebas funcionales y de regresión.",
+        "image_alt": "Proyecto de Automatización de Pruebas QA",
+        "modal": {
+          "image_alt": "Detalle del proyecto de Automatización de Pruebas QA",
+          "description": "Desarrollo e implementación de una suite completa de pruebas automatizadas para una aplicación web compleja, reduciendo significativamente el tiempo de pruebas de regresión.",
+          "client": "TechSolutions Globales",
+          "duration": "8 semanas",
+          "result1": "Reducción del 90% en tiempo de pruebas de regresión",
+          "result2": "Mejora en la detección de defectos",
+          "result3": "Integración continua con el pipeline de desarrollo"
+        }
+      },
+      "functional_testing": {
+        "title": "Pruebas Funcionales Completas",
+        "description": "Creación de suite completa de pruebas funcionales para aplicación bancaria.",
+        "image_alt": "Proyecto de Pruebas Funcionales",
+        "modal": {
+          "image_alt": "Detalle del proyecto de Pruebas Funcionales",
+          "description": "Diseño y ejecución de un plan integral de pruebas funcionales para una nueva aplicación bancaria móvil, asegurando el cumplimiento de requisitos y la seguridad de las transacciones.",
+          "client": "CooperativaFinanciera Unidos",
+          "duration": "10 semanas",
+          "result1": "Validación completa de 200+ casos de prueba",
+          "result2": "Identificación y resolución de 50+ defectos críticos",
+          "result3": "Certificación de seguridad y cumplimiento"
+        }
       }
+    },
+    "modal": {
+      "details": "Detalles del Proyecto",
+      "client": "Cliente:",
+      "duration": "Duración:",
+      "technologies": "Tecnologías:",
+      "results": "Resultados",
+      "close": "Cerrar"
+    },
+    "cta": {
+      "title": "¿Listo para impulsar tu proyecto?",
+      "description": "Contáctame hoy para una consulta gratuita y descubre cómo puedo mejorar la eficiencia y calidad de tus proyectos.",
+      "button": "Solicitar Consulta"
     }
   },
-  "testimonials": {
-    "title": "Lo que Dicen Mis Clientes"
-  },
-  "cta": {
-    "title": "¿Listo para Optimizar tu Proceso de QA?",
-    "description": "Contáctame hoy para una consulta gratuita y descubre cómo puedo mejorar la eficiencia y calidad de tus proyectos.",
-    "button": "Solicitar Consulta"
-  },
-  "footer": {
-    "title": "QA Expert",
-    "description": "Especialista en automatización de procesos y pruebas de performance con más de 12 años de experiencia en la industria.",
-    "links": "Enlaces",
-    "services": "Servicios",
-    "contact": "Contacto",
-    "email": "contacto@qaexpert.com",
-    "phone": "+57 300 123 4567",
-    "location": "Bogotá, Colombia",
-    "copyright": "© 2023 QA Expert. Todos los derechos reservados."
+  "services_page": {
+    "hero": {
+      "title": "Nuestros Servicios Especializados",
+      "subtitle": "Ofrecemos soluciones integrales de QA y automatización adaptadas a las necesidades específicas de tu negocio.",
+      "cta1": "Solicitar Presupuesto",
+      "cta2": "Ver Portafolio"
+    },
+    "process": {
+      "title": "Nuestro Proceso de Entrega",
+      "step1": {
+        "title": "Evaluación Inicial",
+        "description": "Analizamos tus objetivos, desafíos y el estado actual de tu software."
+      },
+      "step2": {
+        "title": "Planificación Estratégica",
+        "description": "Creamos un plan personalizado con hitos y entregables claros."
+      },
+      "step3": {
+        "title": "Implementación",
+        "description": "Ejecutamos el plan con herramientas y metodologías de vanguardia."
+      },
+      "step4": {
+        "title": "Entrega y Soporte",
+        "description": "Entregamos los resultados y ofrecemos soporte continuo."
+      }
+    },
+    "tech": {
+      "title": "Tecnologías que Utilizamos",
+      "selenium": "Selenium",
+      "cypress": "Cypress",
+      "n8n": "n8n",
+      "jmeter": "JMeter",
+      "postman": "Postman"
+    },
+    "cta": {
+      "title": "Potencia tu Software con Nuestras Soluciones",
+      "description": "No dejes la calidad y el rendimiento de tu software al azar. Contáctame para comenzar.",
+      "button": "Iniciar Proyecto"
+    }
   },
   "contact": {
-    "title": "Contáctame",
-    "description": "¿Tienes un proyecto que necesita automatización o pruebas de performance? Estoy aquí para ayudarte.",
-    "info": "Información de Contacto",
-    "email": "Correo Electrónico",
-    "phone": "Teléfono",
-    "location": "Ubicación",
+    "hero": {
+      "title": "Contáctame",
+      "subtitle": "¿Tienes un proyecto que necesita automatización o pruebas de performance? Estoy aquí para ayudarte.",
+      "cta1": "Explorar Servicios",
+      "cta2": "Enviar Email"
+    },
+    "info": {
+      "title": "Información de Contacto",
+      "description": "Puedes comunicarte conmigo a través de los siguientes medios:",
+      "email": "Email:",
+      "email_address": "contacto@qaexpert.com",
+      "phone": "Teléfono:",
+      "phone_number": "+57 300 123 4567",
+      "location": "Ubicación:",
+      "location_address": "Bogotá, Colombia",
+      "follow": "Sígueme en:"
+    },
     "form": {
       "title": "Envíame un Mensaje",
-      "name": "Nombre Completo",
+      "name": "Nombre",
+      "email_label": "Email",
       "subject": "Asunto",
       "service": "Servicio de Interés",
+      "service_select": "Selecciona un servicio",
+      "service_consulting": "Consultoría QA",
       "message": "Mensaje",
       "privacy": "Acepto la Política de Privacidad",
-      "button": "Enviar Mensaje",
-      "success": "Mensaje enviado exitosamente. Me pondré en contacto contigo pronto."
+      "privacy_text": "He leído y acepto la",
+      "privacy_link": "Política de Privacidad",
+      "submit": "Enviar Mensaje",
+      "success": "Mensaje enviado exitosamente. Me pondré en contacto contigo pronto.",
+      "error": "Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo."
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "q1": "¿Cuánto tiempo toma un proyecto de automatización?",
+      "a1": "El tiempo varía según la complejidad del proyecto. Un proyecto pequeño puede tomar de 2 a 4 semanas, mientras que uno más complejo puede extenderse por varios meses. Ofrecemos estimaciones precisas tras una evaluación inicial.",
+      "q2": "¿Qué herramientas utilizas para las pruebas de performance?",
+      "a2": "Utilizo herramientas líderes en la industria como Apache JMeter, NeoLoad, LoadRunner y k6, dependiendo de las necesidades específicas del proyecto.",
+      "q3": "¿Ofrecen mantenimiento para scripts automatizados?",
+      "a3": "Sí, ofrecemos planes de mantenimiento proactivo para asegurar que tus scripts automatizados sigan funcionando correctamente incluso después de actualizaciones en tu aplicación."
+    },
+    "map": {
+      "title": "Nuestra Ubicación",
+      "description": "Encuéntranos en el corazón de Bogotá.",
+      "iframe_title": "Mapa de ubicación de QA Expert"
     }
+  },
+  "cta": {
+    "title": "Impulsa tu Negocio con Automatización",
+    "description": "No pierdas más tiempo en tareas repetitivas. Automatiza tus procesos y enfócate en lo que realmente importa.",
+    "button": "Agenda una Consulta"
   }
 }

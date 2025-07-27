@@ -1,0 +1,9 @@
+/* Responsive para Portfolio Filter */
+@media (max-width: 768px) {
+    .filter-btn {
+        display: inline-block;
+        margin: 5px;
+        padding: 6px 15px;
+        font-size: 0.9rem;
+    }
+}
