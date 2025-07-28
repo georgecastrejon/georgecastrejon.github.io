@@ -1,6 +1,6 @@
 /* Importar estilos base */
-@import url('../css/base/_variables.css');
-@import url('../css/base/_base.css');
+@import url('./css/base/_variables.css');
+@import url('./css/base/_base.css');
 
 /* Importar componentes */
 @import url('./components/_buttons.css');
