@@ -1,4 +1,3 @@
-// main.js
 import { languageManager } from './core/_language-manager.js';
 import { SPARouter } from './core/_router.js';
 

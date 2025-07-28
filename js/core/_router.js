@@ -7,10 +7,10 @@ export class SPARouter {
     constructor() {
         // Definir rutas apuntando a la nueva carpeta 'views/'
         this.routes = {
-            '': { template: 'views/home.html' },
-            'servicios': { template: 'views/services.html' },
-            'portafolio': { template: 'views/portfolio.html' },
-            'contacto': { template: 'views/contact.html' }
+            '': { template: './views/home.html' },
+            'servicios': { template: './views/services.html' },
+            'portafolio': { template: './views/portfolio.html' },
+            'contacto': { template: './views/contact.html' }
         };
         this.contentContainer = document.getElementById('spa-content');
         this.navLinks = document.querySelectorAll('a[data-route]');
