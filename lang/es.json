@@ -1,5 +1,4 @@
 {
-  "language": "es",
   "navbar": {
     "brand": "QA Expert",
     "home": "Inicio",
@@ -27,12 +26,6 @@
       "twitter": "Twitter",
       "email": "Email"
     }
-  },
-  "navigation": {
-    "home": "Inicio",
-    "services": "Servicios",
-    "portfolio": "Portafolio",
-    "contact": "Contacto"
   },
   "hero": {
     "title": "Automatización y Pruebas de Performance Profesionales",
