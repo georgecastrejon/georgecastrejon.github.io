@@ -19,7 +19,7 @@ export class LanguageManager {
 
     async loadTranslations(language) {
         try {
-            const response = await fetch(`./lang/${language}.json`);
+            const response = await fetch(`/lang/${language}.json`);
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             this.translations = await response.json();
             this.currentLanguage = language;
