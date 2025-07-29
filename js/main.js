@@ -1,5 +1,5 @@
-import { languageManager } from '/js/core/_language-manager.js';
-import { SPARouter } from '/js/core/_router.js';
+import { languageManager } from './core/_language-manager.js';
+import { SPARouter } from './core/_router.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
     try {

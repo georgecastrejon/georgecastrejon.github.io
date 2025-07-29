@@ -1,16 +1,16 @@
 // js/core/_router.js
 // Asumimos que los módulos están en la misma carpeta 'core' o ajusta la ruta según tu estructura real
-import { initPortfolioFilters } from '/js/modules/_portafolio-filter.js';
-import { initializeDynamicBootstrapComponents } from '/js/modules/_bootstrap-helpers.js';
+import { initPortfolioFilters } from '../modules/_portafolio-filter.js';
+import { initializeDynamicBootstrapComponents } from '../modules/_bootstrap-helpers.js';
 
 export class SPARouter {
     constructor() {
         // Definir rutas apuntando a la nueva carpeta 'views/'
         this.routes = {
-            '': { template: '/views/home.html' },
-            'servicios': { template: '/views/services.html' },
-            'portafolio': { template: '/views/portfolio.html' },
-            'contacto': { template: '/views/contact.html' }
+            '': { template: './views/home.html' },
+            'servicios': { template: './views/services.html' },
+            'portafolio': { template: './views/portfolio.html' },
+            'contacto': { template: './views/contact.html' }
         };
         this.contentContainer = document.getElementById('spa-content');
         this.navLinks = document.querySelectorAll('a[data-route]');
