@@ -10,9 +10,13 @@ export class LanguageManager {
 
         const path = window.location.pathname;
         if (path.startsWith('/en/')) return 'en';
+        if (path.startsWith('/jp/')) return 'jp';
+        if (path.startsWith('/cn/')) return 'cn';
 
         const browserLanguage = navigator.language || navigator.userLanguage;
         if (browserLanguage && browserLanguage.startsWith('en')) return 'en';
+        if (browserLanguage && browserLanguage.startsWith('jp')) return 'jp';
+        if (browserLanguage && browserLanguage.startsWith('cn')) return 'cn';
 
         return 'es';
     }

@@ -1,0 +1,289 @@
+{
+  "navbar": {
+    "brand": "QAエキスパート",
+    "home": "ホーム",
+    "services": "サービス",
+    "portfolio": "ポートフォリオ",
+    "contact": "お問い合わせ"
+  },
+  "language_selector": {
+    "spanish": "ES",
+    "english": "EN",
+    "japanese": "JP",
+    "chinese": "CN"    
+  },
+  "footer": {
+    "title": "QAエキスパート",
+    "description": "ソフトウェアの品質と効率を保証するためのプロセス自動化とパフォーマンステストの専門家。",
+    "links": "リンク",
+    "services": "サービス",
+    "contact": "お問い合わせ",
+    "email": "sandovalcastrejon@gmail.com",
+    "phone": "+51 912 103 641",
+    "location": "ペルー、リマ",
+    "copyright": "2025 QAエキスパート。全著作権所有。",
+    "social": {
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "twitter": "Twitter",
+      "email": "メール"
+    }
+  },
+  "hero": {
+    "title": "プロフェッショナルな自動化とパフォーマンステスト",
+    "subtitle": "高度な自動化ソリューションでソフトウェアの品質とパフォーマンスを保証します。",
+    "cta1": "プロジェクトを開始",
+    "cta2": "詳細を見る"
+  },
+  "stats": {
+    "tests": "250",
+    "tests_label": "実施済みテスト",
+    "uptime": "98",
+    "uptime_label": "向上した効率性",
+    "clients": "120",
+    "clients_label": "満足したクライアント",
+    "projects": "15",
+    "projects_label": "成功したプロジェクト"
+  },
+  "services": {
+    "title": "当社のサービス",
+    "automation": {
+      "title": "プロセス自動化",
+      "description": "テストプロセスを自動化する堅牢なソリューションを実装し、時間とリソースを節約します。",
+      "benefit1": "運用コストの削減",
+      "benefit2": "精度とカバレッジの向上",
+      "benefit3": "人的リソースの解放"
+    },
+    "performance": {
+      "title": "パフォーマンステスト",
+      "description": "アプリケーションの動作をさまざまな負荷で評価し、安定性と速度を保証します。",
+      "benefit1": "ボトルネックの特定",
+      "benefit2": "サーバーリソースの最適化",
+      "benefit3": "ユーザーエクスペリエンスの向上"
+    },
+    "quality": {
+      "title": "品質テスト",
+      "description": "ソフトウェアが最高の品質基準を満たすように包括的なQA戦略を設計します。",
+      "benefit1": "早期欠陥検出",
+      "benefit2": "ソフトウェアの信頼性向上",
+      "benefit3": "顧客満足度の向上"
+    }
+  },
+  "process": {
+    "title": "当社の作業プロセス",
+    "step1": "要件と目的の分析",
+    "step2": "自動化ソリューションの設計",
+    "step3": "実装とテスト",
+    "step4": "監視とメンテナンス"    
+  },
+  "portfolio": {
+    "title": "注目のプロジェクト",
+    "preview_title": "当社のプロジェクトの一部",
+    "view_details": "詳細を見る",
+    "view_all": "ポートフォリオ全体を見る",
+    "filter": {
+      "all": "すべて",
+      "automation": "自動化",
+      "performance": "パフォーマンス",
+      "api": "API",
+      "qa": "QA"
+    },
+    "hero": {
+      "title": "プロジェクトポートフォリオ",
+      "subtitle": "自動化とパフォーマンステストにおける注目のプロジェクトをご覧ください。",
+      "cta1": "相談をリクエスト",
+      "cta2": "サービスを見る"
+    },
+    "projects": {
+      "ecommerce": {
+        "title": "Eコマース自動化",
+        "description": "Eコマースプラットフォームのプロセス自動化の実装。",
+        "image_alt": "Eコマース自動化プロジェクト",
+        "modal": {          
+          "description": "Eコマースプラットフォームの在庫管理と価格更新プロセスの完全自動化。",
+          "client": "RetailGlobal S.A.",
+          "duration": "3ヶ月",
+          "result1": "人的ミスの80%削減",
+          "result2": "手作業タスクの週20時間節約",
+          "result3": "既存システムとのシームレスな統合"
+        }
+      },
+      "api_integration": {
+        "title": "n8nを使用したAPI統合",
+        "description": "n8nを使用してCRMと会計ツール間のデータフローを自動化。",
+        "image_alt": "API統合プロジェクト",
+        "modal": {          
+          "description": "企業のCRMと会計ツール間のデータフローを自動化し、顧客情報と請求書情報を同期。",
+          "client": "FinanzasPro Ltda.",
+          "duration": "6週間",
+          "result1": "リアルタイム自動同期",
+          "result2": "データ入力エラーの排除",
+          "result3": "処理時間の50%節約"
+        }
+      },
+      "web_performance": {
+        "title": "ウェブパフォーマンステスト",
+        "description": "JMeterを使用した保険会社ウェブポータルの負荷とストレス分析。",
+        "image_alt": "ウェブパフォーマンステストプロジェクト",
+        "modal": {          
+          "description": "プロモーションキャンペーンなどの高トラフィックイベント時の保険会社ウェブポータルの包括的な負荷とストレス評価。",
+          "client": "SegurosConfiable S.A.",
+          "duration": "5週間",
+          "result1": "重要なボトルネックの特定と解決",
+          "result2": "応答時間の65%改善",
+          "result3": "同時リクエスト処理能力を500から2000に増加"
+        }
+      },
+      "api_performance": {
+        "title": "APIパフォーマンステスト",
+        "description": "金融サービスREST APIのパフォーマンスと拡張性の評価。",
+        "image_alt": "APIパフォーマンステストプロジェクト",
+        "modal": {          
+          "description": "金融サービスの重要なREST APIの詳細なパフォーマンスと拡張性分析により、制限を特定し応答能力を最適化。",
+          "client": "BancoInnova",
+          "duration": "4週間",
+          "result1": "負荷時の障害点の特定",
+          "result2": "データベースクエリの最適化",
+          "result3": "1秒あたりの処理能力を1000から5000トランザクションに増加"
+        }
+      },
+      "qa_automation": {
+        "title": "QAテスト自動化",
+        "description": "機能テストと回帰テストのための自動化スイートの実装。",
+        "image_alt": "QAテスト自動化プロジェクト",
+        "modal": {          
+          "description": "複雑なウェブアプリケーション向けの完全な自動テストスイートの開発と実装により、回帰テスト時間を大幅に削減。",
+          "client": "TechSolutions Global",
+          "duration": "8週間",
+          "result1": "回帰テスト時間の90%削減",
+          "result2": "欠陥検出の改善",
+          "result3": "開発パイプラインとの継続的統合"
+        }
+      },
+      "functional_testing": {
+        "title": "包括的機能テスト",
+        "description": "銀行アプリケーション向けの完全な機能テストスイートの作成。",
+        "image_alt": "機能テストプロジェクト",
+        "modal": {          
+          "description": "新しいモバイル銀行アプリケーション向けの包括的な機能テストプランの設計と実行により、要件の遵守と取引の安全性を確保。",
+          "client": "CooperativaFinanciera Unidos",
+          "duration": "10週間",
+          "result1": "200以上のテストケースの完全な検証",
+          "result2": "50以上の重大な欠陥の特定と解決",
+          "result3": "セキュリティとコンプライアンスの認証"
+        }
+      }
+    },
+    "modal": {
+      "details": "プロジェクト詳細",
+      "client": "クライアント:",
+      "duration": "期間:",
+      "technologies": "技術:",
+      "results": "結果",
+      "close": "閉じる"
+    },
+    "cta": {
+      "title": "プロジェクトを推進する準備はできましたか？",
+      "description": "無料相談のために今日連絡して、プロジェクトの効率と品質を向上させる方法を発見してください。",
+      "button": "相談をリクエスト"
+    }
+  },
+  "services_page": {
+    "hero": {
+      "title": "当社の専門サービス",
+      "subtitle": "ビジネスの特定のニーズに合わせた包括的なQAと自動化ソリューションを提供します。",
+      "cta1": "見積もりをリクエスト",
+      "cta2": "ポートフォリオを見る"
+    },
+    "process": {
+      "title": "当社の提供プロセス",
+      "step1": {
+        "title": "初期評価",
+        "description": "目標、課題、ソフトウェアの現在の状態を分析します。"
+      },
+      "step2": {
+        "title": "戦略的計画",
+        "description": "明確なマイルストーンと成果物を含むカスタマイズされた計画を作成します。"
+      },
+      "step3": {
+        "title": "実装",
+        "description": "最先端のツールと方法論で計画を実行します。"
+      },
+      "step4": {
+        "title": "提供とサポート",
+        "description": "結果を提供し、継続的なサポートを提供します。"
+      }
+    },
+    "tech": {
+      "title": "使用技術",
+      "selenium": "Selenium",
+      "cypress": "Cypress",
+      "n8n": "n8n",
+      "jmeter": "JMeter",
+      "postman": "Postman"
+    },
+    "cta": {
+      "title": "当社のソリューションでソフトウェアを強化",
+      "description": "ソフトウェアの品質とパフォーマンスを偶然に任せないでください。開始するために連絡してください。",
+      "button": "プロジェクトを開始"
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "お問い合わせ",
+      "subtitle": "自動化やパフォーマンステストが必要なプロジェクトをお持ちですか？お手伝いします。",
+      "cta1": "サービスを探索",
+      "cta2": "メールを送信"
+    },
+    "info": {
+      "title": "連絡先情報",
+      "description": "以下のチャネルから連絡できます:",
+      "email": "メール:",
+      "email_address": "sandovalcastrejon@gmail.com",
+      "phone": "電話:",
+      "phone_number": "+51 912 103 641",
+      "location": "所在地:",
+      "location_address": "ペルー、リマ",
+      "follow": "フォロー:"
+    },
+    "form": {
+      "title": "メッセージを送信",
+      "name": "名前",
+      "email_label": "メール",
+      "subject": "件名",
+      "service": "興味のあるサービス",
+      "service_select": "サービスを選択",
+      "service_consulting": "QAコンサルティング",
+      "message": "メッセージ",
+      "privacy": "プライバシーポリシーに同意します",
+      "privacy_text": "私は以下の内容を読み、同意します",
+      "privacy_link": "プライバシーポリシー",
+      "submit": "メッセージを送信",
+      "success": "メッセージが正常に送信されました。すぐに連絡します。",
+      "error": "メッセージの送信中にエラーが発生しました。もう一度お試しください。"
+    },
+    "social": {      
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "twitter": "Twitter"
+    },
+    "faq": {
+      "title": "よくある質問",
+      "q1": "自動化プロジェクトにはどれくらい時間がかかりますか？",
+      "a1": "プロジェクトの複雑さによって異なります。小規模なプロジェクトは2〜4週間、より複雑なプロジェクトは数ヶ月かかる場合があります。初期評価後に正確な見積もりを提供します。",
+      "q2": "パフォーマンステストにはどのツールを使用しますか？",
+      "a2": "プロジェクトの特定のニーズに応じて、Apache JMeter、NeoLoad、LoadRunner、k6などの業界をリードするツールを使用します。",
+      "q3": "自動化スクリプトのメンテナンスは提供していますか？",
+      "a3": "はい、アプリケーションの更新後も自動化スクリプトが正しく機能し続けるように、積極的なメンテナンスプランを提供しています。"
+    },
+    "map": {
+      "title": "当社の所在地",
+      "description": "リマの首都でお探しください。"
+    }
+  },
+  "cta": {
+    "title": "自動化でビジネスを強化",
+    "description": "繰り返し作業にもう時間を無駄にしないでください。プロセスを自動化し、本当に重要なことに集中しましょう。",
+    "button": "相談を予約"
+  }
+}

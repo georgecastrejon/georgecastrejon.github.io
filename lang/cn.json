@@ -1,0 +1,289 @@
+{
+  "navbar": {
+    "brand": "质量保证专家",
+    "home": "首页",
+    "services": "服务",
+    "portfolio": "作品集",
+    "contact": "联系我们"
+  },
+  "language_selector": {
+    "spanish": "西班牙语",
+    "english": "英语",
+    "japanese": "日语",
+    "chinese": "中文"
+  },
+  "footer": {
+    "title": "质量保证专家",
+    "description": "专业从事流程自动化和性能测试，确保您的软件质量和效率。",
+    "links": "链接",
+    "services": "服务",
+    "contact": "联系我们",
+    "email": "sandovalcastrejon@gmail.com",
+    "phone": "+51 912 103 641",
+    "location": "秘鲁利马",
+    "copyright": "2025 质量保证专家。保留所有权利。",
+    "social": {
+      "linkedin": "领英",
+      "github": "GitHub",
+      "twitter": "推特",
+      "email": "电子邮件"
+    }
+  },
+  "hero": {
+    "title": "专业的自动化和性能测试服务",
+    "subtitle": "我们通过先进的自动化解决方案确保您的软件质量和性能。",
+    "cta1": "开始您的项目",
+    "cta2": "了解更多"
+  },
+  "stats": {
+    "tests": "250",
+    "tests_label": "已完成测试",
+    "uptime": "98",
+    "uptime_label": "提升的效率",
+    "clients": "120",
+    "clients_label": "满意客户",
+    "projects": "15",
+    "projects_label": "成功项目"
+  },
+  "services": {
+    "title": "我们的服务",
+    "automation": {
+      "title": "流程自动化",
+      "description": "我们实施强大的解决方案来自动化您的测试流程，节省时间和资源。",
+      "benefit1": "降低运营成本",
+      "benefit2": "提高准确性和覆盖率",
+      "benefit3": "释放人力资源"
+    },
+    "performance": {
+      "title": "性能测试",
+      "description": "我们评估您的应用在不同负载下的表现，确保其稳定性和速度。",
+      "benefit1": "识别瓶颈问题",
+      "benefit2": "优化服务器资源",
+      "benefit3": "改善用户体验"
+    },
+    "quality": {
+      "title": "质量测试",
+      "description": "我们设计全面的质量保证策略，确保您的软件符合最高质量标准。",
+      "benefit1": "早期缺陷检测",
+      "benefit2": "提高软件可靠性",
+      "benefit3": "增加客户满意度"
+    }
+  },
+  "process": {
+    "title": "我们的工作流程",
+    "step1": "需求与目标分析",
+    "step2": "自动化解决方案设计",
+    "step3": "实施与测试",
+    "step4": "监控与维护"    
+  },
+  "portfolio": {
+    "title": "精选项目",
+    "preview_title": "部分项目展示",
+    "view_details": "查看详情",
+    "view_all": "查看全部作品",
+    "filter": {
+      "all": "全部",
+      "automation": "自动化",
+      "performance": "性能",
+      "api": "API",
+      "qa": "质量保证"
+    },
+    "hero": {
+      "title": "项目作品集",
+      "subtitle": "探索我们在自动化和性能测试方面的精选项目。",
+      "cta1": "申请咨询",
+      "cta2": "查看服务"
+    },
+    "projects": {
+      "ecommerce": {
+        "title": "电商自动化",
+        "description": "为电子商务平台实施流程自动化解决方案。",
+        "image_alt": "电商自动化项目",
+        "modal": {          
+          "description": "为电子商务平台实现库存管理和价格更新流程的全面自动化。",
+          "client": "RetailGlobal S.A.",
+          "duration": "3个月",
+          "result1": "减少80%人为错误",
+          "result2": "每周节省20小时手工操作时间",
+          "result3": "与现有系统无缝集成"
+        }
+      },
+      "api_integration": {
+        "title": "使用n8n的API集成",
+        "description": "使用n8n自动化CRM与会计工具之间的数据流。",
+        "image_alt": "API集成项目",
+        "modal": {          
+          "description": "使用n8n自动化企业CRM与其会计工具之间的数据流，同步客户和发票信息。",
+          "client": "FinanzasPro Ltda.",
+          "duration": "6周",
+          "result1": "实时自动同步",
+          "result2": "消除数据输入错误",
+          "result3": "节省50%处理时间"
+        }
+      },
+      "web_performance": {
+        "title": "网页性能测试",
+        "description": "使用JMeter为保险公司网站进行负载和压力分析。",
+        "image_alt": "网页性能测试项目",
+        "modal": {          
+          "description": "在促销活动等高流量事件期间，对保险公司网站进行全面负载和压力评估。",
+          "client": "SegurosConfiable S.A.",
+          "duration": "5周",
+          "result1": "识别并解决关键瓶颈",
+          "result2": "响应时间提升65%",
+          "result3": "并发处理能力从500提升至2000请求"
+        }
+      },
+      "api_performance": {
+        "title": "API性能测试",
+        "description": "评估金融服务REST API的性能和可扩展性。",
+        "image_alt": "API性能测试项目",
+        "modal": {          
+          "description": "详细分析关键金融服务REST API的性能和可扩展性，识别限制并优化其响应能力。",
+          "client": "BancoInnova",
+          "duration": "4周",
+          "result1": "识别负载下的故障点",
+          "result2": "优化数据库查询",
+          "result3": "处理能力从1000提升至5000次交易/秒"
+        }
+      },
+      "qa_automation": {
+        "title": "质量保证自动化",
+        "description": "为功能和回归测试实施自动化测试套件。",
+        "image_alt": "质量保证自动化项目",
+        "modal": {          
+          "description": "为复杂Web应用开发和实施完整的自动化测试套件，显著减少回归测试时间。",
+          "client": "TechSolutions Globales",
+          "duration": "8周",
+          "result1": "回归测试时间减少90%",
+          "result2": "提高缺陷检测率",
+          "result3": "与开发流水线持续集成"
+        }
+      },
+      "functional_testing": {
+        "title": "全面功能测试",
+        "description": "为银行应用创建完整的功能测试套件。",
+        "image_alt": "功能测试项目",
+        "modal": {          
+          "description": "为新的银行移动应用设计和执行全面的功能测试计划，确保符合要求并保障交易安全。",
+          "client": "CooperativaFinanciera Unidos",
+          "duration": "10周",
+          "result1": "完整验证200+测试用例",
+          "result2": "识别并解决50+关键缺陷",
+          "result3": "获得安全和合规认证"
+        }
+      }
+    },
+    "modal": {
+      "details": "项目详情",
+      "client": "客户:",
+      "duration": "持续时间:",
+      "technologies": "使用技术:",
+      "results": "成果",
+      "close": "关闭"
+    },
+    "cta": {
+      "title": "准备好推进您的项目了吗？",
+      "description": "立即联系我获取免费咨询，了解如何提高您项目的效率和质量。",
+      "button": "申请咨询"
+    }
+  },
+  "services_page": {
+    "hero": {
+      "title": "我们的专业服务",
+      "subtitle": "我们提供量身定制的全面质量保证和自动化解决方案，满足您的特定业务需求。",
+      "cta1": "获取报价",
+      "cta2": "查看作品集"
+    },
+    "process": {
+      "title": "我们的交付流程",
+      "step1": {
+        "title": "初步评估",
+        "description": "分析您的目标、挑战和软件现状。"
+      },
+      "step2": {
+        "title": "战略规划",
+        "description": "创建具有明确里程碑和交付成果的个性化计划。"
+      },
+      "step3": {
+        "title": "实施",
+        "description": "使用前沿工具和方法执行计划。"
+      },
+      "step4": {
+        "title": "交付与支持",
+        "description": "交付成果并提供持续支持。"
+      }
+    },
+    "tech": {
+      "title": "我们使用的技术",
+      "selenium": "Selenium",
+      "cypress": "Cypress",
+      "n8n": "n8n",
+      "jmeter": "JMeter",
+      "postman": "Postman"
+    },
+    "cta": {
+      "title": "用我们的解决方案提升您的软件",
+      "description": "不要让您的软件质量和性能听天由命。联系我开始合作。",
+      "button": "启动项目"
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "联系我",
+      "subtitle": "有需要自动化或性能测试的项目吗？我随时为您提供帮助。",
+      "cta1": "探索服务",
+      "cta2": "发送邮件"
+    },
+    "info": {
+      "title": "联系信息",
+      "description": "您可以通过以下方式与我联系:",
+      "email": "电子邮件:",
+      "email_address": "sandovalcastrejon@gmail.com",
+      "phone": "电话:",
+      "phone_number": "+51 912 103 641",
+      "location": "位置:",
+      "location_address": "秘鲁利马",
+      "follow": "关注我:"
+    },
+    "form": {
+      "title": "发送消息",
+      "name": "姓名",
+      "email_label": "电子邮件",
+      "subject": "主题",
+      "service": "感兴趣的服务",
+      "service_select": "选择服务",
+      "service_consulting": "质量保证咨询",
+      "message": "消息",
+      "privacy": "我接受隐私政策",
+      "privacy_text": "我已阅读并同意",
+      "privacy_link": "隐私政策",
+      "submit": "发送消息",
+      "success": "消息发送成功。我会尽快与您联系。",
+      "error": "发送消息时出错。请重试。"
+    },
+    "social": {      
+      "linkedin": "领英",
+      "github": "GitHub",
+      "twitter": "推特"
+    },
+    "faq": {
+      "title": "常见问题",
+      "q1": "自动化项目需要多长时间？",
+      "a1": "时间根据项目复杂性而异。小型项目可能需要2-4周，而更复杂的项目可能需要数月。我们会在初步评估后提供准确的时间估算。",
+      "q2": "你们使用什么工具进行性能测试？",
+      "a2": "我们使用行业领先的工具，如Apache JMeter、NeoLoad、LoadRunner和k6，具体取决于项目的特定需求。",
+      "q3": "你们提供自动化脚本的维护服务吗？",
+      "a3": "是的，我们提供主动维护计划，确保您的自动化脚本在应用程序更新后仍能正常运行。"
+    },
+    "map": {
+      "title": "我们的位置",
+      "description": "我们在利马首都。"
+    }
+  },
+  "cta": {
+    "title": "通过自动化推动您的业务",
+    "description": "不要再把时间浪费在重复性任务上。自动化您的流程，专注于真正重要的事情。",
+    "button": "预约咨询"
+  }
+}

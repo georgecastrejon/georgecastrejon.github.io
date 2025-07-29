@@ -8,7 +8,9 @@
   },
   "language_selector": {
     "spanish": "ES",
-    "english": "EN"
+    "english": "EN",
+    "japanese": "JP",
+    "chinese": "CN"
   },
   "footer": {
     "title": "QA Expert",
@@ -16,10 +18,10 @@
     "links": "Enlaces",
     "services": "Servicios",
     "contact": "Contacto",
-    "email": "contacto@qaexpert.com",
-    "phone": "+57 300 123 4567",
-    "location": "Bogotá, Colombia",
-    "copyright": "&copy; 2023 QA Expert. Todos los derechos reservados.",
+    "email": "sandovalcastrejon@gmail.com",
+    "phone": "+51 912 103 641",
+    "location": "Lima, Perú",
+    "copyright": "2025 QA Expert. Todos los derechos reservados.",
     "social": {
       "linkedin": "LinkedIn",
       "github": "GitHub",
@@ -72,10 +74,10 @@
     "step1": "Análisis de requisitos y objetivos",
     "step2": "Diseño de solución automatizada",
     "step3": "Implementación y pruebas",
-    "step4": "Monitoreo y mantenimiento",
-    "video_title": "Video explicativo de nuestro proceso"
+    "step4": "Monitoreo y mantenimiento"    
   },
   "portfolio": {
+    "title": "Proyectos destacados ",
     "preview_title": "Algunos de Nuestros Proyectos",
     "view_details": "Ver Detalles",
     "view_all": "Ver Todo el Portafolio",
@@ -86,13 +88,18 @@
       "api": "API",
       "qa": "QA"
     },
+    "hero": {
+      "title": "Portafolio de Proyectos",
+      "subtitle": "Explora nuestros proyectos destacados en automatización y pruebas de performance.",
+      "cta1": "Solicitar Consulta",
+      "cta2": "Ver Servicios"
+    },
     "projects": {
       "ecommerce": {
         "title": "Automatización E-commerce",
         "description": "Implementación de automatización de procesos para plataforma de comercio electrónico.",
         "image_alt": "Proyecto de Automatización E-commerce",
-        "modal": {
-          "image_alt": "Detalle del proyecto de Automatización E-commerce",
+        "modal": {          
           "description": "Automatización completa del proceso de gestión de inventario y actualización de precios para una plataforma de comercio electrónico.",
           "client": "RetailGlobal S.A.",
           "duration": "3 meses",
@@ -105,8 +112,7 @@
         "title": "Integración API con n8n",
         "description": "Automatización de flujo de datos entre CRM y herramienta de contabilidad usando n8n.",
         "image_alt": "Proyecto de Integración API",
-        "modal": {
-          "image_alt": "Detalle del proyecto de Integración API",
+        "modal": {          
           "description": "Automatización del flujo de datos entre el CRM de la empresa y su herramienta de contabilidad utilizando n8n para sincronizar información de clientes y facturas.",
           "client": "FinanzasPro Ltda.",
           "duration": "6 semanas",
@@ -119,8 +125,7 @@
         "title": "Pruebas de Rendimiento Web",
         "description": "Análisis de carga y estrés para portal web de empresa de seguros con JMeter.",
         "image_alt": "Proyecto de Pruebas de Rendimiento Web",
-        "modal": {
-          "image_alt": "Detalle del proyecto de Pruebas de Rendimiento Web",
+        "modal": {          
           "description": "Evaluación exhaustiva de carga y estrés para el portal web de una aseguradora durante eventos de alto tráfico como campañas promocionales.",
           "client": "SegurosConfiable S.A.",
           "duration": "5 semanas",
@@ -133,8 +138,7 @@
         "title": "Pruebas de Rendimiento API",
         "description": "Evaluación de rendimiento y escalabilidad de API REST de servicios financieros.",
         "image_alt": "Proyecto de Pruebas de Rendimiento API",
-        "modal": {
-          "image_alt": "Detalle del proyecto de Pruebas de Rendimiento API",
+        "modal": {          
           "description": "Análisis detallado de rendimiento y escalabilidad de una API REST crítica para servicios financieros, identificando límites y optimizando su capacidad de respuesta.",
           "client": "BancoInnova",
           "duration": "4 semanas",
@@ -147,8 +151,7 @@
         "title": "Automatización de Pruebas QA",
         "description": "Implementación de suite automatizada para pruebas funcionales y de regresión.",
         "image_alt": "Proyecto de Automatización de Pruebas QA",
-        "modal": {
-          "image_alt": "Detalle del proyecto de Automatización de Pruebas QA",
+        "modal": {          
           "description": "Desarrollo e implementación de una suite completa de pruebas automatizadas para una aplicación web compleja, reduciendo significativamente el tiempo de pruebas de regresión.",
           "client": "TechSolutions Globales",
           "duration": "8 semanas",
@@ -161,8 +164,7 @@
         "title": "Pruebas Funcionales Completas",
         "description": "Creación de suite completa de pruebas funcionales para aplicación bancaria.",
         "image_alt": "Proyecto de Pruebas Funcionales",
-        "modal": {
-          "image_alt": "Detalle del proyecto de Pruebas Funcionales",
+        "modal": {          
           "description": "Diseño y ejecución de un plan integral de pruebas funcionales para una nueva aplicación bancaria móvil, asegurando el cumplimiento de requisitos y la seguridad de las transacciones.",
           "client": "CooperativaFinanciera Unidos",
           "duration": "10 semanas",
@@ -237,11 +239,11 @@
       "title": "Información de Contacto",
       "description": "Puedes comunicarte conmigo a través de los siguientes medios:",
       "email": "Email:",
-      "email_address": "contacto@qaexpert.com",
+      "email_address": "sandovalcastrejon@gmail.com",
       "phone": "Teléfono:",
-      "phone_number": "+57 300 123 4567",
+      "phone_number": "+51 912 103 641",
       "location": "Ubicación:",
-      "location_address": "Bogotá, Colombia",
+      "location_address": "Lima, Perú",
       "follow": "Sígueme en:"
     },
     "form": {
@@ -260,6 +262,11 @@
       "success": "Mensaje enviado exitosamente. Me pondré en contacto contigo pronto.",
       "error": "Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo."
     },
+    "social": {      
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "twitter": "Twitter"
+    },
     "faq": {
       "title": "Preguntas Frecuentes",
       "q1": "¿Cuánto tiempo toma un proyecto de automatización?",
@@ -271,8 +278,7 @@
     },
     "map": {
       "title": "Nuestra Ubicación",
-      "description": "Encuéntranos en el corazón de Bogotá.",
-      "iframe_title": "Mapa de ubicación de QA Expert"
+      "description": "Encuéntranos en la capital de Lima."
     }
   },
   "cta": {
