@@ -19,15 +19,4 @@ export function initializeDynamicBootstrapComponents(containerElement) {
         tooltipTriggerEl.setAttribute('data-bs-initialized', 'true');
     });
 
-    // --- Aquí podrías añadir la inicialización de otros componentes de Bootstrap ---
-    // Por ejemplo, Popovers:
-    /*
-    const popoverTriggerList = [].slice.call(
-        containerElement.querySelectorAll('[data-bs-toggle="popover"]:not([data-bs-initialized])')
-    );
-    popoverTriggerList.forEach(popoverTriggerEl => {
-        new bootstrap.Popover(popoverTriggerEl);
-        popoverTriggerEl.setAttribute('data-bs-initialized', 'true');
-    });
-    */
 }

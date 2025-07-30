@@ -1,16 +1,19 @@
 {
-  "navbar": {
-    "brand": "QA Expert",
-    "home": "Inicio",
-    "services": "Servicios",
-    "portfolio": "Portafolio",
-    "contact": "Contacto"
-  },
-  "language_selector": {
-    "spanish": "ES",
-    "english": "EN",
-    "japanese": "JP",
-    "chinese": "CN"
+  "header": {
+    "navbar": {
+      "brand": "QA Expert",
+      "home": "Inicio",
+      "services": "Servicios",
+      "portfolio": "Portafolio",
+      "contact": "Contacto"
+    },
+    "language_selector": {
+      "spanish": "ES",
+      "english": "EN",
+      "japanese": "JP",
+      "chinese": "CN",
+      "korean": "KR"
+    }
   },
   "footer": {
     "title": "QA Expert",
@@ -28,53 +31,36 @@
       "twitter": "Twitter",
       "email": "Email"
     }
-  },
-  "hero": {
-    "title": "Automatización y Pruebas de Performance Profesionales",
-    "subtitle": "Aseguramos la calidad y el rendimiento de tu software con soluciones automatizadas avanzadas.",
-    "cta1": "Comienza tu Proyecto",
-    "cta2": "Descubre Más"
-  },
-  "stats": {
-    "tests": "250",
-    "tests_label": "Pruebas Realizadas",
-    "uptime": "98",
-    "uptime_label": "Eficiencia Mejorada",
-    "clients": "120",
-    "clients_label": "Clientes Satisfechos",
-    "projects": "15",
-    "projects_label": "Proyectos Exitosos"
-  },
-  "services": {
-    "title": "Nuestros Servicios",
-    "automation": {
-      "title": "Automatización de Procesos",
-      "description": "Implementamos soluciones robustas para automatizar tus procesos de testing, ahorrando tiempo y recursos.",
-      "benefit1": "Reducción de costos operativos",
-      "benefit2": "Aumento de la precisión y cobertura",
-      "benefit3": "Liberación de recursos humanos"
+  },  
+  "home": {
+    "hero": {
+      "title": "Automatización y Pruebas de Performance Profesionales",
+      "subtitle": "Aseguramos la calidad y el rendimiento de tu software con soluciones automatizadas avanzadas.",
+      "cta1": "Comienza tu Proyecto",
+      "cta2": "Descubre Más"
     },
-    "performance": {
-      "title": "Pruebas de Rendimiento",
-      "description": "Evaluamos el comportamiento de tu aplicación bajo diferentes cargas para garantizar su estabilidad y velocidad.",
-      "benefit1": "Identificación de cuellos de botella",
-      "benefit2": "Optimización de recursos del servidor",
-      "benefit3": "Mejora de la experiencia del usuario"
+    "stats": {
+      "tests": "250",
+      "tests_label": "Pruebas Realizadas",
+      "uptime": "98",
+      "uptime_label": "Eficiencia Mejorada",
+      "clients": "120",
+      "clients_label": "Clientes Satisfechos",
+      "projects": "15",
+      "projects_label": "Proyectos Exitosos"
     },
-    "quality": {
-      "title": "Pruebas de Calidad",
-      "description": "Diseñamos estrategias integrales de QA para asegurar que tu software cumpla con los más altos estándares de calidad.",
-      "benefit1": "Detección temprana de defectos",
-      "benefit2": "Mejora de la confiabilidad del software",
-      "benefit3": "Aumento de la satisfacción del cliente"
+    "process": {
+      "title": "Nuestro Proceso de Trabajo",
+      "step1": "Análisis de requisitos y objetivos",
+      "step2": "Diseño de solución automatizada",
+      "step3": "Implementación y pruebas",
+      "step4": "Monitoreo y mantenimiento"
+    },
+    "cta": {
+      "title": "Impulsa tu Negocio con Automatización",
+      "description": "No pierdas más tiempo en tareas repetitivas. Automatiza tus procesos y enfócate en lo que realmente importa.",
+      "button": "Agenda una Consulta"
     }
-  },
-  "process": {
-    "title": "Nuestro Proceso de Trabajo",
-    "step1": "Análisis de requisitos y objetivos",
-    "step2": "Diseño de solución automatizada",
-    "step3": "Implementación y pruebas",
-    "step4": "Monitoreo y mantenimiento"    
   },
   "portfolio": {
     "title": "Proyectos destacados ",
@@ -99,7 +85,7 @@
         "title": "Automatización E-commerce",
         "description": "Implementación de automatización de procesos para plataforma de comercio electrónico.",
         "image_alt": "Proyecto de Automatización E-commerce",
-        "modal": {          
+        "modal": {
           "description": "Automatización completa del proceso de gestión de inventario y actualización de precios para una plataforma de comercio electrónico.",
           "client": "RetailGlobal S.A.",
           "duration": "3 meses",
@@ -112,7 +98,7 @@
         "title": "Integración API con n8n",
         "description": "Automatización de flujo de datos entre CRM y herramienta de contabilidad usando n8n.",
         "image_alt": "Proyecto de Integración API",
-        "modal": {          
+        "modal": {
           "description": "Automatización del flujo de datos entre el CRM de la empresa y su herramienta de contabilidad utilizando n8n para sincronizar información de clientes y facturas.",
           "client": "FinanzasPro Ltda.",
           "duration": "6 semanas",
@@ -125,7 +111,7 @@
         "title": "Pruebas de Rendimiento Web",
         "description": "Análisis de carga y estrés para portal web de empresa de seguros con JMeter.",
         "image_alt": "Proyecto de Pruebas de Rendimiento Web",
-        "modal": {          
+        "modal": {
           "description": "Evaluación exhaustiva de carga y estrés para el portal web de una aseguradora durante eventos de alto tráfico como campañas promocionales.",
           "client": "SegurosConfiable S.A.",
           "duration": "5 semanas",
@@ -138,7 +124,7 @@
         "title": "Pruebas de Rendimiento API",
         "description": "Evaluación de rendimiento y escalabilidad de API REST de servicios financieros.",
         "image_alt": "Proyecto de Pruebas de Rendimiento API",
-        "modal": {          
+        "modal": {
           "description": "Análisis detallado de rendimiento y escalabilidad de una API REST crítica para servicios financieros, identificando límites y optimizando su capacidad de respuesta.",
           "client": "BancoInnova",
           "duration": "4 semanas",
@@ -151,7 +137,7 @@
         "title": "Automatización de Pruebas QA",
         "description": "Implementación de suite automatizada para pruebas funcionales y de regresión.",
         "image_alt": "Proyecto de Automatización de Pruebas QA",
-        "modal": {          
+        "modal": {
           "description": "Desarrollo e implementación de una suite completa de pruebas automatizadas para una aplicación web compleja, reduciendo significativamente el tiempo de pruebas de regresión.",
           "client": "TechSolutions Globales",
           "duration": "8 semanas",
@@ -164,7 +150,7 @@
         "title": "Pruebas Funcionales Completas",
         "description": "Creación de suite completa de pruebas funcionales para aplicación bancaria.",
         "image_alt": "Proyecto de Pruebas Funcionales",
-        "modal": {          
+        "modal": {
           "description": "Diseño y ejecución de un plan integral de pruebas funcionales para una nueva aplicación bancaria móvil, asegurando el cumplimiento de requisitos y la seguridad de las transacciones.",
           "client": "CooperativaFinanciera Unidos",
           "duration": "10 semanas",
@@ -188,12 +174,34 @@
       "button": "Solicitar Consulta"
     }
   },
-  "services_page": {
+  "services": {
+    "title": "Nuestros Servicios",
     "hero": {
       "title": "Nuestros Servicios Especializados",
       "subtitle": "Ofrecemos soluciones integrales de QA y automatización adaptadas a las necesidades específicas de tu negocio.",
       "cta1": "Solicitar Presupuesto",
       "cta2": "Ver Portafolio"
+    },
+    "automation": {
+      "title": "Automatización de Procesos",
+      "description": "Implementamos soluciones robustas para automatizar tus procesos de testing, ahorrando tiempo y recursos.",
+      "benefit1": "Reducción de costos operativos",
+      "benefit2": "Aumento de la precisión y cobertura",
+      "benefit3": "Liberación de recursos humanos"
+    },
+    "performance": {
+      "title": "Pruebas de Rendimiento",
+      "description": "Evaluamos el comportamiento de tu aplicación bajo diferentes cargas para garantizar su estabilidad y velocidad.",
+      "benefit1": "Identificación de cuellos de botella",
+      "benefit2": "Optimización de recursos del servidor",
+      "benefit3": "Mejora de la experiencia del usuario"
+    },
+    "quality": {
+      "title": "Pruebas de Calidad",
+      "description": "Diseñamos estrategias integrales de QA para asegurar que tu software cumpla con los más altos estándares de calidad.",
+      "benefit1": "Detección temprana de defectos",
+      "benefit2": "Mejora de la confiabilidad del software",
+      "benefit3": "Aumento de la satisfacción del cliente"
     },
     "process": {
       "title": "Nuestro Proceso de Entrega",
@@ -262,7 +270,7 @@
       "success": "Mensaje enviado exitosamente. Me pondré en contacto contigo pronto.",
       "error": "Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo."
     },
-    "social": {      
+    "social": {
       "linkedin": "LinkedIn",
       "github": "GitHub",
       "twitter": "Twitter"
@@ -280,10 +288,5 @@
       "title": "Nuestra Ubicación",
       "description": "Encuéntranos en la capital de Lima."
     }
-  },
-  "cta": {
-    "title": "Impulsa tu Negocio con Automatización",
-    "description": "No pierdas más tiempo en tareas repetitivas. Automatiza tus procesos y enfócate en lo que realmente importa.",
-    "button": "Agenda una Consulta"
   }
 }

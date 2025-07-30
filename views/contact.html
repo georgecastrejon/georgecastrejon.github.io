@@ -7,8 +7,10 @@
                 <h1 class="display-4 fw-bold mb-4" data-lang="contact.hero.title"></h1>
                 <p class="lead mb-5" data-lang="contact.hero.subtitle"></p>
                 <div class="d-grid gap-3 d-sm-flex">
-                    <a href="#servicios" class="btn btn-primary btn-lg px-4 py-2" data-route="servicios" data-lang="contact.hero.cta1"></a>
-                    <a href="mailto:contacto@qaexpert.com" class="btn btn-outline-light btn-lg px-4 py-2" data-lang="contact.hero.cta2"></a>
+                    <a href="#servicios" class="btn btn-primary btn-lg px-4 py-2" data-route="servicios"
+                        data-lang="contact.hero.cta1"></a>
+                    <a href="mailto:contacto@qaexpert.com" class="btn btn-outline-light btn-lg px-4 py-2"
+                        data-lang="contact.hero.cta2"></a>
                 </div>
             </div>
             <div class="col-lg-6 d-none d-lg-block">
@@ -37,25 +39,34 @@
                 <p data-lang="contact.info.description"></p>
                 <ul class="list-unstyled">
                     <li class="mb-4">
-                        <h5 class="mb-2"><i class="bi bi-envelope me-2"></i> <span data-lang="contact.info.email"></span></h5>
-                        <a href="mailto:contacto@qaexpert.com" class="text-decoration-none" data-lang="contact.info.email_address"></a>
+                        <h5 class="mb-2"><i class="bi bi-envelope me-2"></i> <span
+                                data-lang="contact.info.email"></span></h5>
+                        <a href="mailto:contacto@qaexpert.com" class="text-decoration-none"
+                            data-lang="contact.info.email_address"></a>
                     </li>
                     <li class="mb-4">
-                        <h5 class="mb-2"><i class="bi bi-telephone me-2"></i> <span data-lang="contact.info.phone"></span></h5>
-                        <a href="tel:+573001234567" class="text-decoration-none" data-lang="contact.info.phone_number"></a>
+                        <h5 class="mb-2"><i class="bi bi-telephone me-2"></i> <span
+                                data-lang="contact.info.phone"></span></h5>
+                        <a href="tel:+573001234567" class="text-decoration-none"
+                            data-lang="contact.info.phone_number"></a>
                     </li>
                     <li class="mb-4">
-                        <h5 class="mb-2"><i class="bi bi-geo-alt me-2"></i> <span data-lang="contact.info.location"></span></h5>
+                        <h5 class="mb-2"><i class="bi bi-geo-alt me-2"></i> <span
+                                data-lang="contact.info.location"></span></h5>
                         <p class="mb-0" data-lang="contact.info.location_address"></p>
                     </li>
                 </ul>
                 <div class="mt-4">
                     <h5 class="mb-3" data-lang="contact.info.follow"></h5>
                     <div class="d-flex">
-                        <a href="#" class="social-icon me-3" data-lang-title="contact.social.linkedin" title=""><i class="bi bi-linkedin"></i></a>
-                        <a href="#" class="social-icon me-3" data-lang-title="contact.social.github" title=""><i class="bi bi-github"></i></a>
-                        <a href="#" class="social-icon me-3" data-lang-title="contact.social.twitter" title=""><i class="bi bi-twitter"></i></a>
-                        <a href="mailto:contacto@qaexpert.com" class="social-icon" data-lang-title="contact.social.email" title=""><i class="bi bi-envelope"></i></a>
+                        <a href="#" class="social-icon me-3" data-lang-title="contact.social.linkedin" title=""><i
+                                class="bi bi-linkedin"></i></a>
+                        <a href="#" class="social-icon me-3" data-lang-title="contact.social.github" title=""><i
+                                class="bi bi-github"></i></a>
+                        <a href="#" class="social-icon me-3" data-lang-title="contact.social.twitter" title=""><i
+                                class="bi bi-twitter"></i></a>
+                        <a href="mailto:contacto@qaexpert.com" class="social-icon"
+                            data-lang-title="contact.social.email" title=""><i class="bi bi-envelope"></i></a>
                     </div>
                 </div>
             </div>
@@ -64,24 +75,24 @@
                 <!-- Mensajes de éxito y error -->
                 <div id="successMessage" class="success-message" data-lang="contact.form.success"></div>
                 <div id="errorMessage" class="error-message" data-lang="contact.form.error"></div>
-                
-                <form id="contactForm">
+
+                <form action="https://formspree.io/f/xyzppgkp" method="POST" id="contactForm">
                     <div class="row g-3">
                         <div class="col-md-6">
                             <label for="contactName" class="form-label" data-lang="contact.form.name"></label>
-                            <input type="text" class="form-control" id="contactName" required>
+                            <input type="text" class="form-control" id="contactName" name="name" required>
                         </div>
                         <div class="col-md-6">
                             <label for="contactEmail" class="form-label" data-lang="contact.form.email_label"></label>
-                            <input type="email" class="form-control" id="contactEmail" required>
+                            <input type="email" class="form-control" id="contactEmail" name="email" required>
                         </div>
                         <div class="col-12">
                             <label for="contactSubject" class="form-label" data-lang="contact.form.subject"></label>
-                            <input type="text" class="form-control" id="contactSubject" required>
+                            <input type="text" class="form-control" id="contactSubject" nme="subject" required>
                         </div>
                         <div class="col-12">
                             <label for="contactService" class="form-label" data-lang="contact.form.service"></label>
-                            <select class="form-select" id="contactService">
+                            <select class="form-select" id="contactService" name="service" required>
                                 <option value="" data-lang="contact.form.service_select"></option>
                                 <option value="automation" data-lang="services.automation.title"></option>
                                 <option value="performance" data-lang="services.performance.title"></option>
@@ -91,18 +102,31 @@
                         </div>
                         <div class="col-12">
                             <label for="contactMessage" class="form-label" data-lang="contact.form.message"></label>
-                            <textarea class="form-control" id="contactMessage" rows="5" required></textarea>
+                            <textarea class="form-control" id="contactMessage" rows="5" name="message" required></textarea>
                         </div>
+
                         <div class="col-12">
                             <div class="form-check mb-3">
-                                <input class="form-check-input" type="checkbox" id="contactPrivacy" required>
+                                <input class="form-check-input" type="checkbox" id="contactPrivacy" name="privacy" required>
                                 <label class="form-check-label" for="contactPrivacy" data-lang="contact.form.privacy">
-                                    <span data-lang="contact.form.privacy_text"></span> <a href="#" data-lang="contact.form.privacy_link"></a>
+                                    <span data-lang="contact.form.privacy_text"></span> <a href="#"
+                                        data-lang="contact.form.privacy_link"></a>
                                 </label>
                             </div>
                         </div>
+                        <!-- Honeypot anti-bot -->
+                        <div style="display:none;">
+                            <input type="text" name="_honey">
+                        </div>
+
+                        <!-- Google reCAPTCHA v2 
                         <div class="col-12">
-                            <button type="submit" class="btn btn-primary btn-lg px-5 py-3" data-lang="contact.form.submit"></button>
+                            <div class="g-recaptcha" data-sitekey="6Ley_5MrAAAAALiYPUQfce1NJuFzzDnHNB2TpnB0"></div>
+                        </div>-->
+
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary btn-lg px-5 py-3"
+                                data-lang="contact.form.submit"></button>
                         </div>
                     </div>
                 </form>
@@ -118,25 +142,34 @@
         <div class="accordion" id="faqAccordion">
             <div class="accordion-item">
                 <h2 class="accordion-header" id="faqHeading1">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1" data-lang="contact.faq.q1"></button>
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1"
+                        data-lang="contact.faq.q1"></button>
                 </h2>
-                <div id="faqCollapse1" class="accordion-collapse collapse show" aria-labelledby="faqHeading1" data-bs-parent="#faqAccordion">
+                <div id="faqCollapse1" class="accordion-collapse collapse show" aria-labelledby="faqHeading1"
+                    data-bs-parent="#faqAccordion">
                     <div class="accordion-body" data-lang="contact.faq.a1"></div>
                 </div>
             </div>
             <div class="accordion-item">
                 <h2 class="accordion-header" id="faqHeading2">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2" data-lang="contact.faq.q2"></button>
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2"
+                        data-lang="contact.faq.q2"></button>
                 </h2>
-                <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faqHeading2" data-bs-parent="#faqAccordion">
+                <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faqHeading2"
+                    data-bs-parent="#faqAccordion">
                     <div class="accordion-body" data-lang="contact.faq.a2"></div>
                 </div>
             </div>
             <div class="accordion-item">
                 <h2 class="accordion-header" id="faqHeading3">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3" data-lang="contact.faq.q3"></button>
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3"
+                        data-lang="contact.faq.q3"></button>
                 </h2>
-                <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faqHeading3" data-bs-parent="#faqAccordion">
+                <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faqHeading3"
+                    data-bs-parent="#faqAccordion">
                     <div class="accordion-body" data-lang="contact.faq.a3"></div>
                 </div>
             </div>
@@ -150,7 +183,10 @@
         <h2 class="section-title text-center mb-4" data-lang="contact.map.title"></h2>
         <p class="text-center mb-4" data-lang="contact.map.description"></p>
         <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124858.55435791177!2d-77.12762385648307!3d-12.05522719755188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8db1e539667%3A0x4f45538aa07bda29!2sLima!5e0!3m2!1ses-419!2spe!4v1753807580314!5m2!1ses-419!2spe" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124858.55435791177!2d-77.12762385648307!3d-12.05522719755188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8db1e539667%3A0x4f45538aa07bda29!2sLima!5e0!3m2!1ses-419!2spe!4v1753807580314!5m2!1ses-419!2spe"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
 </section>

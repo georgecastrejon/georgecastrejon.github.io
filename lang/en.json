@@ -1,16 +1,19 @@
 {
-  "navbar": {
-    "brand": "QA Expert",
-    "home": "Home",
-    "services": "Services",
-    "portfolio": "Portfolio",
-    "contact": "Contact"
-  },
-  "language_selector": {
-    "spanish": "ES",
-    "english": "EN",
-    "japanese": "JP",
-    "chinese": "CN"
+  "header": {
+    "navbar": {
+      "brand": "QA Expert",
+      "home": "Home",
+      "services": "Services",
+      "portfolio": "Portfolio",
+      "contact": "Contact"
+    },
+    "language_selector": {
+      "spanish": "ES",
+      "english": "EN",
+      "japanese": "JP",
+      "chinese": "CN",
+      "korean": "KR"
+    }
   },
   "footer": {
     "title": "QA Expert",
@@ -28,53 +31,36 @@
       "twitter": "Twitter",
       "email": "Email"
     }
-  },
-  "hero": {
-    "title": "Professional Automation and Performance Testing",
-    "subtitle": "We ensure the quality and performance of your software with advanced automated solutions.",
-    "cta1": "Start Your Project",
-    "cta2": "Learn More"
-  },
-  "stats": {
-    "tests": "250",
-    "tests_label": "Tests Completed",
-    "uptime": "98",
-    "uptime_label": "Improved Efficiency",
-    "clients": "120",
-    "clients_label": "Satisfied Clients",
-    "projects": "15",
-    "projects_label": "Successful Projects"
-  },
-  "services": {
-    "title": "Our Services",
-    "automation": {
-      "title": "Process Automation",
-      "description": "We implement robust solutions to automate your testing processes, saving time and resources.",
-      "benefit1": "Reduction in operational costs",
-      "benefit2": "Increased accuracy and coverage",
-      "benefit3": "Freeing up human resources"
+  },  
+  "home": {
+    "hero": {
+      "title": "Professional Automation and Performance Testing",
+      "subtitle": "We ensure the quality and performance of your software with advanced automated solutions.",
+      "cta1": "Start Your Project",
+      "cta2": "Learn More"
     },
-    "performance": {
-      "title": "Performance Testing",
-      "description": "We evaluate your application's behavior under different loads to ensure stability and speed.",
-      "benefit1": "Identification of bottlenecks",
-      "benefit2": "Server resource optimization",
-      "benefit3": "Improved user experience"
+    "stats": {
+      "tests": "250",
+      "tests_label": "Tests Completed",
+      "uptime": "98",
+      "uptime_label": "Improved Efficiency",
+      "clients": "120",
+      "clients_label": "Satisfied Clients",
+      "projects": "15",
+      "projects_label": "Successful Projects"
     },
-    "quality": {
-      "title": "Quality Testing",
-      "description": "We design comprehensive QA strategies to ensure your software meets the highest quality standards.",
-      "benefit1": "Early defect detection",
-      "benefit2": "Improved software reliability",
-      "benefit3": "Increased customer satisfaction"
+    "process": {
+      "title": "Our Work Process",
+      "step1": "Requirements and objectives analysis",
+      "step2": "Automated solution design",
+      "step3": "Implementation and testing",
+      "step4": "Monitoring and maintenance"
+    },
+    "cta": {
+      "title": "Boost Your Business with Automation",
+      "description": "Don't waste more time on repetitive tasks. Automate your processes and focus on what really matters.",
+      "button": "Schedule a Consultation"
     }
-  },
-  "process": {
-    "title": "Our Work Process",
-    "step1": "Requirement and objective analysis",
-    "step2": "Automated solution design",
-    "step3": "Implementation and testing",
-    "step4": "Monitoring and maintenance"    
   },
   "portfolio": {
     "title": "Featured Projects",
@@ -99,8 +85,8 @@
         "title": "E-commerce Automation",
         "description": "Implementation of process automation for e-commerce platform.",
         "image_alt": "E-commerce Automation Project",
-        "modal": {          
-          "description": "Complete automation of inventory management and price update process for an e-commerce platform.",
+        "modal": {
+          "description": "Complete automation of inventory management and price update processes for an e-commerce platform.",
           "client": "RetailGlobal S.A.",
           "duration": "3 months",
           "result1": "80% reduction in human errors",
@@ -112,8 +98,8 @@
         "title": "API Integration with n8n",
         "description": "Automation of data flow between CRM and accounting tool using n8n.",
         "image_alt": "API Integration Project",
-        "modal": {          
-          "description": "Automation of data flow between the company's CRM and accounting tool using n8n to synchronize customer and invoice information.",
+        "modal": {
+          "description": "Automation of data flow between company CRM and accounting tool using n8n to synchronize customer and invoice information.",
           "client": "FinanzasPro Ltda.",
           "duration": "6 weeks",
           "result1": "Real-time automatic synchronization",
@@ -125,35 +111,35 @@
         "title": "Web Performance Testing",
         "description": "Load and stress analysis for insurance company web portal with JMeter.",
         "image_alt": "Web Performance Testing Project",
-        "modal": {          
-          "description": "Comprehensive load and stress evaluation for an insurer's web portal during high traffic events like promotional campaigns.",
+        "modal": {
+          "description": "Comprehensive load and stress evaluation for an insurer's web portal during high-traffic events like promotional campaigns.",
           "client": "SegurosConfiable S.A.",
           "duration": "5 weeks",
           "result1": "Identification and resolution of critical bottlenecks",
           "result2": "65% improvement in response times",
-          "result3": "Capacity increase from 500 to 2000 concurrent requests"
+          "result3": "Increased capacity from 500 to 2000 concurrent requests"
         }
       },
       "api_performance": {
         "title": "API Performance Testing",
         "description": "Performance and scalability evaluation of financial services REST API.",
         "image_alt": "API Performance Testing Project",
-        "modal": {          
+        "modal": {
           "description": "Detailed performance and scalability analysis of a critical REST API for financial services, identifying limits and optimizing response capacity.",
           "client": "BancoInnova",
           "duration": "4 weeks",
           "result1": "Identification of failure points under load",
           "result2": "Database query optimization",
-          "result3": "Capacity increase from 1000 to 5000 transactions per second"
+          "result3": "Increased capacity from 1000 to 5000 transactions per second"
         }
       },
       "qa_automation": {
         "title": "QA Test Automation",
-        "description": "Implementation of automated suite for functional and regression testing.",
+        "description": "Implementation of automated test suite for functional and regression testing.",
         "image_alt": "QA Test Automation Project",
-        "modal": {          
-          "description": "Development and implementation of a complete automated test suite for a complex web application, significantly reducing regression testing time.",
-          "client": "TechSolutions Global",
+        "modal": {
+          "description": "Development and implementation of a comprehensive automated test suite for a complex web application, significantly reducing regression testing time.",
+          "client": "TechSolutions Globales",
           "duration": "8 weeks",
           "result1": "90% reduction in regression testing time",
           "result2": "Improved defect detection",
@@ -161,11 +147,11 @@
         }
       },
       "functional_testing": {
-        "title": "Complete Functional Testing",
+        "title": "Comprehensive Functional Testing",
         "description": "Creation of complete functional test suite for banking application.",
         "image_alt": "Functional Testing Project",
-        "modal": {          
-          "description": "Design and execution of a comprehensive functional test plan for a new mobile banking application, ensuring requirement compliance and transaction security.",
+        "modal": {
+          "description": "Design and execution of comprehensive functional test plan for a new mobile banking application, ensuring requirement compliance and transaction security.",
           "client": "CooperativaFinanciera Unidos",
           "duration": "10 weeks",
           "result1": "Complete validation of 200+ test cases",
@@ -188,18 +174,40 @@
       "button": "Request Consultation"
     }
   },
-  "services_page": {
+  "services": {
+    "title": "Our Services",
     "hero": {
       "title": "Our Specialized Services",
       "subtitle": "We offer comprehensive QA and automation solutions tailored to your business's specific needs.",
       "cta1": "Request Quote",
       "cta2": "View Portfolio"
     },
+    "automation": {
+      "title": "Process Automation",
+      "description": "We implement robust solutions to automate your testing processes, saving time and resources.",
+      "benefit1": "Reduction in operational costs",
+      "benefit2": "Increased accuracy and coverage",
+      "benefit3": "Freeing up human resources"
+    },
+    "performance": {
+      "title": "Performance Testing",
+      "description": "We evaluate your application's behavior under different loads to ensure its stability and speed.",
+      "benefit1": "Identification of bottlenecks",
+      "benefit2": "Server resource optimization",
+      "benefit3": "Improved user experience"
+    },
+    "quality": {
+      "title": "Quality Testing",
+      "description": "We design comprehensive QA strategies to ensure your software meets the highest quality standards.",
+      "benefit1": "Early defect detection",
+      "benefit2": "Improved software reliability",
+      "benefit3": "Increased customer satisfaction"
+    },
     "process": {
       "title": "Our Delivery Process",
       "step1": {
-        "title": "Initial Assessment",
-        "description": "We analyze your objectives, challenges and your software's current state."
+        "title": "Initial Evaluation",
+        "description": "We analyze your objectives, challenges, and current software status."
       },
       "step2": {
         "title": "Strategic Planning",
@@ -223,7 +231,7 @@
       "postman": "Postman"
     },
     "cta": {
-      "title": "Power Your Software With Our Solutions",
+      "title": "Power Your Software with Our Solutions",
       "description": "Don't leave your software's quality and performance to chance. Contact me to get started.",
       "button": "Start Project"
     }
@@ -231,13 +239,13 @@
   "contact": {
     "hero": {
       "title": "Contact Me",
-      "subtitle": "Do you have a project that needs automation or performance testing? I'm here to help.",
+      "subtitle": "Do you have a project that needs automation or performance testing? I'm here to help you.",
       "cta1": "Explore Services",
       "cta2": "Send Email"
     },
     "info": {
       "title": "Contact Information",
-      "description": "You can reach me through the following channels:",
+      "description": "You can reach me through the following means:",
       "email": "Email:",
       "email_address": "sandovalcastrejon@gmail.com",
       "phone": "Phone:",
@@ -262,7 +270,7 @@
       "success": "Message sent successfully. I will contact you soon.",
       "error": "There was an error sending the message. Please try again."
     },
-    "social": {      
+    "social": {
       "linkedin": "LinkedIn",
       "github": "GitHub",
       "twitter": "Twitter"
@@ -270,20 +278,15 @@
     "faq": {
       "title": "Frequently Asked Questions",
       "q1": "How long does an automation project take?",
-      "a1": "Time varies depending on project complexity. A small project may take 2 to 4 weeks, while a more complex one may extend several months. We provide accurate estimates after initial assessment.",
+      "a1": "Time varies depending on project complexity. A small project may take 2-4 weeks, while a more complex one may extend several months. We provide precise estimates after an initial evaluation.",
       "q2": "What tools do you use for performance testing?",
       "a2": "I use industry-leading tools like Apache JMeter, NeoLoad, LoadRunner and k6, depending on the project's specific needs.",
       "q3": "Do you offer maintenance for automation scripts?",
-      "a3": "Yes, we offer proactive maintenance plans to ensure your automation scripts keep working properly even after application updates."
+      "a3": "Yes, we offer proactive maintenance plans to ensure your automation scripts keep working correctly even after updates to your application."
     },
     "map": {
       "title": "Our Location",
-      "description": "Find us in Lima's capital."
+      "description": "Find us in the capital of Lima."
     }
-  },
-  "cta": {
-    "title": "Boost Your Business With Automation",
-    "description": "Don't waste more time on repetitive tasks. Automate your processes and focus on what really matters.",
-    "button": "Schedule a Consultation"
   }
 }
