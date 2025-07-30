@@ -59,13 +59,13 @@
                 <div class="mt-4">
                     <h5 class="mb-3" data-lang="contact.info.follow"></h5>
                     <div class="d-flex">
-                        <a href="#" class="social-icon me-3" data-lang-title="contact.social.linkedin" title=""><i
+                        <a href="#" class="social-icon social-icon--dark me-3" data-lang-title="contact.social.linkedin" title=""><i
                                 class="bi bi-linkedin"></i></a>
-                        <a href="#" class="social-icon me-3" data-lang-title="contact.social.github" title=""><i
+                        <a href="#" class="social-icon social-icon--dark me-3" data-lang-title="contact.social.github" title=""><i
                                 class="bi bi-github"></i></a>
-                        <a href="#" class="social-icon me-3" data-lang-title="contact.social.twitter" title=""><i
+                        <a href="#" class="social-icon social-icon--dark me-3" data-lang-title="contact.social.twitter" title=""><i
                                 class="bi bi-twitter"></i></a>
-                        <a href="mailto:contacto@qaexpert.com" class="social-icon"
+                        <a href="mailto:contacto@qaexpert.com" class="social-icon social-icon--dark"
                             data-lang-title="contact.social.email" title=""><i class="bi bi-envelope"></i></a>
                     </div>
                 </div>
@@ -80,15 +80,15 @@
                     <div class="row g-3">
                         <div class="col-md-6">
                             <label for="contactName" class="form-label" data-lang="contact.form.name"></label>
-                            <input type="text" class="form-control" id="contactName" name="name" required>
+                            <input type="text" class="form-control" id="contactName" name="name" maxlength="50" required>
                         </div>
                         <div class="col-md-6">
                             <label for="contactEmail" class="form-label" data-lang="contact.form.email_label"></label>
-                            <input type="email" class="form-control" id="contactEmail" name="email" required>
+                            <input type="email" class="form-control" id="contactEmail" name="email" maxlength="50" required>
                         </div>
                         <div class="col-12">
                             <label for="contactSubject" class="form-label" data-lang="contact.form.subject"></label>
-                            <input type="text" class="form-control" id="contactSubject" nme="subject" required>
+                            <input type="text" class="form-control" id="contactSubject" nme="subject" maxlength="100" required>
                         </div>
                         <div class="col-12">
                             <label for="contactService" class="form-label" data-lang="contact.form.service"></label>
@@ -102,7 +102,7 @@
                         </div>
                         <div class="col-12">
                             <label for="contactMessage" class="form-label" data-lang="contact.form.message"></label>
-                            <textarea class="form-control" id="contactMessage" rows="5" name="message" required></textarea>
+                            <textarea class="form-control" id="contactMessage" rows="5" name="message" maxlength="1000" required></textarea>
                         </div>
 
                         <div class="col-12">
@@ -114,15 +114,17 @@
                                 </label>
                             </div>
                         </div>
+                        
                         <!-- Honeypot anti-bot -->
                         <div style="display:none;">
                             <input type="text" name="_honey">
                         </div>
 
-                        <!-- Google reCAPTCHA v2 
+                        <!--Widget Google reCAPTCHA v2 -->
+                        <input type="hidden" name="g-recaptcha-response" id="recaptchaResponse">
                         <div class="col-12">
-                            <div class="g-recaptcha" data-sitekey="6Ley_5MrAAAAALiYPUQfce1NJuFzzDnHNB2TpnB0"></div>
-                        </div>-->
+                            <div id="recaptcha-container" class="g-recaptcha" data-sitekey="6Ley_5MrAAAAALiYPUQfce1NJuFzzDnHNB2TpnB0"></div>
+                        </div>
 
                         <div class="col-12">
                             <button type="submit" class="btn btn-primary btn-lg px-5 py-3"

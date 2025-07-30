@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!-- El atributo lang se actualizará dinámicamente por LanguageManager -->
-<html lang="es"> 
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,8 +13,10 @@
     <style>
         /* Estilo para el contenedor principal de la SPA */
         #spa-content {
-            flex: 1; /* Para que el footer se mantenga al final */
+            flex: 1;
+            /* Para que el footer se mantenga al final */
         }
+
         /* Ocultar contenido mientras se carga */
         .spa-loading {
             text-align: center;
@@ -21,6 +24,7 @@
         }
     </style>
 </head>
+
 <body class="d-flex flex-column min-vh-100">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
@@ -37,18 +41,21 @@
                         <a class="nav-link" href="#" data-route="home" data-lang="header.navbar.home"></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#servicios" data-route="servicios" data-lang="header.navbar.services"></a>
+                        <a class="nav-link" href="#servicios" data-route="servicios"
+                            data-lang="header.navbar.services"></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#portafolio" data-route="portafolio" data-lang="header.navbar.portfolio"></a>
+                        <a class="nav-link" href="#portafolio" data-route="portafolio"
+                            data-lang="header.navbar.portfolio"></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contacto" data-route="contacto" data-lang="header.navbar.contact"></a>
+                        <a class="nav-link" href="#contacto" data-route="contacto"
+                            data-lang="header.navbar.contact"></a>
                     </li>
                 </ul>
                 <div class="d-flex align-items-center me-3">
                     <select class="form-select form-select-sm" id="languageSelector" style="width: auto;">
-                        <option value="es" data-lang="header.language_selector.spanish"></option> 
+                        <option value="es" data-lang="header.language_selector.spanish"></option>
                         <option value="en" data-lang="header.language_selector.english"></option>
                         <option value="jp" data-lang="header.language_selector.japanese"></option>
                         <option value="cn" data-lang="header.language_selector.chinese"></option>
@@ -75,45 +82,62 @@
                     <p data-lang="footer.description"></p>
                     <div class="mt-4">
                         <!-- Tooltips en los iconos sociales -->
-                        <a href="#" class="social-icon" data-lang-title="footer.social.linkedin" title=""><i class="bi bi-linkedin"></i></a>
-                        <a href="#" class="social-icon" data-lang-title="footer.social.github" title=""><i class="bi bi-github"></i></a>
-                        <a href="#" class="social-icon" data-lang-title="footer.social.twitter" title=""><i class="bi bi-twitter"></i></a>
-                        <a href="#" class="social-icon" data-lang-title="footer.social.email" title=""><i class="bi bi-envelope"></i></a>
+                        <a href="#" class="social-icon social-icon--light" data-lang-title="footer.social.linkedin"
+                            title=""><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="social-icon social-icon--light" data-lang-title="footer.social.github"
+                            title=""><i class="bi bi-github"></i></a>
+                        <a href="#" class="social-icon social-icon--light" data-lang-title="footer.social.twitter"
+                            title=""><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="social-icon social-icon--light" data-lang-title="footer.social.email"
+                            title=""><i class="bi bi-envelope"></i></a>
                     </div>
                 </div>
                 <div class="col-md-2">
-                    <h5 class="fw-bold mb-4" data-lang="footer.links"></h5> 
+                    <h5 class="fw-bold mb-4" data-lang="footer.links"></h5>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#" class="text-decoration-none text-light" data-route="home" data-lang="navbar.home"></a></li> 
-                        <li class="mb-2"><a href="#servicios" class="text-decoration-none text-light" data-route="servicios" data-lang="navbar.services"></a></li> 
-                        <li class="mb-2"><a href="#portafolio" class="text-decoration-none text-light" data-route="portafolio" data-lang="navbar.portfolio"></a></li> 
-                        <li class="mb-2"><a href="#contacto" class="text-decoration-none text-light" data-route="contacto" data-lang="navbar.contact"></a></li> 
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-light" data-route="home"
+                                data-lang="header.navbar.home"></a></li>
+                        <li class="mb-2"><a href="#servicios" class="text-decoration-none text-light"
+                                data-route="servicios" data-lang="header.navbar.services"></a></li>
+                        <li class="mb-2"><a href="#portafolio" class="text-decoration-none text-light"
+                                data-route="portafolio" data-lang="header.navbar.portfolio"></a></li>
+                        <li class="mb-2"><a href="#contacto" class="text-decoration-none text-light"
+                                data-route="contacto" data-lang="header.navbar.contact"></a></li>
                     </ul>
                 </div>
                 <div class="col-md-3">
-                    <h5 class="fw-bold mb-4" data-lang="footer.services"></h5> 
+                    <h5 class="fw-bold mb-4" data-lang="footer.services"></h5>
                     <ul class="list-unstyled">
-                        <li class="mb-2" data-lang="services.automation.title"></li> 
-                        <li class="mb-2" data-lang="services.performance.title"></li> 
-                        <li class="mb-2" data-lang="services.quality.title"></li>                         
+                        <li class="mb-2" data-lang="services.automation.title"></li>
+                        <li class="mb-2" data-lang="services.performance.title"></li>
+                        <li class="mb-2" data-lang="services.quality.title"></li>
                     </ul>
                 </div>
                 <div class="col-md-3">
-                    <h5 class="fw-bold mb-4" data-lang="footer.contact"></h5> 
+                    <h5 class="fw-bold mb-4" data-lang="footer.contact"></h5>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><i class="bi bi-envelope me-2"></i> <span data-lang="footer.email"></span></li> 
-                        <li class="mb-2"><i class="bi bi-telephone me-2"></i> <span data-lang="footer.phone"></span></li> 
-                        <li class="mb-2"><i class="bi bi-geo-alt me-2"></i> <span data-lang="footer.location"></span></li> 
+                        <li class="mb-2"><i class="bi bi-envelope me-2"></i> <span data-lang="footer.email"></span></li>
+                        <li class="mb-2"><i class="bi bi-telephone me-2"></i> <span data-lang="footer.phone"></span>
+                        </li>
+                        <li class="mb-2"><i class="bi bi-geo-alt me-2"></i> <span data-lang="footer.location"></span>
+                        </li>
                     </ul>
                 </div>
             </div>
             <hr class="my-4 bg-light">
             <div class="text-center">
-                <p class="mb-0" data-lang="footer.copyright"></p> 
+                <p class="mb-0" data-lang="footer.copyright"></p>
             </div>
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script type="module" src="/js/main.js"></script>
+    <script>
+        function initRecaptcha() {
+            console.log("reCAPTCHA cargado. Widget listo para renderizar manualmente.");
+        }
+    </script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=initRecaptcha&render=explicit" async defer></script>
 </body>
+
 </html>

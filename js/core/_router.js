@@ -36,7 +36,7 @@ export class SPARouter {
     }
 
     getInitialLanguage() {
-         // Preferir el idioma del LanguageManager si ya está disponible
+        // Preferir el idioma del LanguageManager si ya está disponible
         if (window.languageManager) {
             return window.languageManager.getCurrentLanguage();
         }
@@ -70,10 +70,10 @@ export class SPARouter {
             await this.loadAndDisplayContent('');
             return;
         }
-        
+
         // Usar siempre routeConfig.template, ya que ahora es independiente del idioma
         const contentPath = routeConfig.template;
-        
+
         if (!contentPath) {
             console.error(`No se encontró contenido para la ruta ${path}`);
             this.contentContainer.innerHTML = '<div class="container py-5"><h2>Error al cargar el contenido</h2><p>El contenido solicitado no está disponible.</p></div>';
@@ -98,6 +98,10 @@ export class SPARouter {
             console.error('Error al cargar el contenido de la página:', error);
             this.contentContainer.innerHTML = `<div class="container py-5"><h2>Error</h2><p>No se pudo cargar el contenido. Por favor, inténtalo de nuevo más tarde.</p><p>Detalles: ${error.message}</p></div>`;
         }
+
+        if (path === 'contacto') {
+            await this.handleRecaptchaRender();
+        }
     }
 
     initializeBootstrapComponents() {
@@ -116,7 +120,7 @@ export class SPARouter {
     updateUI(path) {
         // Actualizar título de la página usando las claves de traducción
         let titleKey = 'navigation.home';
-        switch(path) {
+        switch (path) {
             case 'servicios':
                 titleKey = 'navigation.services';
                 break;
@@ -129,13 +133,13 @@ export class SPARouter {
         }
         const pageTitle = window.languageManager ? window.languageManager.getTranslation(titleKey) : 'QA Expert';
         document.title = `QA Expert | ${pageTitle}`;
-        
+
         // Actualizar clase 'active' en el navbar
         this.navLinks.forEach(link => {
             // Comparar el hash de la URL con el data-route del enlace
             const route = link.getAttribute('data-route');
             let targetHash = '';
-            switch(route) {
+            switch (route) {
                 case 'servicios':
                     targetHash = 'servicios';
                     break;
@@ -150,14 +154,14 @@ export class SPARouter {
                     targetHash = '';
                     break;
             }
-            
+
             if (targetHash === path) {
                 link.classList.add('active');
             } else {
                 link.classList.remove('active');
             }
         });
-        
+
         // Actualizar selector de idioma
         if (this.langSelector) {
             this.langSelector.value = this.currentLanguage;
@@ -168,23 +172,23 @@ export class SPARouter {
         if (newLanguage === this.currentLanguage) return;
         const oldLanguage = this.currentLanguage;
         this.currentLanguage = newLanguage;
-        
+
         try {
             // Actualizar las traducciones usando LanguageManager
             if (window.languageManager) {
                 await window.languageManager.changeLanguage(newLanguage);
             }
-            
+
             // Recargar el contenido actual para aplicar las nuevas traducciones
             const hash = window.location.hash.slice(1) || '';
             await this.loadAndDisplayContent(hash);
             this.updateUI(hash);
-            
+
             // Nota: En una SPA pura con hash, no necesitamos cambiar la ruta base
             // La URL con hash se mantiene, y el contenido se traduce.
             // Si quisieras cambiar el idioma en la URL base, se podría hacer,
             // pero sería más complejo con el enfoque de hash actual.
-            
+
         } catch (error) {
             console.error('Error changing language in SPARouter:', error);
             // Revertir el idioma en caso de error
@@ -194,12 +198,50 @@ export class SPARouter {
             }
         }
     }
-    
+
     // Método auxiliar para normalizar rutas si es necesario
     // En este caso con hash, puede ser más simple
     normalizePath(path) {
         // Para rutas basadas en hash, normalmente trabajamos con el hash
         // Este método podría no ser necesario o muy simple
         return path; // O tal vez window.location.hash.slice(1) || '';
+    }
+
+    async handleRecaptchaRender() {
+        await this.waitForRecaptcha();
+
+        const container = document.getElementById('recaptcha-container');
+        if (!container) {
+            console.error('Contenedor reCAPTCHA no encontrado');
+            return;
+        }
+
+        if (container.hasAttribute('data-widget-id')) {
+            grecaptcha.reset();
+        } else {
+            try {
+                const widgetId = grecaptcha.render(container, {
+                    sitekey: '6Ley_5MrAAAAALiYPUQfce1NJuFzzDnHNB2TpnB0',
+                    callback: (response) => console.log('reCAPTCHA completado:', response),
+                    'expired-callback': () => console.log('reCAPTCHA expirado'),
+                    'error-callback': () => console.log('Error en reCAPTCHA')
+                });
+                container.setAttribute('data-widget-id', widgetId);
+            } catch (error) {
+                console.error('Error renderizando reCAPTCHA:', error);
+            }
+        }
+    }
+
+    waitForRecaptcha(attempts = 0) {
+        return new Promise((resolve, reject) => {
+            if (window.grecaptcha && grecaptcha.render) {
+                resolve();
+            } else if (attempts < 10) {
+                setTimeout(() => this.waitForRecaptcha(attempts + 1).then(resolve), 300);
+            } else {
+                reject(new Error('reCAPTCHA no cargado después de 3 segundos'));
+            }
+        });
     }
 }
