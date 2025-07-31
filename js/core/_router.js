@@ -5,6 +5,7 @@ import { initializeDynamicBootstrapComponents } from '../modules/_bootstrap-help
 
 export class SPARouter {
     constructor() {
+        this.RECAPTCHA_SITE_KEY = '6LfiIpUrAAAAABhohXhcpvXNfVA6UL-KC9op2cit';
         // Definir rutas apuntando a la nueva carpeta 'views/'
         this.routes = {
             '': { template: './views/home.html' },
@@ -81,6 +82,7 @@ export class SPARouter {
         }
         // Mostrar indicador de carga
         this.contentContainer.innerHTML = '<div class="spa-loading"><div class="spinner-border text-primary" role="status"><span class="visually-hidden">Loading...</span></div></div>';
+
         try {
             const response = await fetch(contentPath);
             if (!response.ok) {
@@ -94,13 +96,77 @@ export class SPARouter {
             if (window.languageManager) {
                 window.languageManager.translatePage();
             }
+
+            if (path === 'contacto') {
+                await this.handleRecaptchaRender();
+
+                const contactForm = document.getElementById('contactForm');
+                if (contactForm) {
+                    contactForm.addEventListener('submit', async (e) => {  // ¡Ahora es async!
+                        e.preventDefault(); // Siempre prevenir el envío primero
+
+                        // Verifica si reCAPTCHA está listo
+                        if (!window.grecaptcha) {
+                            alert("Error de seguridad. Recarga la página.");
+                            return;
+                        }
+
+                        const token = grecaptcha.getResponse();
+                        if (!token) {
+                            alert("Por favor completa el reCAPTCHA");
+                            return;
+                        }
+
+                        // Convertir FormData a objeto y asegurar el token
+                        const formData = new FormData(contactForm);
+
+                        //console.log("Datos a enviar:", Object.fromEntries(formData.entries()));
+
+                        // Envío manual con fetch para mayor control
+                        try {
+                            // Convertir FormData a URLSearchParams (formato que Formspree espera)
+                            const formData = new URLSearchParams();
+
+                            // Añadir manualmente cada campo necesario
+                            formData.append('name', contactForm.name.value);
+                            formData.append('email', contactForm.email.value);
+                            formData.append('subject', contactForm.subject.value);
+                            formData.append('service', contactForm.service.value);
+                            formData.append('message', contactForm.message.value);
+                            formData.append('privacy', contactForm.privacy.checked ? 'true' : 'false');
+                            formData.append('g-recaptcha-response', token); // Solo una vez
+
+                            //console.log("Datos finales:", formData.toString());
+
+                            const response = await fetch(contactForm.action, {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/x-www-form-urlencoded',
+                                    'Accept': 'application/json'
+                                },
+                                body: formData
+                            });
+
+                            if (!response.ok) {
+                                const errorData = await response.json();
+                                throw new Error(errorData.error || 'Error en el servidor');
+                            }
+
+                            contactForm.reset();
+                            grecaptcha.reset();
+
+                        } catch (error) {
+                            console.error("Error al enviar:", error);
+                            alert(`Error: ${error.message}`);
+                            grecaptcha.reset();
+                        }
+                    });
+                }
+            }
+
         } catch (error) {
             console.error('Error al cargar el contenido de la página:', error);
             this.contentContainer.innerHTML = `<div class="container py-5"><h2>Error</h2><p>No se pudo cargar el contenido. Por favor, inténtalo de nuevo más tarde.</p><p>Detalles: ${error.message}</p></div>`;
-        }
-
-        if (path === 'contacto') {
-            await this.handleRecaptchaRender();
         }
     }
 
@@ -208,35 +274,32 @@ export class SPARouter {
     }
 
     async handleRecaptchaRender() {
-        await this.waitForRecaptcha();
+        try {
+            await this.waitForRecaptcha();
+            const container = document.getElementById('recaptcha-container');
+            if (!container || container.hasAttribute('data-widget-id')) return;
 
-        const container = document.getElementById('recaptcha-container');
-        if (!container) {
-            console.error('Contenedor reCAPTCHA no encontrado');
-            return;
+            const widgetId = grecaptcha.render(container, {
+                sitekey: this.RECAPTCHA_SITE_KEY,
+                /*callback: (token) => {
+                    console.log("Token activo:", token);
+                },*/
+                'expired-callback': () => {
+                    console.warn("Token expirado");
+                    grecaptcha.reset();
+                }
+            });
+            container.setAttribute('data-widget-id', widgetId);
+        } catch (error) {
+            console.error("Error al renderizar reCAPTCHA:", error);
         }
 
-        if (container.hasAttribute('data-widget-id')) {
-            grecaptcha.reset();
-        } else {
-            try {
-                const widgetId = grecaptcha.render(container, {
-                    sitekey: '6Ley_5MrAAAAALiYPUQfce1NJuFzzDnHNB2TpnB0',
-                    callback: (response) => console.log('reCAPTCHA completado:', response),
-                    'expired-callback': () => console.log('reCAPTCHA expirado'),
-                    'error-callback': () => console.log('Error en reCAPTCHA')
-                });
-                container.setAttribute('data-widget-id', widgetId);
-            } catch (error) {
-                console.error('Error renderizando reCAPTCHA:', error);
-            }
-        }
     }
 
     waitForRecaptcha(attempts = 0) {
         return new Promise((resolve, reject) => {
             if (window.grecaptcha && grecaptcha.render) {
-                resolve();
+                grecaptcha.ready(resolve);
             } else if (attempts < 10) {
                 setTimeout(() => this.waitForRecaptcha(attempts + 1).then(resolve), 300);
             } else {

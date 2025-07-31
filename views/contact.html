@@ -76,7 +76,7 @@
                 <div id="successMessage" class="success-message" data-lang="contact.form.success"></div>
                 <div id="errorMessage" class="error-message" data-lang="contact.form.error"></div>
 
-                <form action="https://formspree.io/f/xyzppgkp" method="POST" id="contactForm">
+                <form id="contactForm" action="https://formspree.io/f/xyzppgkp" method="POST">
                     <div class="row g-3">
                         <div class="col-md-6">
                             <label for="contactName" class="form-label" data-lang="contact.form.name"></label>
@@ -88,7 +88,7 @@
                         </div>
                         <div class="col-12">
                             <label for="contactSubject" class="form-label" data-lang="contact.form.subject"></label>
-                            <input type="text" class="form-control" id="contactSubject" nme="subject" maxlength="100" required>
+                            <input type="text" class="form-control" id="contactSubject" name="subject" maxlength="100" required>
                         </div>
                         <div class="col-12">
                             <label for="contactService" class="form-label" data-lang="contact.form.service"></label>
@@ -120,11 +120,12 @@
                             <input type="text" name="_honey">
                         </div>
 
-                        <!--Widget Google reCAPTCHA v2 -->
-                        <input type="hidden" name="g-recaptcha-response" id="recaptchaResponse">
+                        <!--Widget Google reCAPTCHA v2 -->                                                
                         <div class="col-12">
-                            <div id="recaptcha-container" class="g-recaptcha" data-sitekey="6Ley_5MrAAAAALiYPUQfce1NJuFzzDnHNB2TpnB0"></div>
+                            <div id="recaptcha-container" class="g-recaptcha"></div>
                         </div>
+                        
+                        <!--<input type="hidden" name="g-recaptcha-response" id="recaptchaResponse">-->
 
                         <div class="col-12">
                             <button type="submit" class="btn btn-primary btn-lg px-5 py-3"
