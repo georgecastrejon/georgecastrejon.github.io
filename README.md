@@ -1,5 +1,4 @@
 # QA Professional Portfolio
-![Banner del Proyecto](assets/images/banner.png) 
 
 Una SPA (Single Page Application) moderna que muestra mis servicios y experiencia como profesional de Control de Calidad (QA), con arquitectura escalable y diseño atómico.
 
