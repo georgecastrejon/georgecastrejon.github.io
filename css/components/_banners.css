@@ -9,8 +9,10 @@
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1050; /* Asegurar que esté por encima */
-    box-sizing: border-box; /* Para padding y width */
+    z-index: 1050;
+    /* Asegurar que esté por encima */
+    box-sizing: border-box;
+    /* Para padding y width */
 }
 
 /* Mensajes */
@@ -18,18 +20,18 @@
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 20px;
-    box-sizing: border-box; /* Para padding y width */
+    box-sizing: border-box;
 }
 
 .success-message {
-    display: none; /* Controlado por JS */
+    display: none;
     background-color: #d1fae5;
     border: 1px solid #10b981;
     color: #065f46;
 }
 
 .error-message {
-    display: none; /* Controlado por JS */
+    display: none;
     background-color: #fee2e2;
     border: 1px solid #ef4444;
     color: #b91c1c;

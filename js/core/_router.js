@@ -1,12 +1,11 @@
-// js/core/_router.js
-// Asumimos que los módulos están en la misma carpeta 'core' o ajusta la ruta según tu estructura real
 import { initPortfolioFilters } from '../modules/_portafolio-filter.js';
 import { initializeDynamicBootstrapComponents } from '../modules/_bootstrap-helpers.js';
 
 export class SPARouter {
+
+    //Constructor - configura rutas y elementos del DOM
     constructor() {
         this.RECAPTCHA_SITE_KEY = '6LfiIpUrAAAAABhohXhcpvXNfVA6UL-KC9op2cit';
-        // Definir rutas apuntando a la nueva carpeta 'views/'
         this.routes = {
             '': { template: './views/home.html' },
             'servicios': { template: './views/services.html' },
@@ -15,74 +14,56 @@ export class SPARouter {
         };
         this.contentContainer = document.getElementById('spa-content');
         this.navLinks = document.querySelectorAll('a[data-route]');
-        this.langSelector = document.getElementById('languageSelector');
-        // Usar el idioma del LanguageManager o un fallback
-        this.currentLanguage = window.languageManager ? window.languageManager.getCurrentLanguage() : 'es';
         this.init();
     }
 
+    //Inicializa el router, configura eventos y carga contenido inicial
+    //Escucha cambios en el hash de la URL y actualiza el contenido
+    //Configura los enlaces de navegación para manejar clics y cambios de hash
     init() {
-        // Escuchar cambios en el hash de la URL (botones atrás/adelante)
         window.addEventListener('hashchange', () => this.handleLocationChange());
-        // Escuchar clics en enlaces de navegación
         this.navLinks.forEach(link => {
             link.addEventListener('click', (e) => this.handleNavigationClick(e));
         });
-        // Escuchar cambios en el selector de idioma
-        if (this.langSelector) {
-            this.langSelector.addEventListener('change', (e) => this.changeLanguage(e.target.value));
-        }
-        // Cargar la ruta inicial
         this.handleLocationChange();
     }
 
-    getInitialLanguage() {
-        // Preferir el idioma del LanguageManager si ya está disponible
-        if (window.languageManager) {
-            return window.languageManager.getCurrentLanguage();
-        }
-        // Fallback: Determinar el idioma inicial basado en la URL o preferencias
-        const path = window.location.pathname;
-        if (path.startsWith('/en/')) {
-            return 'en';
-        }
-        return 'es'; // Por defecto español
-    }
-
+    //Maneja los cambios en la ubicación (hash de la URL)
+    //Carga y muestra el contenido correspondiente a la ruta actual
+    //Actualiza la interfaz de usuario según la ruta
     async handleLocationChange() {
         const hash = window.location.hash.slice(1) || '';
-        // Cargar y mostrar el contenido
         await this.loadAndDisplayContent(hash);
-        // Actualizar UI (navbar, título)
         this.updateUI(hash);
     }
 
+    //Maneja los clics en los enlaces de navegación
+    //Previene el comportamiento por defecto del enlace y actualiza el hash de la URL
+    //Carga el contenido correspondiente a la ruta seleccionada
     handleNavigationClick(e) {
         e.preventDefault();
         const route = e.target.getAttribute('data-route');
         window.location.hash = route === 'home' ? '' : route;
     }
 
+    //Carga y muestra el contenido correspondiente a la ruta especificada
+    //Si la ruta no está definida, carga la página de inicio
+    //Muestra un mensaje de carga mientras se obtiene el contenido
+    //Maneja errores al cargar el contenido y muestra un mensaje de error
     async loadAndDisplayContent(path) {
         const routeConfig = this.routes[path];
         if (!routeConfig) {
-            // Ruta no encontrada, cargar página de inicio
             console.warn(`Ruta no encontrada: ${path}. Cargando página de inicio.`);
             await this.loadAndDisplayContent('');
             return;
         }
-
-        // Usar siempre routeConfig.template, ya que ahora es independiente del idioma
         const contentPath = routeConfig.template;
-
         if (!contentPath) {
             console.error(`No se encontró contenido para la ruta ${path}`);
             this.contentContainer.innerHTML = '<div class="container py-5"><h2>Error al cargar el contenido</h2><p>El contenido solicitado no está disponible.</p></div>';
             return;
         }
-        // Mostrar indicador de carga
         this.contentContainer.innerHTML = '<div class="spa-loading"><div class="spinner-border text-primary" role="status"><span class="visually-hidden">Loading...</span></div></div>';
-
         try {
             const response = await fetch(contentPath);
             if (!response.ok) {
@@ -90,22 +71,17 @@ export class SPARouter {
             }
             const htmlContent = await response.text();
             this.contentContainer.innerHTML = htmlContent;
-            // Inicializar componentes de Bootstrap usando el módulo importado
             this.initializeBootstrapComponents();
-            // Aplicar traducciones al nuevo contenido
             if (window.languageManager) {
                 window.languageManager.translatePage();
             }
-
             if (path === 'contacto') {
                 await this.handleRecaptchaRender();
-
                 const contactForm = document.getElementById('contactForm');
                 if (contactForm) {
-                    contactForm.addEventListener('submit', async (e) => {  // ¡Ahora es async!
-                        e.preventDefault(); // Siempre prevenir el envío primero
+                    contactForm.addEventListener('submit', async (e) => {
+                        e.preventDefault();
 
-                        // Verifica si reCAPTCHA está listo
                         if (!window.grecaptcha) {
                             alert("Error de seguridad. Recarga la página.");
                             return;
@@ -116,27 +92,16 @@ export class SPARouter {
                             alert("Por favor completa el reCAPTCHA");
                             return;
                         }
-
-                        // Convertir FormData a objeto y asegurar el token
-                        const formData = new FormData(contactForm);
-
-                        //console.log("Datos a enviar:", Object.fromEntries(formData.entries()));
-
-                        // Envío manual con fetch para mayor control
                         try {
-                            // Convertir FormData a URLSearchParams (formato que Formspree espera)
                             const formData = new URLSearchParams();
 
-                            // Añadir manualmente cada campo necesario
                             formData.append('name', contactForm.name.value);
                             formData.append('email', contactForm.email.value);
                             formData.append('subject', contactForm.subject.value);
                             formData.append('service', contactForm.service.value);
                             formData.append('message', contactForm.message.value);
                             formData.append('privacy', contactForm.privacy.checked ? 'true' : 'false');
-                            formData.append('g-recaptcha-response', token); // Solo una vez
-
-                            //console.log("Datos finales:", formData.toString());
+                            formData.append('g-recaptcha-response', token);
 
                             const response = await fetch(contactForm.action, {
                                 method: 'POST',
@@ -147,17 +112,17 @@ export class SPARouter {
                                 body: formData
                             });
 
-                            if (!response.ok) {
+                            if (response.ok) {
+                                this.showSuccess();
+                                contactForm.reset();
+                                grecaptcha.reset();
+                            } else {
                                 const errorData = await response.json();
                                 throw new Error(errorData.error || 'Error en el servidor');
                             }
 
-                            contactForm.reset();
-                            grecaptcha.reset();
-
                         } catch (error) {
-                            console.error("Error al enviar:", error);
-                            alert(`Error: ${error.message}`);
+                            this.showError(error.message);
                             grecaptcha.reset();
                         }
                     });
@@ -170,109 +135,69 @@ export class SPARouter {
         }
     }
 
+    //Muestra un mensaje de éxito al enviar el formulario de contacto
+    //Oculta el mensaje después de 5 segundos
+    //Actualiza el texto del mensaje con la traducción correspondiente
+    //Si no se encuentra la traducción, usa un mensaje por defecto
+    showSuccess() {
+        const successElement = document.getElementById('successMessage');
+        successElement.style.display = 'block';
+        setTimeout(() => {
+            successElement.style.display = 'none';
+        }, 5000);
+    }
+
+    //Muestra un mensaje de error al enviar el formulario de contacto
+    //Oculta el mensaje después de 5 segundos
+    //Actualiza el texto del mensaje con la traducción correspondiente
+    //Si no se encuentra la traducción, usa un mensaje por defecto
+    showError(message) {
+        const errorElement = document.getElementById('errorMessage');
+        errorElement.style.display = 'block';
+        console.debug(message)
+        
+        setTimeout(() => {
+            errorElement.style.display = 'none';
+        }, 5000);
+    }
+
+    //Inicializa los componentes de Bootstrap dinámicos
     initializeBootstrapComponents() {
-        // Re-inicializar componentes de Bootstrap usando el módulo importado
         initializeDynamicBootstrapComponents(this.contentContainer);
-        // Inicializar filtros de portafolio usando el módulo importado
         this.setupPortfolioFilters();
     }
 
+    //Configura los filtros del portafolio
     setupPortfolioFilters() {
-        // Lógica para los filtros del portafolio delegada al módulo
-        // Pasamos el contenedor donde se encuentran los elementos
         initPortfolioFilters(this.contentContainer);
     }
 
+    //Actualiza la interfaz de usuario según la ruta actual
+    //Actualiza el título de la página y los enlaces de navegación
+    //Resalta el enlace activo según la ruta actual
+    //Si no se encuentra una ruta específica, usa 'home' como predeterminado
     updateUI(path) {
-        // Actualizar título de la página usando las claves de traducción
         let titleKey = 'navigation.home';
         switch (path) {
-            case 'servicios':
-                titleKey = 'navigation.services';
-                break;
-            case 'portafolio':
-                titleKey = 'navigation.portfolio';
-                break;
-            case 'contacto':
-                titleKey = 'navigation.contact';
-                break;
+            case 'servicios': titleKey = 'navigation.services'; break;
+            case 'portafolio': titleKey = 'navigation.portfolio'; break;
+            case 'contacto': titleKey = 'navigation.contact'; break;
         }
-        const pageTitle = window.languageManager ? window.languageManager.getTranslation(titleKey) : 'QA Expert';
-        document.title = `QA Expert | ${pageTitle}`;
-
-        // Actualizar clase 'active' en el navbar
+        document.title = `QA Expert | ${window.languageManager?.getTranslation(titleKey) || 'QA Expert'}`;
         this.navLinks.forEach(link => {
-            // Comparar el hash de la URL con el data-route del enlace
             const route = link.getAttribute('data-route');
             let targetHash = '';
             switch (route) {
-                case 'servicios':
-                    targetHash = 'servicios';
-                    break;
-                case 'portafolio':
-                    targetHash = 'portafolio';
-                    break;
-                case 'contacto':
-                    targetHash = 'contacto';
-                    break;
-                case 'home':
-                default:
-                    targetHash = '';
-                    break;
+                case 'servicios': targetHash = 'servicios'; break;
+                case 'portafolio': targetHash = 'portafolio'; break;
+                case 'contacto': targetHash = 'contacto'; break;
+                default: targetHash = ''; break;
             }
-
-            if (targetHash === path) {
-                link.classList.add('active');
-            } else {
-                link.classList.remove('active');
-            }
+            link.classList.toggle('active', targetHash === path);
         });
-
-        // Actualizar selector de idioma
-        if (this.langSelector) {
-            this.langSelector.value = this.currentLanguage;
-        }
     }
 
-    async changeLanguage(newLanguage) {
-        if (newLanguage === this.currentLanguage) return;
-        const oldLanguage = this.currentLanguage;
-        this.currentLanguage = newLanguage;
-
-        try {
-            // Actualizar las traducciones usando LanguageManager
-            if (window.languageManager) {
-                await window.languageManager.changeLanguage(newLanguage);
-            }
-
-            // Recargar el contenido actual para aplicar las nuevas traducciones
-            const hash = window.location.hash.slice(1) || '';
-            await this.loadAndDisplayContent(hash);
-            this.updateUI(hash);
-
-            // Nota: En una SPA pura con hash, no necesitamos cambiar la ruta base
-            // La URL con hash se mantiene, y el contenido se traduce.
-            // Si quisieras cambiar el idioma en la URL base, se podría hacer,
-            // pero sería más complejo con el enfoque de hash actual.
-
-        } catch (error) {
-            console.error('Error changing language in SPARouter:', error);
-            // Revertir el idioma en caso de error
-            this.currentLanguage = oldLanguage;
-            if (this.langSelector) {
-                this.langSelector.value = oldLanguage;
-            }
-        }
-    }
-
-    // Método auxiliar para normalizar rutas si es necesario
-    // En este caso con hash, puede ser más simple
-    normalizePath(path) {
-        // Para rutas basadas en hash, normalmente trabajamos con el hash
-        // Este método podría no ser necesario o muy simple
-        return path; // O tal vez window.location.hash.slice(1) || '';
-    }
-
+    //Maneja la renderización de reCAPTCHA
     async handleRecaptchaRender() {
         try {
             await this.waitForRecaptcha();
@@ -281,9 +206,6 @@ export class SPARouter {
 
             const widgetId = grecaptcha.render(container, {
                 sitekey: this.RECAPTCHA_SITE_KEY,
-                /*callback: (token) => {
-                    console.log("Token activo:", token);
-                },*/
                 'expired-callback': () => {
                     console.warn("Token expirado");
                     grecaptcha.reset();
@@ -293,9 +215,9 @@ export class SPARouter {
         } catch (error) {
             console.error("Error al renderizar reCAPTCHA:", error);
         }
-
     }
 
+    //Espera a que reCAPTCHA esté disponible
     waitForRecaptcha(attempts = 0) {
         return new Promise((resolve, reject) => {
             if (window.grecaptcha && grecaptcha.render) {

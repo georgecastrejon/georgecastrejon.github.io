@@ -1,112 +1,54 @@
 # QA Professional Portfolio
+![Banner del Proyecto](assets/images/banner.png) 
 
-Una aplicación de página única (SPA) moderna que muestra mis servicios y experiencia como profesional de Control de Calidad (QA), con soporte multilenguaje implementado a través de archivos de idioma JSON y atributos `data-lang` en el HTML.
+Una SPA (Single Page Application) moderna que muestra mis servicios y experiencia como profesional de Control de Calidad (QA), con arquitectura escalable y diseño atómico.
 
-## Estructura del Proyecto
+## 🌟 Características Principales
 
-```
-│
-├───index.html                 # Página principal de la SPA
-├───README.md                  # Documentación del proyecto
-│
-├───.gitignore                 # Archivos y carpetas ignorados por Git
-│
-├───assets/
-│   ├───icons/                 # Iconos (SVG, PNG, etc.)
-│   └───images/                # Imágenes (banners, screenshots, fondos)
-│
-├───css/
-│   │   styles.css             # Archivo CSS principal que importa todos los módulos
-│   │
-│   ├───base/                  # Estilos base y variables
-│   │       _base.css          # Estilos generales para el body, html, etc.
-│   │       _variables.css     # Variables CSS (colores, fuentes, espaciados)
-│   │
-│   ├───components/            # Estilos para componentes reutilizables
-│   │       _banners.css       # Banners (welcome banner, mensajes)
-│   │       _buttons.css       # Botones
-│   │       _cards.css         # Tarjetas (stats, servicios, proyectos, testimonials)
-│   │       _footer.css        # Pie de página
-│   │       _forms.css         # Formularios y elementos de entrada
-│   │       _navbar.css        # Barra de navegación
-│   │       _portfolio.css     # Estilos específicos para la sección de portafolio
-│   │
-│   ├───layout/                # Estilos para secciones principales
-│   │       _hero.css          # Sección hero (encabezado principal)
-│   │       _sections.css      # Estilos generales para secciones (títulos, espaciado)
-│   │
-│   └───utilities/             # Clases de utilidad y helpers
-│           _helpers.css       # Clases auxiliares (text-center, d-sm-flex, etc.)
-│
-├───js/
-│   │   main.js                # Punto de entrada principal de la aplicación JS
-│   │
-│   ├───core/                  # Lógica central de la aplicación
-│   │       _language-manager.js  # Gestiona la internacionalización (carga JSON, traduce elementos)
-│   │       _router.js         # Maneja la navegación SPA y carga de vistas
-│   │
-│   └───modules/               # Módulos específicos con funcionalidades aisladas
-│           _bootstrap-helpers.js  # Funciones para inicializar componentes Bootstrap dinámicos
-│           _portafolio-filter.js  # Lógica para filtrar proyectos en el portafolio
-│
-├───lang/
-│       en.json                # Archivo de traducción al inglés
-│       es.json                # Archivo de traducción al español
-│
-└───views/
-        contact.html           # Vista: Página de contacto
-        home.html              # Vista: Página de inicio
-        portfolio.html         # Vista: Página de portafolio
-        services.html          # Vista: Página de servicios
+* SPA con navegación sin recargas
+* Soporte para 2 idiomas (español/inglés)
+* Formulario seguro con reCAPTCHA
+* Diseño responsive
+
+## 🏗️ Arquitectura del Proyecto
+
+```mermaid
+graph TD
+    A[index.html] --> B[SPA Router]
+    B --> C[Vistas Dinámicas]
+    C --> D[Home]
+    C --> E[Servicios]
+    C --> F[Portafolio]
+    C --> G[Contacto]
+    B --> H[Language Manager]
+    H --> I[Traducciones JSON]
+    G --> J[Formspree + reCAPTCHA]
 ```
 
-## Implementación Técnica
+## **🚀 Stack Tecnológico**  
 
-### Stack del Frontend
+### **🌐 Frontend**  
+| Tecnología       | Uso en el Proyecto                          | Versión |  
+|------------------|---------------------------------------------|---------|  
+| ![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white) | Estructura semántica y vistas SPA.          | 5       |  
+| ![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white) | Estilos modulares con diseño atómico.       | 3       |  
+| ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black) | Lógica SPA, formularios y animaciones.      | ES6+    |  
 
-*   **HTML5**: Marcado semántico para mejor accesibilidad y estructura.
-*   **CSS3**: Estilos modernos con un enfoque de diseño atómico.
-    *   Los estilos se dividen en `base`, `components`, `layout` y `utilities` para facilitar el mantenimiento.
-*   **JavaScript (Módulos ES6)**:
-    *   JavaScript vanilla para la funcionalidad principal.
-    *   Utiliza Módulos ES6 (`import`/`export`) para un código organizado.
-    *   Implementa un enrutador del lado del cliente para navegación SPA.
-    *   Carga dinámicamente el contenido HTML desde la carpeta `views/`.
-    *   Gestiona el soporte multilenguaje.
-    *   Inicializa componentes de UI dinámicos.
+### **🔌 Integraciones**  
+| Servicio         | Función                                     | Versión/Plan |  
+|------------------|---------------------------------------------|--------------|  
+| ![Formspree](https://img.shields.io/badge/Formspree-Formularios-3C3C3C?logo=formspree) | Procesamiento de formularios y envío a Gmail. | Free Tier    |  
+| ![reCAPTCHA](https://img.shields.io/badge/reCAPTCHA-v2-4285F4?logo=google) | Protección contra spam en formularios.       | v2           |  
+| ![Bootstrap](https://img.shields.io/badge/Bootstrap-5-7952B3?logo=bootstrap) | Componentes responsive y utilidades CSS.     | 5.3.x        |  
 
-### Sistema de Idioma
+### **🗃️ Backend**  
+| Tecnología       | Rol                                         |  
+|------------------|---------------------------------------------|  
+| GitHub Pages     | Hosting estático de la SPA.                 |  
+| Formspree        | Backend serveless para formularios (sin código).      |  
 
-El sistema multilenguaje se implementa usando:
 
-*   **Archivos de traducción JSON** (`lang/en.json`, `lang/es.json`): Almacenan pares clave-valor para todo el texto traducible.
-*   **Atributos `data-lang`**: Los elementos HTML usan `data-lang="clave.nombre"` (ej. `data-lang="hero.title"`) para indicar qué texto deben mostrar. El `LanguageManager` encuentra estos elementos y reemplaza su contenido.
-*   **Atributos `data-lang-title`**: Usado para traducir atributos `title` (ej. tooltips).
-*   **Detección y Persistencia de Idioma**: El `LanguageManager` detecta el idioma preferido del usuario (desde `localStorage`, URL o configuración del navegador) y guarda su elección.
-*   **Traducción Dinámica**: El contenido se traduce al cargar la página y cuando se cambia el idioma.
-
-### Enrutamiento SPA
-
-*   La navegación se maneja del lado del cliente usando fragmentos de URL (`#home`, `#servicios`).
-*   El `_router.js` escucha los cambios en el hash y carga el archivo HTML correspondiente desde la carpeta `views/` en el área `#spa-content` de `index.html`.
-*   También dispara la traducción del contenido recién cargado.
-
-### Diseño Responsivo
-
-*   Enfoque "mobile-first" usando Bootstrap 5.
-*   Layouts fluidos y componentes adaptables.
-*   Optimizado para todos los tamaños de dispositivo.
-*   Interfaz amigable para dispositivos táctiles.
-
-## Compatibilidad con Navegadores
-
-*   Chrome (última versión)
-*   Firefox (última versión)
-*   Safari (última versión)
-*   Edge (última versión)
-*   Navegadores móviles (con soporte para Módulos ES6)
-
-## Licencia
+## Licencia (h3)
 
 ISC License
 

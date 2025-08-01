@@ -1,23 +1,18 @@
 <!DOCTYPE html>
-<!-- El atributo lang se actualizará dinámicamente por LanguageManager -->
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- El título se actualizará dinámicamente por SPARouter -->
     <title>QA Expert | Automatización y Pruebas de Performance</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="/css/styles.css">
     <style>
-        /* Estilo para el contenedor principal de la SPA */
         #spa-content {
             flex: 1;
-            /* Para que el footer se mantenga al final */
         }
 
-        /* Ocultar contenido mientras se carga */
         .spa-loading {
             text-align: center;
             padding: 50px;
@@ -26,7 +21,6 @@
 </head>
 
 <body class="d-flex flex-column min-vh-100">
-    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand fw-bold" href="/">
@@ -65,7 +59,6 @@
             </div>
         </div>
     </nav>
-    <!-- Contenedor principal para el contenido SPA -->
     <main id="spa-content" class="flex-shrink-0">
         <div class="spa-loading">
             <div class="spinner-border text-primary" role="status">
@@ -73,7 +66,6 @@
             </div>
         </div>
     </main>
-    <!-- Footer -->
     <footer class="mt-auto">
         <div class="container">
             <div class="row g-4">
@@ -81,7 +73,6 @@
                     <h4 class="fw-bold mb-4" data-lang="footer.title"></h4>
                     <p data-lang="footer.description"></p>
                     <div class="mt-4">
-                        <!-- Tooltips en los iconos sociales -->
                         <a href="#" class="social-icon social-icon--light" data-lang-title="footer.social.linkedin"
                             title=""><i class="bi bi-linkedin"></i></a>
                         <a href="#" class="social-icon social-icon--light" data-lang-title="footer.social.github"
