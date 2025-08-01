@@ -5,7 +5,7 @@ Una SPA (Single Page Application) moderna que muestra mis servicios y experienci
 ## 🌟 Características Principales
 
 * SPA con navegación sin recargas
-* Soporte para 2 idiomas (español/inglés)
+* Soporte multi idioma
 * Formulario seguro con reCAPTCHA
 * Diseño responsive
 
