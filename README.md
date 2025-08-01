@@ -41,14 +41,8 @@ graph TD
 | ![reCAPTCHA](https://img.shields.io/badge/reCAPTCHA-v2-4285F4?logo=google) | Protección contra spam en formularios.       | v2           |  
 | ![Bootstrap](https://img.shields.io/badge/Bootstrap-5-7952B3?logo=bootstrap) | Componentes responsive y utilidades CSS.     | 5.3.x        |  
 
-### **🗃️ Backend**  
-| Tecnología       | Rol                                         |  
-|------------------|---------------------------------------------|  
-| GitHub Pages     | Hosting estático de la SPA.                 |  
-| Formspree        | Backend serveless para formularios (sin código).      |  
 
-
-## Licencia (h3)
+## Licencia
 
 ISC License
 
