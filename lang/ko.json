@@ -8,11 +8,20 @@
       "contact": "연락처"
     },
     "language_selector": {
-      "spanish": "ES",
-      "english": "EN",
-      "japanese": "JP",
-      "chinese": "CN",
-      "korean": "KR"
+      "text":{
+      "spanish": "Español",
+      "english": "Inglés",
+      "japanese": "Japonés",
+      "chinese": "Chino",
+      "korean": "Coreano"
+      },
+      "value": {
+        "spanish": "es",
+        "english": "en",
+        "japanese": "ja",
+        "chinese": "zh",
+        "korean": "ko"
+      }
     }
   },
   "footer": {

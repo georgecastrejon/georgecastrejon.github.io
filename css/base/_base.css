@@ -6,3 +6,12 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+.spa-content {
+    flex: 1;
+}
+
+.spa-loading {
+    text-align: center;
+    padding: 50px;
+}

@@ -15,24 +15,73 @@
     /* Para padding y width */
 }
 
-/* Mensajes */
-.success-message, .error-message {
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    box-sizing: border-box;
+/* Sistema de notificaciones */
+.notification-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1050; /* Mayor que Bootstrap modal (1040) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
 }
 
-.success-message {
-    display: none;
-    background-color: #d1fae5;
-    border: 1px solid #10b981;
-    color: #065f46;
+.notification-overlay.active {
+    opacity: 1;
+    visibility: visible;
 }
 
-.error-message {
-    display: none;
-    background-color: #fee2e2;
-    border: 1px solid #ef4444;
-    color: #b91c1c;
+.notification-popup {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.notification-overlay.active .notification-popup {
+    transform: translateY(0);
+}
+
+.notification-popup.success {
+    border-top: 4px solid #28a745;
+}
+
+.notification-popup.error {
+    border-top: 4px solid #dc3545;
+}
+
+.notification-popup .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #6c757d;
+}
+
+.notification-popup .icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.notification-popup.success .icon {
+    color: #28a745;
+}
+
+.notification-popup.error .icon {
+    color: #dc3545;
 }

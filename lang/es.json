@@ -8,11 +8,20 @@
       "contact": "Contacto"
     },
     "language_selector": {
-      "spanish": "ES",
-      "english": "EN",
-      "japanese": "JP",
-      "chinese": "CN",
-      "korean": "KR"
+      "text": {
+        "spanish": "Español",
+        "english": "Inglés",
+        "japanese": "Japonés",
+        "chinese": "Chino",
+        "korean": "Coreano"
+      },
+      "value": {
+        "spanish": "es",
+        "english": "en",
+        "japanese": "ja",
+        "chinese": "zh",
+        "korean": "ko"
+      }
     }
   },
   "footer": {
@@ -31,7 +40,7 @@
       "twitter": "Twitter",
       "email": "Email"
     }
-  },  
+  },
   "home": {
     "hero": {
       "title": "Automatización y Pruebas de Performance Profesionales",
@@ -288,5 +297,20 @@
       "title": "Nuestra Ubicación",
       "description": "Encuéntranos en la capital de Lima."
     }
-  }
+  },
+  "js": {
+    "notification": {
+      "error": "Error al enviar el mensaje. Por favor, inténtalo de nuevo.",
+      "success": "Mensaje enviado exitosamente. Me pondré en contacto contigo pronto."
+    },
+    "form_validation": {
+      "name_required": "El nombre es obligatorio.",
+      "email_required": "El email es obligatorio.",
+      "email_invalid": "Por favor, introduce un email válido.",
+      "subject_required": "El asunto es obligatorio.",
+      "message_required": "El mensaje es obligatorio.",
+      "privacy_required": "Debes aceptar la Política de Privacidad."
+    }
+  } 
+
 }

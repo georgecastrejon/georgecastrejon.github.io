@@ -2,8 +2,6 @@ import { initPortfolioFilters } from '../modules/_portafolio-filter.js';
 import { initializeDynamicBootstrapComponents } from '../modules/_bootstrap-helpers.js';
 
 export class SPARouter {
-
-    //Constructor - configura rutas y elementos del DOM
     constructor() {
         this.RECAPTCHA_SITE_KEY = '6LfiIpUrAAAAABhohXhcpvXNfVA6UL-KC9op2cit';
         this.routes = {
@@ -14,44 +12,40 @@ export class SPARouter {
         };
         this.contentContainer = document.getElementById('spa-content');
         this.navLinks = document.querySelectorAll('a[data-route]');
+
+        this.initNotificationSystem();
         this.init();
     }
 
-    //Inicializa el router, configura eventos y carga contenido inicial
-    //Escucha cambios en el hash de la URL y actualiza el contenido
-    //Configura los enlaces de navegación para manejar clics y cambios de hash
-    init() {
+    async init() {
         window.addEventListener('hashchange', () => this.handleLocationChange());
         this.navLinks.forEach(link => {
             link.addEventListener('click', (e) => this.handleNavigationClick(e));
         });
-        this.handleLocationChange();
+
+        await this.handleLocationChange();
     }
 
-    //Maneja los cambios en la ubicación (hash de la URL)
-    //Carga y muestra el contenido correspondiente a la ruta actual
-    //Actualiza la interfaz de usuario según la ruta
     async handleLocationChange() {
         const hash = window.location.hash.slice(1) || '';
-        await this.loadAndDisplayContent(hash);
-        this.updateUI(hash);
+        try {
+            await this.loadAndDisplayContent(hash);
+            this.updateUI(hash);
+        } catch (error) {
+            console.error('Error en handleLocationChange:', error);
+            this.showErrorView();
+        }
     }
 
-    //Maneja los clics en los enlaces de navegación
-    //Previene el comportamiento por defecto del enlace y actualiza el hash de la URL
-    //Carga el contenido correspondiente a la ruta seleccionada
     handleNavigationClick(e) {
         e.preventDefault();
         const route = e.target.getAttribute('data-route');
         window.location.hash = route === 'home' ? '' : route;
     }
 
-    //Carga y muestra el contenido correspondiente a la ruta especificada
-    //Si la ruta no está definida, carga la página de inicio
-    //Muestra un mensaje de carga mientras se obtiene el contenido
-    //Maneja errores al cargar el contenido y muestra un mensaje de error
+
     async loadAndDisplayContent(path) {
-        const routeConfig = this.routes[path];
+        const routeConfig = this.routes[path] || this.routes[''];
         if (!routeConfig) {
             console.warn(`Ruta no encontrada: ${path}. Cargando página de inicio.`);
             await this.loadAndDisplayContent('');
@@ -64,6 +58,8 @@ export class SPARouter {
             return;
         }
         this.contentContainer.innerHTML = '<div class="spa-loading"><div class="spinner-border text-primary" role="status"><span class="visually-hidden">Loading...</span></div></div>';
+
+
         try {
             const response = await fetch(contentPath);
             if (!response.ok) {
@@ -79,53 +75,9 @@ export class SPARouter {
                 await this.handleRecaptchaRender();
                 const contactForm = document.getElementById('contactForm');
                 if (contactForm) {
-                    contactForm.addEventListener('submit', async (e) => {
-                        e.preventDefault();
-
-                        if (!window.grecaptcha) {
-                            alert("Error de seguridad. Recarga la página.");
-                            return;
-                        }
-
-                        const token = grecaptcha.getResponse();
-                        if (!token) {
-                            alert("Por favor completa el reCAPTCHA");
-                            return;
-                        }
-                        try {
-                            const formData = new URLSearchParams();
-
-                            formData.append('name', contactForm.name.value);
-                            formData.append('email', contactForm.email.value);
-                            formData.append('subject', contactForm.subject.value);
-                            formData.append('service', contactForm.service.value);
-                            formData.append('message', contactForm.message.value);
-                            formData.append('privacy', contactForm.privacy.checked ? 'true' : 'false');
-                            formData.append('g-recaptcha-response', token);
-
-                            const response = await fetch(contactForm.action, {
-                                method: 'POST',
-                                headers: {
-                                    'Content-Type': 'application/x-www-form-urlencoded',
-                                    'Accept': 'application/json'
-                                },
-                                body: formData
-                            });
-
-                            if (response.ok) {
-                                this.showSuccess();
-                                contactForm.reset();
-                                grecaptcha.reset();
-                            } else {
-                                const errorData = await response.json();
-                                throw new Error(errorData.error || 'Error en el servidor');
-                            }
-
-                        } catch (error) {
-                            this.showError(error.message);
-                            grecaptcha.reset();
-                        }
-                    });
+                    contactForm.removeEventListener('submit', this.handleFormSubmit);
+                    this.handleFormSubmit = this.handleContactFormSubmit.bind(this);
+                    contactForm.addEventListener('submit', this.handleFormSubmit);
                 }
             }
 
@@ -135,47 +87,153 @@ export class SPARouter {
         }
     }
 
-    //Muestra un mensaje de éxito al enviar el formulario de contacto
-    //Oculta el mensaje después de 5 segundos
-    //Actualiza el texto del mensaje con la traducción correspondiente
-    //Si no se encuentra la traducción, usa un mensaje por defecto
-    showSuccess() {
-        const successElement = document.getElementById('successMessage');
-        successElement.style.display = 'block';
-        setTimeout(() => {
-            successElement.style.display = 'none';
-        }, 5000);
+    async handleContactFormSubmit(e) {
+        e.preventDefault();
+        const contactForm = e.target;
+
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+
+        if (!window.grecaptcha) {
+            this.showNotification(
+                'error',
+                'Error de seguridad',
+                'Por favor recarga la página para habilitar la verificación de seguridad.',
+                'Recargar'
+            );
+            this.notificationElements.actionBtn.onclick = () => {
+                window.location.reload();
+            };
+            return;
+        }
+
+        const token = grecaptcha.getResponse();
+        if (!token) {
+            this.showNotification(
+                'error',
+                'Verificación requerida',
+                'Por favor completa el reCAPTCHA para enviar el formulario.',
+                'Entendido'
+            );
+            return;
+        }
+
+        try {
+            const formData = new URLSearchParams();
+            formData.append('name', contactForm.name.value);
+            formData.append('email', contactForm.email.value);
+            formData.append('subject', contactForm.subject.value);
+            formData.append('service', contactForm.service.value);
+            formData.append('message', contactForm.message.value);
+            formData.append('privacy', contactForm.privacy.checked ? 'true' : 'false');
+            formData.append('g-recaptcha-response', token);
+
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                    'Accept': 'application/json'
+                },
+                body: formData
+            });
+
+            if (response.ok) {
+                this.showNotification(
+                    'success',
+                    '¡Mensaje enviado!',
+                    'Hemos recibido tu mensaje correctamente. Nos pondremos en contacto contigo pronto.',
+                    'Cerrar'
+                );
+                contactForm.reset();
+                grecaptcha.reset();
+            } else {
+                const errorData = await response.json();
+                throw new Error(errorData.error || 'Error en el servidor');
+            }
+        } catch (error) {
+            this.showNotification(
+                'error',
+                'Error al enviar',
+                error.message || 'Hubo un problema al enviar tu mensaje. Por favor inténtalo de nuevo más tarde.',
+                'Reintentar'
+            );
+            grecaptcha.reset();
+        }
     }
 
-    //Muestra un mensaje de error al enviar el formulario de contacto
-    //Oculta el mensaje después de 5 segundos
-    //Actualiza el texto del mensaje con la traducción correspondiente
-    //Si no se encuentra la traducción, usa un mensaje por defecto
-    showError(message) {
-        const errorElement = document.getElementById('errorMessage');
-        errorElement.style.display = 'block';
-        console.debug(message)
-        
-        setTimeout(() => {
-            errorElement.style.display = 'none';
-        }, 5000);
+    initNotificationSystem() {
+        const overlay = document.createElement('div');
+        overlay.id = 'notificationOverlay';
+        overlay.className = 'notification-overlay';
+
+        const popup = document.createElement('div');
+        popup.id = 'notificationPopup';
+        popup.className = 'notification-popup';
+
+        popup.innerHTML = `
+            <button class="close-btn" id="closeNotification">&times;</button>
+            <div class="icon">
+                <i id="notificationIcon"></i>
+            </div>
+            <h3 id="notificationTitle"></h3>
+            <p id="notificationMessage"></p>
+            <button id="notificationAction" class="btn btn-primary mt-3"></button>
+        `;
+
+        overlay.appendChild(popup);
+        document.body.appendChild(overlay);
+
+        this.notificationElements = {
+            overlay,
+            popup,
+            icon: document.getElementById('notificationIcon'),
+            title: document.getElementById('notificationTitle'),
+            message: document.getElementById('notificationMessage'),
+            actionBtn: document.getElementById('notificationAction'),
+            closeBtn: document.getElementById('closeNotification')
+        };
+
+        this.notificationElements.closeBtn.addEventListener('click', () => this.hideNotification());
+        this.notificationElements.overlay.addEventListener('click', (e) => {
+            if (e.target === this.notificationElements.overlay) this.hideNotification();
+        });
+        this.notificationElements.actionBtn.addEventListener('click', () => this.hideNotification());
+
     }
 
-    //Inicializa los componentes de Bootstrap dinámicos
+    hideNotification() {
+        this.notificationElements.overlay.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+
+    showNotification(type, title, message, actionText) {
+        this.notificationElements.popup.className = `notification-popup ${type}`;
+        this.notificationElements.icon.className = 'bi ' +
+            (type === 'success' ? 'bi-check-circle-fill' :
+                type === 'error' ? 'bi-exclamation-circle-fill' :
+                    'bi-info-circle-fill');
+        this.notificationElements.title.textContent = title;
+        this.notificationElements.message.textContent = message;
+        this.notificationElements.actionBtn.textContent = actionText;
+
+        this.notificationElements.overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+
+
     initializeBootstrapComponents() {
         initializeDynamicBootstrapComponents(this.contentContainer);
         this.setupPortfolioFilters();
     }
 
-    //Configura los filtros del portafolio
     setupPortfolioFilters() {
         initPortfolioFilters(this.contentContainer);
     }
 
-    //Actualiza la interfaz de usuario según la ruta actual
-    //Actualiza el título de la página y los enlaces de navegación
-    //Resalta el enlace activo según la ruta actual
-    //Si no se encuentra una ruta específica, usa 'home' como predeterminado
     updateUI(path) {
         let titleKey = 'navigation.home';
         switch (path) {
@@ -197,7 +255,6 @@ export class SPARouter {
         });
     }
 
-    //Maneja la renderización de reCAPTCHA
     async handleRecaptchaRender() {
         try {
             await this.waitForRecaptcha();
@@ -217,7 +274,6 @@ export class SPARouter {
         }
     }
 
-    //Espera a que reCAPTCHA esté disponible
     waitForRecaptcha(attempts = 0) {
         return new Promise((resolve, reject) => {
             if (window.grecaptcha && grecaptcha.render) {
