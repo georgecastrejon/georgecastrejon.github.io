@@ -1,5 +1,164 @@
+/* _navbar.css - Versión completa actualizada */
+
 .navbar {
     background: linear-gradient(135deg, var(--primary), var(--secondary));
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    /* Asegúrate de que el z-index sea alto si usas fixed/absolute */
+    padding: 0.75rem 1rem;
+    position: relative;
+    z-index: 1030;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    color: white !important;
+}
+
+.navbar-nav {
+    margin-left: auto;
+}
+
+.nav-link {
+    color: rgba(255,255,255,0.85) !important;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: white !important;
+    transform: translateY(-2px);
+}
+
+/* Contenedor del selector de idiomas */
+.language-dropdown-container {
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+}
+
+/* Botón principal del selector */
+#languageDropdown {
+    background: transparent;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+#languageDropdown:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+/* Elementos del selector */
+#currentLanguageFlag {
+    width: 20px;
+    height: 15px;
+    object-fit: cover;
+    border-radius: 2px;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+#currentLanguageText {
+    margin: 0 8px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    max-width: 60px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block !important;
+}
+
+/* Menú desplegable */
+.dropdown-menu {
+    border: none;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.15);
+    min-width: 160px;
+    padding: 0.5rem 0;
+    z-index: 1050;
+}
+
+/* Opciones de idioma */
+.dropdown-item.btn-flag {
+    display: flex !important;
+    align-items: center;
+    padding: 0.5rem 1.25rem !important;
+    color: var(--dark) !important;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.dropdown-item.btn-flag:hover {
+    background: linear-gradient(135deg, var(--primary), var(--secondary)) !important;
+    color: white !important;
+}
+
+/* Bandera en las opciones */
+.btn-flag .fi {
+    width: 20px;
+    height: 15px;
+    border-radius: 2px;
+    border: 1px solid rgba(0,0,0,0.1);
+    margin-right: 12px;
+    display: inline-block;
+}
+
+/* Texto en las opciones */
+.btn-flag .dropdown-text {
+    display: inline-block !important;
+    font-size: 0.9rem;
+    color: inherit;
+}
+
+/* Versión móvil */
+@media (max-width: 768px) {
+    .navbar-collapse {
+        padding: 1rem 0;
+    }
+    
+    .language-dropdown-container {
+        margin: 0.75rem 0 0;
+        width: 100%;
+        justify-content: flex-end;
+    }
+    
+    #languageDropdown {
+        padding: 0.5rem;
+    }
+    
+    #currentLanguageText {
+        max-width: 50px;
+        font-size: 0.8rem;
+        margin: 0 5px;
+    }
+    
+    .dropdown-menu {
+        width: 180px !important;
+        right: 1rem;
+        left: auto !important;
+    }
+    
+    .btn-flag .fi {
+        margin-right: 10px;
+    }
+}
+
+/* Pantallas muy pequeñas */
+@media (max-width: 576px) {
+    #currentLanguageText {
+        max-width: 40px;
+        font-size: 0.75rem;
+    }
+    
+    .dropdown-menu {
+        transform: translateX(10%) !important;
+    }
+    
+    .dropdown-item.btn-flag {
+        padding: 0.5rem 1rem !important;
+    }
 }

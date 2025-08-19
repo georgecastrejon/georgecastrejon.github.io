@@ -1,16 +1,15 @@
-/* Botones */
 .btn {
     border-radius: 30px;
     padding: 10px 25px;
     font-weight: 600;
     transition: all 0.3s ease;
-    border: none; /* Añadido para evitar conflictos */
-    cursor: pointer; /* Añadido para mejor UX */
+    border: none;
+    cursor: pointer;
 }
 
 .btn-primary {
     background: linear-gradient(135deg, var(--primary), var(--secondary));
-    color: white; /* Asegurar color de texto */
+    color: white;
     border: none;
 }
 
@@ -22,8 +21,8 @@
 
 .btn-outline-light {
     background: transparent;
-    border: 1px solid white; /* Asumiendo es el estilo base */
-    color: white; /* Asumiendo es el estilo base */
+    border: 1px solid white;
+    color: white;
 }
 
 .btn-flag:hover{
@@ -35,7 +34,6 @@
     color: var(--primary);
 }
 
-/* Portfolio Filter */
 .portfolio-filter {
     margin-bottom: 30px;
 }
@@ -57,9 +55,8 @@
 }
 
 
-/* Responsive para Botones (afecta al hero) */
 @media (max-width: 576px) {
-    .hero-section .btn { /* O simplemente .btn si es global */
+    .hero-section .btn { 
         width: 100%;
         margin-bottom: 10px;
     }

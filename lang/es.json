@@ -10,17 +10,11 @@
     "language_selector": {
       "text": {
         "spanish": "Español",
-        "english": "Inglés",
-        "japanese": "Japonés",
-        "chinese": "Chino",
-        "korean": "Coreano"
+        "english": "Inglés"
       },
       "value": {
         "spanish": "es",
-        "english": "en",
-        "japanese": "ja",
-        "chinese": "zh",
-        "korean": "ko"
+        "english": "en"
       }
     }
   },

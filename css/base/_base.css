@@ -7,9 +7,12 @@ body {
     flex-direction: column;
 }
 
-.spa-content {
-    flex: 1;
+#spa-content {
+    flex: 1;   
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
 }
+
 
 .spa-loading {
     text-align: center;
